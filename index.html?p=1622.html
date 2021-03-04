@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<!--[if IE 7]>                  <html class="ie7 no-js"  lang="en-US"     <![endif]-->
+<!--[if lte IE 8]>              <html class="ie8 no-js"  lang="en-US"     <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>RC Car JavaScript Code | readysaltedcode</title>
+<script src="cdn-cgi/apps/head/XqCFCod2Ff5e_ekjogbj5tTs0_E.js"></script><link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="readysaltedcode &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="readysaltedcode &raquo; Comments Feed" href="comments/feed/index.html" />
+<link rel='stylesheet' href="wp-includes/css/dist/block-library/style.min.css%3Fver=5.5.1.css" type='text/css' media='all' />
+<link rel='stylesheet' href="wp-content/themes/smartstart/style.css%3Fver=5.5.1.css" type='text/css' media='all' />
+<link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Quicksand%3A300%2Cregular%2C700&#038;subset=latin&#038;ver=5.5.1" type='text/css' media='all' />
+<link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Quicksand%3A300%2Cregular%2C700&#038;subset=latin&#038;ver=5.5.1" type='text/css' media='all' />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css?ver=5.5.1' type='text/css' media='all' />
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js?ver=false' id='jquery-js'></script>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src="wp-content/themes/smartstart/js/modernizr.custom.js%3Fver=5.5.1" id='modernizr_custom-js'></script>
+<link rel="https://api.w.org/" href="wp-json/index.html" /><link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/1622" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.readysaltedcode.org/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 5.5.1" />
+<link rel="canonical" href="index.html%3Fp=1622.html" />
+<link rel='shortlink' href="index.html%3Fp=1622.html" />
+<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed%3Furl=http:%252F%252Fwww.readysaltedcode.org%252Frc-car-javascript-code%252F" />
+<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed%3Furl=http:%252F%252Fwww.readysaltedcode.org%252Frc-car-javascript-code%252F&amp;format=xml" />
+<style>
+/* Main styles */
+body {
+	color: #545454;
+	font: normal 13px/1.7 "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+::-moz-selection { background: #dd3333; color: #ffffff; text-shadow: none; }
+::selection { background: #dd3333; color: #ffffff; text-shadow: none; }
+
+/* Background (hex) */
+body { background: #ffffff url() repeat top center scroll; }
+
+.ss-slider, .ss-slider .slide-images-container,
+.ss-slider .slide-bg-image, .ss-slider .buttons-container,
+.projects-carousel img, #portfolio-items article img,
+.comment .avatar,
+.not-ie #footer:before { background-color: #ffffff; }
+
+@media only screen and (max-width: 767px) { .ss-slider.fully-loaded, .ss-slider.fully-loaded .slide-images-container { background-color: #ffffff; } }
+
+/* Background (rgb) */
+.single-image .zoom, .image-gallery .zoom, .iframe .zoom,
+.no-js .single-image:before, .no-js .image-gallery:before, .no-js .iframe:before {
+	background: rgb(255,255,255);
+	background: rgba(255,255,255, 0.4);
+}
+
+/* Main heading font*/
+h1, h2, h3, h4, h5, h6,
+.button, input[type="submit"], input[type="reset"], button,
+.dropcap,
+label, input, textarea, select,
+th,
+#main-nav a,
+.ss-slider .slide-button h5,
+.projects-carousel, #portfolio-items,
+.entry-meta { font-family: "Quicksand", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+#main-nav ul ul a, .entry-form label { font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+@media only screen and (max-width: 959px) { .extended-pricing-table .features li:before { font-family: "Quicksand", "Helvetica Neue", Arial, Helvetica, sans-serif; } }
+
+/* Blockquote font */
+blockquote { font-family: "Quicksand", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+/* Color scheme (hex) */
+.button, input[type="submit"], input[type="reset"], button,
+.not-ie #main-nav .current_page_item:after, .not-ie #main-nav .current-menu-item:after, .not-ie #main-nav .current_page_parent:after,
+.not-ie #main-nav .current_page_ancestor:after, .not-ie #main-nav .current-menu-ancestor:after,
+#main-nav ul ul a:hover, #main-nav ul ul .hover > a,
+#main-nav ul ul .current_page_item > a, #main-nav ul ul .current_page_item > a:hover,
+#main-nav ul ul .current_page_parent > a, #main-nav ul ul .current_page_parent > a:hover,
+#main-nav ul ul .current-menu-item > a, #main-nav ul ul .current-menu-item > a:hover,
+#main-nav ul ul .current_page_ancestor > a, #main-nav ul ul .current-menu-ancestor > a:hover,
+.ss-slider .active-slide-bar,
+.not-ie .projects-carousel a:hover:after, #portfolio-items > article:hover:after,
+.not-ie .team-member:hover:after,
+#portfolio-items-filter a { background: #dd3333; }
+
+a:hover, a > *:hover,
+.button.no-bg:hover,
+#main-nav a:hover, #main-nav .hover > a,
+#main-nav .current_page_item > a, #main-nav .current-menu-item > a, #main-nav .current_page_parent > a,
+#main-nav .current_page_ancestor > a, #main-nav .current-menu-ancestor > a,
+.acc-trigger a:hover, .acc-trigger.active a, .acc-trigger.active a:hover,
+.tabs-nav li a:hover, .tabs-nav li.active a,
+.ss-slider .slide-button:hover, .ss-slider.fully-loaded .slide-button.active,
+.ss-slider.fully-loaded .slide-button.active h5,
+.ss-slider .slide-content a,
+.projects-carousel a:hover .title, #portfolio-items > article:hover .title,
+.entry-meta a:hover, .entry-meta a:hover time,
+a:hover > .post-format,
+.comment .author a:hover,
+.comment .date a:hover, .comment .date a:hover time,
+.pagination a:hover, .comments-pagination a:hover,
+.single-portfolio .page-header a:hover,
+.widget li a:hover,
+.widget_nav_menu .current_page_item > a, .widget_nav_menu .current-menu-item > a,
+#sidebar .tweets-feed li a, #footer .tweets-feed li a,
+#footer a:hover, #footer-bottom a:hover  { color: #dd3333; }
+
+.button:hover .arrow,
+#back-to-top:hover, .touch-device #back-to-top:active,
+.jcarousel-next:hover, .jcarousel-next:focus, .jcarousel-next:active,
+.jcarousel-prev:hover, .jcarousel-prev:focus, .jcarousel-prev:active,
+.not-ie .projects-carousel a:hover:after, .not-ie #portfolio-items > article:hover:after,
+a:hover > .post-format { background-color: #dd3333; }
+
+#main-nav a:hover, #main-nav .hover > a,
+#main-nav .current_page_item > a, #main-nav .current-menu-item > a, #main-nav .current_page_parent > a,
+#main-nav .current_page_ancestor > a, #main-nav .current-menu-ancestor > a,
+.projects-carousel a:hover, #portfolio-items > article:hover,
+.team-member:hover  { border-bottom-color: #dd3333; }
+
+#main-nav a:hover, #main-nav .hover > a,
+#main-nav .current_page_item > a, #main-nav .current-menu-item > a, #main-nav .current_page_parent > a,
+#main-nav .current_page_ancestor > a, #main-nav .current-menu-ancestor > a,
+.tabs-nav li.active a { border-top-color: #dd3333; }
+
+@media only screen and (max-width: 959px) { .ss-slider.fully-loaded .slide-button.active { border-top-color: #dd3333; } }
+@media only screen and (max-width: 767px) { #main-nav > ul > .current:last-child a { border-bottom-color: #dd3333; } }
+
+/* Color scheme (rgb) */
+.image-gallery-slider-nav a, .ss-slider .pagination-container a {
+		background-color: rgba(221,51,51, 0.6);}
+
+.image-gallery-slider-nav a:hover, .image-gallery-slider-nav a:active,
+.ss-slider .pagination-container a:hover, .ss-slider.show-content-onhover:hover .pagination-container a:hover {
+		background-color: rgba(221,51,51, 1);}
+
+@media only screen and (max-width: 767px) {
+	.ss-slider .pagination-container a, .ss-slider .pagination-container a:hover {
+				background-color: rgba(221,51,51, 0.6);	}
+}
+
+
+</style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://storage.googleapis.com/readysaltedcode-wordpress.appspot.com/1/cropped-readysaltedcode_fav.png" sizes="32x32" />
+<link rel="icon" href="https://storage.googleapis.com/readysaltedcode-wordpress.appspot.com/1/cropped-readysaltedcode_fav.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://storage.googleapis.com/readysaltedcode-wordpress.appspot.com/1/cropped-readysaltedcode_fav.png" />
+<meta name="msapplication-TileImage" content="https://storage.googleapis.com/readysaltedcode-wordpress.appspot.com/1/cropped-readysaltedcode_fav.png" />
+</head>
+<body class="page-template-default page page-id-1622">
+<header id="header" class="container clearfix">
+<a href="index.html" id="logo" title="readysaltedcode">
+<img src="wp-content/themes/smartstart/images/readysaltedcode_red_web_logo.png" alt="readysaltedcode">
+</a>
+<nav id="main-nav">
+<ul id="menu-main-nav" class="menu"><li id="menu-item-471" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-471"><a href="index.html">About Us:</a></li>
+<li id="menu-item-1650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1650"><a href="index.html%3Fp=72.html">Lessons</a></li>
+<li id="menu-item-1226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1226"><a href="index.html%3Fp=1014.html">datadrivendance</a></li>
+<li id="menu-item-418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-418"><a href="stories/index.html">Stories</a></li>
+</ul>
+</nav>
+</header>
+<section id="content" class="clearfix ">
+<div class="container">
+<header class="page-header clearfix">
+<h1 class="page-title">RC Car JavaScript Code</h1>
+</header>
+<p><a title="Remote Control Car with Appshed" href="index.html%3Fp=1601.html">Back to Project Page</a></p>
+<p>window.app = app;<br />
+app.heading = 0;<br />
+app.beta = 0;<br />
+app.gamma = 0;</p>
+<p>app.rc = {</p>
+<p>// CONSTANTS</p>
+<p>SCREEN_ID_GearP: 7828228,<br />
+SCREEN_ID_GearR: 7828240,<br />
+SCREEN_ID_GearN: 7828260,<br />
+SCREEN_ID_GearD: 7828548,<br />
+steeringCentre: 0,<br />
+currentHeading: 0,<br />
+currentSteering: &#8220;&#8221;,<br />
+currentSpeed: 0,<br />
+currentGear: &#8220;&#8221;,<br />
+apiSteering: &#8220;&#8221;,<br />
+apiSpeed: &#8220;&#8221;,<br />
+apiGear: &#8220;&#8221;,<br />
+valAPISteering: &#8220;&#8221;,<br />
+valAPISpeed: 0,<br />
+valAPIGear: &#8220;&#8221;,<br />
+accelerationX: 0,<br />
+accelerationY: 0,<br />
+accelerationZ: 0,<br />
+DeviceMotionSupported: false,<br />
+driveTimeout: 150,<br />
+updateAPITimeout: 1000,<br />
+watchDirectionTimeout: 150,<br />
+watchAPITimeout: 1000,<br />
+watchSpeedTimeout: 150,</p>
+<p>log: &#8220;&#8221;,</p>
+<p>apiViewDirection: &#8216;https://storage-extension.appshed.com/api/ffa59e04-5e59-11e5-9f41-12313b0e6970&#8217;,<br />
+apiSetDirection: &#8220;https://storage-extension.appshed.com/api/cfaf7e40-5e59-11e5-ae47-12313b0e6970&#8221;,<br />
+apiDeleteDirection: &#8220;https://storage-extension.appshed.com/api/d91ce742-5e59-11e5-a87d-12313b0e6970&#8221;,<br />
+apiViewSpeed: &#8216;https://storage-extension.appshed.com/api/6fb8c72c-5e5d-11e5-8179-12313b0e6970&#8217;,<br />
+apiSetSpeed: &#8216;https://storage-extension.appshed.com/api/61f938ce-5e5d-11e5-839b-12313b0e6970&#8217;,<br />
+apiDeleteSpeed: &#8216;https://storage-extension.appshed.com/api/68a00cfc-5e5d-11e5-a2bb-12313b0e6970&#8217;,<br />
+apiViewGear: &#8216;https://storage-extension.appshed.com/api/ac6b3cb0-66df-11e5-9337-12313b0e6970&#8217;,<br />
+apiSetGear: &#8216;https://storage-extension.appshed.com/api/9c1d5dd4-66df-11e5-95c6-12313b0e6970&#8217;,<br />
+apiDeleteGear: &#8216;https://storage-extension.appshed.com/api/a3ea8ce4-66df-11e5-a404-12313b0e6970&#8217;,<br />
+writelog: function(msg){</p>
+<p>this.log = msg+&#8221;n&#8221;+this.log<br />
+app.setVariable(&#8220;log&#8221;,this.log)</p>
+<p>},<br />
+startSteeringApp: function(){<br />
+this.watchMotion();<br />
+this.watchDirection();<br />
+this.updateAPIDirection();<br />
+alert(&#8220;Steering control has started.&#8221;)<br />
+setTimeout(&#8220;app.rc.calibrateSteering()&#8221;,2000);<br />
+},</p>
+<p>startSpeedApp: function(){<br />
+this.watchSpeed();<br />
+this.updateAPISpeed();<br />
+alert(&#8220;Speed control has started.&#8221;)<br />
+},</p>
+<p>startDrivingApp: function(){</p>
+<p>this.watchAPIs();</p>
+<p>this.drive();<br />
+},</p>
+<p>watchMotion: function(){<br />
+window.addEventListener(&#8216;deviceorientation&#8217;, function(eventData) {<br />
+app.heading = eventData.alpha<br />
+app.beta = eventData.beta<br />
+app.gamma = eventData.gamma</p>
+<p>app.setVariable(&#8220;gamma&#8221;,eventData.gamma)<br />
+app.setVariable(&#8220;beta&#8221;,eventData.beta)<br />
+app.setVariable(&#8220;alpha&#8221;,eventData.alpha)<br />
+}, false);</p>
+<p>if (window.DeviceMotionEvent != undefined) {</p>
+<p>this.DeviceMotionSupported = true;<br />
+app.setVariable(&#8220;DeviceMotionSupported&#8221;,this.DeviceMotionSupported)</p>
+<p>window.ondevicemotion = function(e) {</p>
+<p>app.rc.accelerationX = e.accelerationIncludingGravity.x;<br />
+app.rc.accelerationY = e.accelerationIncludingGravity.y;<br />
+app.rc.accelerationZ = e.accelerationIncludingGravity.z;</p>
+<p>app.setVariable(&#8220;accelerationX&#8221;,e.accelerationIncludingGravity.x);<br />
+app.setVariable(&#8220;accelerationY&#8221;,e.accelerationIncludingGravity.y);<br />
+app.setVariable(&#8220;accelerationZ&#8221;,e.accelerationIncludingGravity.z);</p>
+<p>}<br />
+}</p>
+<p>},</p>
+<p>setDirection: function(x){<br />
+this.currentHeading = x;<br />
+app.setVariable(&#8220;fieldDirection&#8221;,x)</p>
+<p>this.setCurrentSteering()<br />
+},</p>
+<p>setSpeed: function(spd){<br />
+this.currentSpeed = spd;<br />
+app.setVariable(&#8220;currentSpeed&#8221;,spd);</p>
+<p>},</p>
+<p>setGear: function(gear,navigate){<br />
+this.currentGear = gear;<br />
+app.setVariable(&#8220;currentGear&#8221;,gear);<br />
+this.setAPIGear(gear)</p>
+<p>if(navigate){<br />
+var id = app.rc[&#8220;SCREEN_ID_Gear&#8221;+gear]<br />
+if(id)<br />
+app.showScreen(id)<br />
+}<br />
+},<br />
+setSteering: function(steering){</p>
+<p>this.currentSteering = steering<br />
+app.setVariable(&#8220;currentSteering&#8221;,steering)</p>
+<p>},</p>
+<p>calibrateSteering: function(){<br />
+this.steeringCentre = this.currentHeading<br />
+app.setVariable(&#8220;steeringCentre&#8221;,this.steeringCentre)<br />
+},</p>
+<p>getAPIDirection: function(){<br />
+var response;</p>
+<p>app.ajaxRequest(this.apiViewDirection, &#8216;get&#8217;, &#8216;json&#8217;, null, function(response) {<br />
+app.rc.apiSteering = response[0][&#8216;direction&#8217;]<br />
+app.setVariable(&#8220;apiSteering&#8221;,app.rc.apiSteering)<br />
+return app.rc.apiSteering</p>
+<p>})</p>
+<p>},</p>
+<p>getAPIGear: function(){<br />
+var response;</p>
+<p>app.ajaxRequest(app.rc.apiViewGear, &#8216;get&#8217;, &#8216;json&#8217;, null, function(response) {<br />
+app.rc.apiGear = response[0][&#8216;gear&#8217;]<br />
+app.setVariable(&#8220;apiGear&#8221;,app.rc.apiGear)<br />
+return app.rc.apiGear</p>
+<p>})</p>
+<p>},</p>
+<p>getAPISpeed: function(){<br />
+var response;</p>
+<p>app.ajaxRequest(this.apiViewSpeed, &#8216;get&#8217;, &#8216;json&#8217;, null, function(response) {<br />
+app.rc.apiSpeed = response[0][&#8216;speed&#8217;]<br />
+app.setVariable(&#8220;apiSpeed&#8221;,app.rc.apiSpeed)<br />
+return app.rc.apiSpeed</p>
+<p>})</p>
+<p>},</p>
+<p>setAPIDirection: function(drn){</p>
+<p>// if the api value has not changed, don&#8217;t do anything<br />
+if(this.valAPISteering == drn)<br />
+return</p>
+<p>this.valAPISteering = drn;</p>
+<p>var response;</p>
+<p>app.ajaxRequest(app.rc.apiDeleteDirection, &#8216;post&#8217;, &#8216;json&#8217;, null, function(response) {<br />
+app.ajaxRequest(app.rc.apiSetDirection, &#8216;post&#8217;, &#8216;json&#8217;, { &#8220;direction&#8221;:drn }, function(response) {</p>
+<p>}, function(response) {</p>
+<p>})<br />
+}, function(response) {</p>
+<p>})</p>
+<p>},<br />
+setAPIGear: function(gear){</p>
+<p>// if the api value has not changed, don&#8217;t do anything<br />
+if(this.valAPIGear == gear)<br />
+return</p>
+<p>this.valAPIGear = gear;</p>
+<p>var response;</p>
+<p>app.ajaxRequest(app.rc.apiDeleteGear, &#8216;post&#8217;, &#8216;json&#8217;, null, function(response) {<br />
+app.ajaxRequest(app.rc.apiSetGear, &#8216;post&#8217;, &#8216;json&#8217;, { &#8220;gear&#8221;:gear }, function(response) {<br />
+}, function(response) {})</p>
+<p>}, function(response) {</p>
+<p>})</p>
+<p>},</p>
+<p>setAPISpeed: function(spd){</p>
+<p>// if the api value has not changed, don&#8217;t do anything<br />
+if(this.valAPISpeed == spd)<br />
+return</p>
+<p>this.valAPISpeed = spd;<br />
+var response;<br />
+app.ajaxRequest(app.rc.apiDeleteSpeed, &#8216;post&#8217;, &#8216;json&#8217;, null, function(response) {<br />
+app.ajaxRequest(app.rc.apiSetSpeed, &#8216;post&#8217;, &#8216;json&#8217;, { &#8220;speed&#8221;:spd }, function(response) {</p>
+<p>}, function(response) {</p>
+<p>})<br />
+}, function(response) {</p>
+<p>})</p>
+<p>},</p>
+<p>clearAPIs: function(){</p>
+<p>var response;</p>
+<p>app.ajaxRequest(app.rc.apiDeleteGear, &#8216;post&#8217;, &#8216;json&#8217;, null, function(response) {}, function(response) {})<br />
+app.ajaxRequest(app.rc.apiDeleteSpeed, &#8216;post&#8217;, &#8216;json&#8217;, null, function(response) {}, function(response) {})<br />
+app.ajaxRequest(app.rc.apiDeleteDirection, &#8216;post&#8217;, &#8216;json&#8217;, null, function(response) {}, function(response) {})</p>
+<p>},</p>
+<p>setCurrentSteering: function(){</p>
+<p>if(this.DeviceMotionSupported)<br />
+this.setCurrentSteeringRoll()<br />
+else<br />
+this.setCurrentSteeringCompass()</p>
+<p>},<br />
+setCurrentSteeringRoll: function(){<br />
+var x = this.accelerationX;<br />
+var steer = &#8220;&#8221;;</p>
+<p>if(x&gt;3)<br />
+steer = &#8220;left&#8221;<br />
+if(x&gt;5)<br />
+steer = &#8220;hardleft&#8221;<br />
+if(x&gt;7)<br />
+steer = &#8220;veryhardleft&#8221;<br />
+if(x&lt;-3)<br />
+steer = &#8220;right&#8221;<br />
+if(x&lt;-5)<br />
+steer = &#8220;hardright&#8221;<br />
+if(x&lt;-7)<br />
+steer = &#8220;veryhardright&#8221;</p>
+<p>this.setSteering(steer)</p>
+<p>},<br />
+setCurrentSteeringCompass: function(){</p>
+<p>var adjustedHeading;</p>
+<p>var currentHeading = this.currentHeading;<br />
+var adjustment = 180 &#8211; this.steeringCentre</p>
+<p>// if steeringCentre &lt; 180, at some point it crosses 0 to 360<br />
+// work out by how much<br />
+if(this.steeringCentre &lt; 180){</p>
+<p>// values that go past 360 by this amount must be converted into negative<br />
+var adjustmentLimit = 360 &#8211; adjustment;</p>
+<p>if(this.currentHeading &gt; adjustmentLimit){<br />
+var distanceFromZero = 360 &#8211; this.currentHeading<br />
+currentHeading = 0 &#8211; distanceFromZero<br />
+}</p>
+<p>adjustedHeading = currentHeading + adjustment</p>
+<p>}<br />
+if(this.steeringCentre &gt; 180){</p>
+<p>var adjustmentLimit = 0 &#8211; adjustment;</p>
+<p>if(this.currentHeading &lt; adjustmentLimit){<br />
+currentHeading = 360 + currentHeading<br />
+}</p>
+<p>adjustedHeading = currentHeading + adjustment</p>
+<p>}</p>
+<p>app.setVariable(&#8220;adjustedHeading&#8221;,adjustedHeading)</p>
+<p>// work with 180 as the centre point<br />
+// if the adjustedHeading is from 200 to 260, turn left<br />
+// if from 160-100, turn right</p>
+<p>if(adjustedHeading &gt;= 200)<br />
+this.currentSteering = &#8220;left&#8221;<br />
+if(adjustedHeading &gt;= 220)<br />
+this.currentSteering = &#8220;hardleft&#8221;<br />
+if(adjustedHeading &gt;= 240)<br />
+this.currentSteering = &#8220;veryhardleft&#8221;<br />
+if(adjustedHeading &lt;= 160)<br />
+this.currentSteering = &#8220;right&#8221;<br />
+if(adjustedHeading &lt;= 140)<br />
+this.currentSteering = &#8220;hardright&#8221;<br />
+if(adjustedHeading &lt;= 120)<br />
+this.currentSteering = &#8220;veryhardright&#8221;<br />
+if(adjustedHeading &gt; 160 &amp;&amp; adjustedHeading &lt; 200)<br />
+this.currentSteering = &#8220;&#8221;</p>
+<p>this.setSteering(this.currentSteering)<br />
+},<br />
+watchDirection: function(){</p>
+<p>// only do this if using motiondriving<br />
+if(app.getVariable(&#8220;motiondriving&#8221;))<br />
+this.setDirection(app.heading);</p>
+<p>setTimeout(&#8220;app.rc.watchDirection()&#8221;,this.watchDirectionTimeout)</p>
+<p>},</p>
+<p>watchSpeed: function(){</p>
+<p>if(this.DeviceMotionSupported)<br />
+this.watchSpeedMotion()<br />
+else<br />
+this.watchSpeedCompass()</p>
+<p>},<br />
+watchSpeedMotion: function(){</p>
+<p>var speed = 0;<br />
+var y = this.accelerationY;</p>
+<p>if(y &lt; 5)<br />
+speed = 20<br />
+if(y &lt; 4)<br />
+speed = 40<br />
+if(y &lt; 3)<br />
+speed = 60<br />
+if(y &lt; 2)<br />
+speed = 80<br />
+if(y &lt; 1)<br />
+speed = 100</p>
+<p>if(app.getVariable(&#8220;motiondriving&#8221;))<br />
+this.setSpeed(speed)</p>
+<p>setTimeout(&#8220;app.rc.watchSpeed()&#8221;,this.watchSpeedTimeout)</p>
+<p>},</p>
+<p>watchSpeedCompass: function(){<br />
+var beta = app.beta<br />
+if(beta &lt; 0) beta = 0;<br />
+if(beta &gt; 30) beta = 30;<br />
+var speed = (30 &#8211; beta)*3.3333</p>
+<p>if(app.getVariable(&#8220;motiondriving&#8221;))<br />
+this.setSpeed(speed)</p>
+<p>setTimeout(&#8220;app.rc.watchSpeed()&#8221;,this.watchSpeedTimeout)</p>
+<p>},</p>
+<p>watchAPIs: function(){</p>
+<p>this.getAPIDirection()<br />
+this.getAPISpeed()<br />
+this.getAPIGear()</p>
+<p>setTimeout(&#8220;app.rc.watchAPIs()&#8221;,this.watchAPITimeout)<br />
+},</p>
+<p>updateAPIDirection: function(){</p>
+<p>this.setAPIDirection(this.currentSteering);<br />
+setTimeout(&#8220;app.rc.updateAPIDirection()&#8221;,this.updateAPITimeout)</p>
+<p>},</p>
+<p>updateAPISpeed: function(){</p>
+<p>this.setAPISpeed(this.currentSpeed)<br />
+setTimeout(&#8220;app.rc.updateAPISpeed()&#8221;,this.updateAPITimeout)</p>
+<p>},</p>
+<p>move: function(speed,gear){</p>
+<p>if(isNaN(speed))<br />
+speed = 100;</p>
+<p>app.setPin(&#8220;pwma&#8221;,speed)<br />
+app.setPin(&#8220;pwmb&#8221;,speed)</p>
+<p>if(gear == &#8220;R&#8221;){<br />
+app.setPin(&#8220;a1a&#8221;,true)<br />
+app.setPin(&#8220;a1b&#8221;,false);<br />
+app.setPin(&#8220;b1a&#8221;,true)<br />
+app.setPin(&#8220;b1b&#8221;,false);</p>
+<p>} else if(gear == &#8220;D&#8221;) {<br />
+app.setPin(&#8220;a1a&#8221;,false)<br />
+app.setPin(&#8220;a1b&#8221;,true);<br />
+app.setPin(&#8220;b1a&#8221;,false)<br />
+app.setPin(&#8220;b1b&#8221;,true);</p>
+<p>} else {</p>
+<p>app.setPin(&#8220;a1a&#8221;,false)<br />
+app.setPin(&#8220;a1b&#8221;,false);<br />
+app.setPin(&#8220;b1a&#8221;,false)<br />
+app.setPin(&#8220;b1b&#8221;,false);</p>
+<p>}<br />
+},</p>
+<p>stop: function(){<br />
+app.setPin(&#8220;a1a&#8221;,false)<br />
+app.setPin(&#8220;a1b&#8221;,false);<br />
+app.setPin(&#8220;b1a&#8221;,false)<br />
+app.setPin(&#8220;b1b&#8221;,false);</p>
+<p>},</p>
+<p>turn: function(direction,speed,gear){</p>
+<p>if(!gear)<br />
+gear = &#8220;D&#8221;</p>
+<p>if(direction == &#8220;R&#8221;){<br />
+app.setPin(&#8220;pwma&#8221;,0)<br />
+app.setPin(&#8220;pwmb&#8221;,speed)</p>
+<p>app.setPin(&#8220;a1a&#8221;,false)<br />
+app.setPin(&#8220;a1b&#8221;,false);</p>
+<p>if(gear == &#8220;D&#8221;){<br />
+app.setPin(&#8220;b1a&#8221;,false)<br />
+app.setPin(&#8220;b1b&#8221;,true);<br />
+} else {<br />
+app.setPin(&#8220;b1a&#8221;,true)<br />
+app.setPin(&#8220;b1b&#8221;,false);<br />
+}<br />
+}<br />
+if(direction == &#8220;L&#8221;){<br />
+app.setPin(&#8220;pwma&#8221;,speed)<br />
+app.setPin(&#8220;pwmb&#8221;,0)</p>
+<p>if(gear == &#8220;D&#8221;){<br />
+app.setPin(&#8220;a1a&#8221;,false)<br />
+app.setPin(&#8220;a1b&#8221;,true);<br />
+} else {<br />
+app.setPin(&#8220;a1a&#8221;,true)<br />
+app.setPin(&#8220;a1b&#8221;,false);<br />
+}</p>
+<p>app.setPin(&#8220;b1a&#8221;,false)<br />
+app.setPin(&#8220;b1b&#8221;,false);</p>
+<p>}</p>
+<p>},</p>
+<p>drive: function(){</p>
+<p>var steering = this.currentSteering;<br />
+var speed = this.currentSpeed;<br />
+var gear = this.currentGear;</p>
+<p>if(app.getVariable(&#8220;apiMode&#8221;) == &#8220;1&#8221;){<br />
+steering = this.apiSteering;<br />
+speed = this.apiSpeed;<br />
+gear = this.apiGear<br />
+}</p>
+<p>if(app.getVariable(&#8220;pwm&#8221;) != &#8220;1&#8221;){<br />
+if(speed &gt; 50)<br />
+speed = 100;<br />
+else<br />
+speed = 0;</p>
+<p>}</p>
+<p>if(gear == &#8220;&#8221; || speed == 0)<br />
+this.stop();</p>
+<p>else if(String(steering).match(/left/))<br />
+this.turn(&#8220;L&#8221;,speed, gear)</p>
+<p>else if(String(steering).match(/right/))<br />
+this.turn(&#8220;R&#8221;,speed, gear)</p>
+<p>else if(speed &gt; &#8220;&#8221;)<br />
+this.move(speed,gear);</p>
+<p>setTimeout(&#8220;app.rc.drive()&#8221;,this.driveTimeout)<br />
+},</p>
+<p>control: function(gear, speed, steer){</p>
+<p>this.setGear(gear)<br />
+this.setSpeed(speed)<br />
+this.setSteering(steer)<br />
+}</p>
+<p>}</p>
+<p></p>
+</div>
+</section>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src="wp-includes/js/jquery/ui/widget.min.js%3Fver=1.11.4" id='jquery-ui-widget-js'></script>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js?ver=5.5.1' id='respond-js'></script>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js?ver=5.5.1' id='easing-js'></script>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js?ver=5.5.1' id='fancybox-js'></script>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js?ver=5.5.1' id='cycle-js'></script>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src="wp-content/themes/smartstart/js/jquery.smartStartSlider.min.js%3Fver=5.5.1" id='smartstart-slider-js'></script>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.min.js?ver=5.5.1' id='isotope-js'></script>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.4/jquery.jcarousel.min.js?ver=5.5.1' id='jcarousel-js'></script>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js?ver=5.5.1' id='touch_swipe-js'></script>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src="wp-content/themes/smartstart/js/custom.js%3Fver=5.5.1" id='custom_scripts-js'></script>
+<script type="f2a4ae5c8695af1d4a28ea56-text/javascript" src="wp-includes/js/wp-embed.min.js%3Fver=5.5.1" id='wp-embed-js'></script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="f2a4ae5c8695af1d4a28ea56-|49" defer=""></script></body>
+</html>

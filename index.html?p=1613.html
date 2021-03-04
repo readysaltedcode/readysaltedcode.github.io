@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--[if IE 7]>                  <html class="ie7 no-js"  lang="en-US"     <![endif]-->
+<!--[if lte IE 8]>              <html class="ie8 no-js"  lang="en-US"     <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Lesson for RPi and Momentary Push Button | readysaltedcode</title>
+<script src="cdn-cgi/apps/head/XqCFCod2Ff5e_ekjogbj5tTs0_E.js"></script><link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="readysaltedcode &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="readysaltedcode &raquo; Comments Feed" href="comments/feed/index.html" />
+<link rel='stylesheet' href="wp-includes/css/dist/block-library/style.min.css%3Fver=5.5.1.css" type='text/css' media='all' />
+<link rel='stylesheet' href="wp-content/themes/smartstart/style.css%3Fver=5.5.1.css" type='text/css' media='all' />
+<link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Quicksand%3A300%2Cregular%2C700&#038;subset=latin&#038;ver=5.5.1" type='text/css' media='all' />
+<link rel='stylesheet' href="https://fonts.googleapis.com/css?family=Quicksand%3A300%2Cregular%2C700&#038;subset=latin&#038;ver=5.5.1" type='text/css' media='all' />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css?ver=5.5.1' type='text/css' media='all' />
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js?ver=false' id='jquery-js'></script>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src="wp-content/themes/smartstart/js/modernizr.custom.js%3Fver=5.5.1" id='modernizr_custom-js'></script>
+<link rel="https://api.w.org/" href="wp-json/index.html" /><link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/1613" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.readysaltedcode.org/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 5.5.1" />
+<link rel="canonical" href="index.html%3Fp=1613.html" />
+<link rel='shortlink' href="index.html%3Fp=1613.html" />
+<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed%3Furl=http:%252F%252Fwww.readysaltedcode.org%252Flesson-for-rpi-and-momentary-push-button%252F" />
+<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed%3Furl=http:%252F%252Fwww.readysaltedcode.org%252Flesson-for-rpi-and-momentary-push-button%252F&amp;format=xml" />
+<style>
+/* Main styles */
+body {
+	color: #545454;
+	font: normal 13px/1.7 "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+::-moz-selection { background: #dd3333; color: #ffffff; text-shadow: none; }
+::selection { background: #dd3333; color: #ffffff; text-shadow: none; }
+
+/* Background (hex) */
+body { background: #ffffff url() repeat top center scroll; }
+
+.ss-slider, .ss-slider .slide-images-container,
+.ss-slider .slide-bg-image, .ss-slider .buttons-container,
+.projects-carousel img, #portfolio-items article img,
+.comment .avatar,
+.not-ie #footer:before { background-color: #ffffff; }
+
+@media only screen and (max-width: 767px) { .ss-slider.fully-loaded, .ss-slider.fully-loaded .slide-images-container { background-color: #ffffff; } }
+
+/* Background (rgb) */
+.single-image .zoom, .image-gallery .zoom, .iframe .zoom,
+.no-js .single-image:before, .no-js .image-gallery:before, .no-js .iframe:before {
+	background: rgb(255,255,255);
+	background: rgba(255,255,255, 0.4);
+}
+
+/* Main heading font*/
+h1, h2, h3, h4, h5, h6,
+.button, input[type="submit"], input[type="reset"], button,
+.dropcap,
+label, input, textarea, select,
+th,
+#main-nav a,
+.ss-slider .slide-button h5,
+.projects-carousel, #portfolio-items,
+.entry-meta { font-family: "Quicksand", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+#main-nav ul ul a, .entry-form label { font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+@media only screen and (max-width: 959px) { .extended-pricing-table .features li:before { font-family: "Quicksand", "Helvetica Neue", Arial, Helvetica, sans-serif; } }
+
+/* Blockquote font */
+blockquote { font-family: "Quicksand", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+/* Color scheme (hex) */
+.button, input[type="submit"], input[type="reset"], button,
+.not-ie #main-nav .current_page_item:after, .not-ie #main-nav .current-menu-item:after, .not-ie #main-nav .current_page_parent:after,
+.not-ie #main-nav .current_page_ancestor:after, .not-ie #main-nav .current-menu-ancestor:after,
+#main-nav ul ul a:hover, #main-nav ul ul .hover > a,
+#main-nav ul ul .current_page_item > a, #main-nav ul ul .current_page_item > a:hover,
+#main-nav ul ul .current_page_parent > a, #main-nav ul ul .current_page_parent > a:hover,
+#main-nav ul ul .current-menu-item > a, #main-nav ul ul .current-menu-item > a:hover,
+#main-nav ul ul .current_page_ancestor > a, #main-nav ul ul .current-menu-ancestor > a:hover,
+.ss-slider .active-slide-bar,
+.not-ie .projects-carousel a:hover:after, #portfolio-items > article:hover:after,
+.not-ie .team-member:hover:after,
+#portfolio-items-filter a { background: #dd3333; }
+
+a:hover, a > *:hover,
+.button.no-bg:hover,
+#main-nav a:hover, #main-nav .hover > a,
+#main-nav .current_page_item > a, #main-nav .current-menu-item > a, #main-nav .current_page_parent > a,
+#main-nav .current_page_ancestor > a, #main-nav .current-menu-ancestor > a,
+.acc-trigger a:hover, .acc-trigger.active a, .acc-trigger.active a:hover,
+.tabs-nav li a:hover, .tabs-nav li.active a,
+.ss-slider .slide-button:hover, .ss-slider.fully-loaded .slide-button.active,
+.ss-slider.fully-loaded .slide-button.active h5,
+.ss-slider .slide-content a,
+.projects-carousel a:hover .title, #portfolio-items > article:hover .title,
+.entry-meta a:hover, .entry-meta a:hover time,
+a:hover > .post-format,
+.comment .author a:hover,
+.comment .date a:hover, .comment .date a:hover time,
+.pagination a:hover, .comments-pagination a:hover,
+.single-portfolio .page-header a:hover,
+.widget li a:hover,
+.widget_nav_menu .current_page_item > a, .widget_nav_menu .current-menu-item > a,
+#sidebar .tweets-feed li a, #footer .tweets-feed li a,
+#footer a:hover, #footer-bottom a:hover  { color: #dd3333; }
+
+.button:hover .arrow,
+#back-to-top:hover, .touch-device #back-to-top:active,
+.jcarousel-next:hover, .jcarousel-next:focus, .jcarousel-next:active,
+.jcarousel-prev:hover, .jcarousel-prev:focus, .jcarousel-prev:active,
+.not-ie .projects-carousel a:hover:after, .not-ie #portfolio-items > article:hover:after,
+a:hover > .post-format { background-color: #dd3333; }
+
+#main-nav a:hover, #main-nav .hover > a,
+#main-nav .current_page_item > a, #main-nav .current-menu-item > a, #main-nav .current_page_parent > a,
+#main-nav .current_page_ancestor > a, #main-nav .current-menu-ancestor > a,
+.projects-carousel a:hover, #portfolio-items > article:hover,
+.team-member:hover  { border-bottom-color: #dd3333; }
+
+#main-nav a:hover, #main-nav .hover > a,
+#main-nav .current_page_item > a, #main-nav .current-menu-item > a, #main-nav .current_page_parent > a,
+#main-nav .current_page_ancestor > a, #main-nav .current-menu-ancestor > a,
+.tabs-nav li.active a { border-top-color: #dd3333; }
+
+@media only screen and (max-width: 959px) { .ss-slider.fully-loaded .slide-button.active { border-top-color: #dd3333; } }
+@media only screen and (max-width: 767px) { #main-nav > ul > .current:last-child a { border-bottom-color: #dd3333; } }
+
+/* Color scheme (rgb) */
+.image-gallery-slider-nav a, .ss-slider .pagination-container a {
+		background-color: rgba(221,51,51, 0.6);}
+
+.image-gallery-slider-nav a:hover, .image-gallery-slider-nav a:active,
+.ss-slider .pagination-container a:hover, .ss-slider.show-content-onhover:hover .pagination-container a:hover {
+		background-color: rgba(221,51,51, 1);}
+
+@media only screen and (max-width: 767px) {
+	.ss-slider .pagination-container a, .ss-slider .pagination-container a:hover {
+				background-color: rgba(221,51,51, 0.6);	}
+}
+
+
+</style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://storage.googleapis.com/readysaltedcode-wordpress.appspot.com/1/cropped-readysaltedcode_fav.png" sizes="32x32" />
+<link rel="icon" href="https://storage.googleapis.com/readysaltedcode-wordpress.appspot.com/1/cropped-readysaltedcode_fav.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://storage.googleapis.com/readysaltedcode-wordpress.appspot.com/1/cropped-readysaltedcode_fav.png" />
+<meta name="msapplication-TileImage" content="https://storage.googleapis.com/readysaltedcode-wordpress.appspot.com/1/cropped-readysaltedcode_fav.png" />
+</head>
+<body class="page-template-default page page-id-1613">
+<header id="header" class="container clearfix">
+<a href="index.html" id="logo" title="readysaltedcode">
+<img src="wp-content/themes/smartstart/images/readysaltedcode_red_web_logo.png" alt="readysaltedcode">
+</a>
+<nav id="main-nav">
+<ul id="menu-main-nav" class="menu"><li id="menu-item-471" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-471"><a href="index.html">About Us:</a></li>
+<li id="menu-item-1650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1650"><a href="index.html%3Fp=72.html">Lessons</a></li>
+<li id="menu-item-1226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1226"><a href="index.html%3Fp=1014.html">datadrivendance</a></li>
+<li id="menu-item-418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-418"><a href="stories/index.html">Stories</a></li>
+</ul>
+</nav>
+</header>
+<section id="content" class="clearfix ">
+<div class="container">
+<header class="page-header clearfix">
+<h1 class="page-title">Lesson for RPi and Momentary Push Button</h1>
+</header>
+<h3><span style="color: #808080;">NOTE: Scratch GPIO is being Updated at the time of writing.  (Lesson will be updated once software is released)</span></h3>
+<p><a title="RPi-ano | RPi + Momentary Push Buttons" href="rpiano/index.html">Link to main project page</a></p>
+<h2><span style="color: #000080;"><strong>Overview:</strong></span></h2>
+<p>This is a Scratch  GPIO coding project using the RPi and Push Buttons on the duration of your lesson this project should take 1-3 lessons (1 hour per lesson).</p>
+<p>This works well in pairs or small groups depending on the number of students and the equipment that you have available.</p>
+<h2><span style="color: #000080;">Kit List:</span></h2>
+<p>RPi<br />
+Momentary Push Button (5)<br />
+Jumper cables male to Female solderless<br />
+Resistors 1K<br />
+GPIO expansion cable optional<br />
+Solderless Breadboard  l<em>arge enough for the buttons</em></p>
+<p>Starter</p>
+<ul>
+<li>5-10 mins Play video of completed kit or demonstrate one that is already completed</li>
+<li>Or hand out <a href="http://artofcs-123.appspot.com.storage.googleapis.com/RPiano-Worksheet.pdf">RPiano Worksheet</a> and push buttons per group or individual . <span style="color: #008000;"><strong>Question: What can you do/make with this BUTTON? </strong><span style="color: #000000;"> Get the students to be creative, the more bonkers the idea the better. By asking this question at the beginning they are not limited by the current abilities for hardware or coding.  </span></span></li>
+</ul>
+<p><a href="https://flic.kr/p/pFeA7k"><img loading="lazy" src="https://farm8.staticflickr.com/7482/15540200207_b688874fc3_z.jpg" alt="Screen Shot 2014-10-20 at 11.58.07" width="541" height="360" /></a></p>
+<p>&nbsp;</p>
+<h2><span style="color: #000080;">Main &#8211; Wire Up / Code It</span></h2>
+<p>This activity should take between 40-60mins depending size class, experience and dexterity. This can be spilt into 2 lesson one focusing on the circuit / build and the other focusing on the code. Take your time.</p>
+<h3><span style="color: #000080;">Activity 1</span></h3>
+<p>Hand out <a href="http://artofcs-123.appspot.com.storage.googleapis.com/RPiano-Worksheet.pdf">RPiano Worksheet</a> and ask the students (in pairs) to work out how to wire up the RPi to the breadboard. Use multiple colours if you have them. Use the Black for Ground, Red for Power and Blue or Green for the GPIO pins. Be consistent with your choice of colours.   Check out Jumper (hook-up)cables for more information.  Students may wish to label each wire for each button.  This helps if you have a large gap between lessons and you wish to continue the project over more than one lesson.</p>
+<ul>
+<li>If this is the very first time students have seen an RPi or any wiring diagrams then go through <a title="Resistors" href="index.html%3Fp=1590.html" target="_blank">RESISTORS</a> and <a title="GPIO" href="index.html%3Fp=1608.html" target="_blank">GPIO</a> first.  See scratch animation about <a href="https://scratch.mit.edu/projects/29670172/">resistors</a>. Get the students to create a short animation / image or other explaining briefly in their own words what resistors / GPIO are. This work may be used for classroom / online displays to show what the students have been learning in class.</li>
+</ul>
+<p>This project works well by building a smaller single button circuit first and the allowing the students to continue creating the RPI-ano independently until that have a adding all the buttons.</p>
+<h3><span style="color: #000080;">Activity 2</span></h3>
+<h3><span style="color: #000080;">Raspberry Pi Pin name and numbering:</span></h3>
+<p>This activity is to get the students familiar with the names of the names and their corresponding PIN location.  The PIN name is important as these terms are used for higher level projects and will also be in the updated version of Scratch GPIO for RPI once it is released.</p>
+<p>Below in image one we can the see a single LED and resistor attached to the RPI using the GPIO pins.  This <a href="http://pi.gadgetoid.com/pinout" target="_blank">site</a> has great interactive RPI Pin diagram <span style="color: #999999;"><em>(link opens another tab).  </em><span style="color: #000000;">This is a fabulous resource to use to introduce GPIO pins to your students.</span></span></p>
+<div style="width: 574px" class="wp-caption alignnone"><img loading="lazy" class="" src="https://www.raspberrypi.org/documentation/usage/gpio/images/gpio-led.png" alt="RPi GPIO with LED" width="564" height="424" /><p class="wp-caption-text">Image 1 RPi GPIO with LED</p></div>
+<div style="width: 1010px" class="wp-caption alignnone"><img loading="lazy" class="" src="https://www.raspberrypi.org/documentation/usage/gpio/images/basic-gpio-layout.png" alt="RPI GPIO pin layout" width="1000" height="439" /><p class="wp-caption-text">Image 2 RPI GPIO pin layout</p></div>
+<p>&nbsp;</p>
+<h2><span style="color: #000080;">Activity 3 Single button circuit</span></h2>
+<p><a href="https://flic.kr/p/pFb3cX"><img loading="lazy" src="https://farm6.staticflickr.com/5612/15539507549_863d885ac7_z.jpg" alt="IMG_0275" width="640" height="480" /></a></p>
+<ul>
+<li>Wire up just the push buttons to the RPI or via the GPIO expansion cable (as seen in the image above)
+<ul>
+<li>Students to write pseudo code (or animation) of how they think it work</li>
+</ul>
+</li>
+<li>Once complete run the code to test the the push button
+<ul>
+<li>Students to write pseudo code (or animation) of how they think it work</li>
+<li>The scratch code below shows three different PINS in use.  They are using broadcast to activate the code and play a sound/ animation on screen.  This could also be used to turn on LEDS as an extension activity.</li>
+<li><a href="https://flic.kr/p/pFgso3"><img loading="lazy" src="https://farm8.staticflickr.com/7507/15540564430_119f9343d4_c.jpg" alt="Rpi-ano Scratch Code2" width="600" height="800" /></a></li>
+</ul>
+</li>
+</ul>
+<h3><span style="color: #000080;">Activity 4 Adding all the Buttons</span></h3>
+<ul>
+<li>Build the complete circuit using the wiring diagram</li>
+<li>Create pseudo code / animations that explain how they think code works.</li>
+<li>Run the RPi-ano Code: Playing Sounds.</li>
+<li>Students to record their own sounds or modify the ones in the scratch file.</li>
+<li>Run the Blink Code: LEDS to light up</li>
+</ul>
+<p>Decide which option you are going to use and state (display on the board) this to the class or let the students decide depending on their age/ ability and class size.</p>
+<p>Hand out the kit for each group/ pair or individual. (RPI, Breadboard, Ultrasonic sensor, jumper cables, LEDs and resistors). Give the students plenty of time wire this up.  It can be very &#8216;fiddly&#8217; with the small components and this can lead to some students feeling a little frustrated. If this is the case then give them another set of cables/ breadboard/ resistors to practice on while the &#8216;group&#8217; finish the circuit. If there are no spare kits/ resources then get some students to be journalist and document the whole process with pictures video and interviews. During this time some students can be working on the code while others are building the circuit.</p>
+<h3><span style="color: #000080;">Code</span></h3>
+<p>What is the code doing?<br />
+All the code contain <strong>variables, loops </strong>and<strong> boolean </strong>values<strong>.</strong> This a really clear way of explaining boolean in a simple physical way. By using code and push buttons  why not use it your classroom as a buzzer or instead of you asking the class to be quiet. Make your own teaching voice assistatn. This project could be enhanced further by having appropriate animation that are triggered when the buttons are pressed. A possible fun way to make their own music / musical instruments.  Create game controller using the push buttons, sounds and game animation.</p>
+<h2><span style="color: #000080;">Wrap Up</span></h2>
+<p>Show case each &#8216;groups&#8217; work and ask each one what was the most challenging / interesting thing about this project.</p>
+<p>Ask the students what could this new device be used for and what enhancements/ changes could the make to make it &#8216;better&#8217; for them?</p>
+<h4>Assessment</h4>
+<p>Give the student a copy of the Standards/ Programme of Study / State Level Content Standards. 1) The students, in their groups, should select (tick or colour- in) all the points that they feel the project covers. 2) Get the students to mark themselves as a group on wether or not the partially or fully achieved each point. 3) Mark themselves individually. This type of activity is really useful in getting the students to understand how you as an educator have evidence their learning and progression.</p>
+<p>Using the pseudo code/ animations you will be able to see what the students actually understand about the project and relate this back to the assessment criteria/ standards.</p>
+<p>Below will find the curricular mapping for UK, USA and AUS/NZ</p>
+<p><span style="color: #000080;"><strong>Curriculum Mapping:</strong></span><br />
+<strong><span style="color: #000080;">UK Keystage 3 / 4</span></strong></p>
+<p>design, use and evaluate computation abstractions hat model the state and behaviour of real-world problems and physical systems.</p>
+<p>understand several key algorithms that reflect computational thinking, such as ones for sorting and searching; use logical reasoning to compare the utility of alternative algorithms for the same problem</p>
+<p>use programming languages (graphical), to solve a variety of computational problems; make appropriate use of data structures such as lists, tables or arrays; design and develop modular programs that use procedures or functions</p>
+<p>understand simple Boolean logic [such as AND, OR and NOT] and some of its uses in circuits and programming; understand how numbers can be represented in binary, and be able to carry out simple operations on binary numbers [for example, binary addition, and conversation between binary and decimal</p>
+<p>undertake creative projects that involve selecting, using, and combining multiple applications, preferably across a range of devices, to achieve challenging goals, including collecting and analysing data and meeting the needs of known users.</p>
+<p>develop their capability, creativity and knowledge in computer science, digital media and information technology.</p>
+<p>develop and apply their analytic, problem-solving, design, and computational thinking skills.</p>
+<p><span style="color: #000080;"><strong>USA</strong></span><br />
+<a href="http://artofcs-123.appspot.com.storage.googleapis.com/USA_Mapped_to_CommonCoreStandardsNew-copy.pdf">Project mapped to commoncore</a><br />
+<iframe src="https://www.youtube.com/embed/9IRB454B-5M?rel=0" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<h4><span style="color: #000080;">AUS/NZ</span></h4>
+<p><strong>Digital Technologies knowledge and understanding</strong><br />
+6.1 Investigate the main components of common digital systems, their basic functions and interactions and how such digital systems may connect together to form networks to transmit data<br />
+<strong>Digital Technologies processes and production skills</strong><br />
+6.4 Define problems in terms of data and functional requirements, and identify features similar to previously solved problems<br />
+6.9 Manage the creation and communication of ideas and information including online collaborative projects, applying agreed ethical, social and technical protocols<br />
+8.10 Create and communicate interactive ideas and information collaboratively (online), taking into account social contexts<br />
+8.11 Plan and manage projects, including tasks, time and other resources required, considering safety and sustainability<br />
+<strong>Design and Technologies knowledge and understanding</strong><br />
+6.2 Investigate how forces or electrical energy can control <strong>movement</strong>, <strong>sound</strong> or light in a designed product or system<br />
+8.3 Analyse how motion, force and energy, are used to manipulate and control electromechanical systems when designing simple, engineered solutions<br />
+<strong>Design and Technologies processes and production skills</strong><br />
+6.8 Apply safe procedures when using a variety of materials, components, tools, equipment and techniques to make designed solutions<br />
+8.9 Effectively and safely use a broad range of materials, components, tools, equipment and techniques to make designed solutions<br />
+4.9 Plan a sequence of production steps when making designed solutions individually and collaboratively<br />
+6.10 Develop project plans that include consideration of resources when making designed solutions individually and collaboratively<br />
+8.11 Use project management processes individually and collaboratively to coordinate production of designed solutions</p>
+<p></p>
+</div>
+</section>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src="wp-includes/js/jquery/ui/widget.min.js%3Fver=1.11.4" id='jquery-ui-widget-js'></script>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js?ver=5.5.1' id='respond-js'></script>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js?ver=5.5.1' id='easing-js'></script>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js?ver=5.5.1' id='fancybox-js'></script>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js?ver=5.5.1' id='cycle-js'></script>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src="wp-content/themes/smartstart/js/jquery.smartStartSlider.min.js%3Fver=5.5.1" id='smartstart-slider-js'></script>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.min.js?ver=5.5.1' id='isotope-js'></script>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.4/jquery.jcarousel.min.js?ver=5.5.1' id='jcarousel-js'></script>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js?ver=5.5.1' id='touch_swipe-js'></script>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src="wp-content/themes/smartstart/js/custom.js%3Fver=5.5.1" id='custom_scripts-js'></script>
+<script type="2b0f9b291e0504df686c7ed4-text/javascript" src="wp-includes/js/wp-embed.min.js%3Fver=5.5.1" id='wp-embed-js'></script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="2b0f9b291e0504df686c7ed4-|49" defer=""></script></body>
+</html>
