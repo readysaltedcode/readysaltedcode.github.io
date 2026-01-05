@@ -130,7 +130,7 @@ const subscriptionTiers = [
       <div class="section-header">
         <span class="badge">Free</span>
         <h2>Free Resources</h2>
-        <p>Download these resources for free. Sign up to our newsletter to get notified when we release new materials.</p>
+        <p>Download these resources for free to try in your classroom.</p>
       </div>
 
       <div class="free-grid">
@@ -140,24 +140,9 @@ const subscriptionTiers = [
             <h3>{resource.title}</h3>
             <p>{resource.description}</p>
             <span class="type">{resource.type}</span>
-            <a href="#newsletter" class="download-btn">Download Free</a>
+            <a href="/lessons" class="download-btn">View Lessons</a>
           </div>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter Signup -->
-  <section class="newsletter" id="newsletter">
-    <div class="container">
-      <div class="newsletter-box">
-        <h2>Get Free Resources + Teaching Tips</h2>
-        <p>Join our newsletter for free resources, teaching ideas, and updates on new materials.</p>
-        <form class="newsletter-form" action="#" method="post">
-          <input type="email" placeholder="Your email address" required />
-          <button type="submit">Subscribe</button>
-        </form>
-        <p class="small">No spam. Unsubscribe anytime. We send 1-2 emails per month.</p>
       </div>
     </div>
   </section>
@@ -267,7 +252,7 @@ const subscriptionTiers = [
     <div class="container">
       <h2>Get in Touch</h2>
       <p>Questions about resources or subscriptions? Want a demo or custom quote?</p>
-      <a href="mailto:hello@readysaltedcode.org" class="contact-btn">Contact Us</a>
+      <a href="mailto:genevieve@readysaltedcode.org" class="contact-btn">Contact Us</a>
     </div>
   </section>
 </BaseLayout>
@@ -379,65 +364,7 @@ const subscriptionTiers = [
     background: #218838;
   }
 
-  /* Newsletter */
-  .newsletter {
-    padding: 3rem 0;
-    background: #dd3333;
-    color: #fff;
-  }
-
-  .newsletter-box {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .newsletter h2 {
-    color: #fff;
-    margin-bottom: 0.5rem;
-  }
-
-  .newsletter p {
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
-  }
-
-  .newsletter-form {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .newsletter-form input {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-
-  .newsletter-form button {
-    background: #1a1a2e;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .newsletter-form button:hover {
-    background: #2a2a3e;
-  }
-
-  .newsletter .small {
-    font-size: 0.85rem;
-    opacity: 0.8;
-    margin: 0;
-  }
-
-  /* Lesson Packs */
+    /* Lesson Packs */
   .lesson-packs {
     padding: 4rem 0;
   }
@@ -711,10 +638,6 @@ const subscriptionTiers = [
   }
 
   @media (max-width: 768px) {
-    .newsletter-form {
-      flex-direction: column;
-    }
-
     .pricing-grid {
       grid-template-columns: 1fr;
     }
