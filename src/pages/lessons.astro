@@ -3,46 +3,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const lessons = [
   {
-    title: 'Light Up with Gemma',
+    title: 'Lesson for Gemma',
     description: 'Learn to create wearable technology projects using the Adafruit Gemma microcontroller and NeoPixels.',
-    link: '/light-up-with-gemma',
-    image: '/images/1/Light-Up-with-Gemma.mp4',
+    link: '/lessons/gemma',
     tags: ['Wearables', 'Physical Computing']
   },
   {
     title: 'Simple Wearables',
     description: 'Introduction to creating simple wearable electronics projects with sewable circuits.',
-    link: '/simple-wearables',
+    link: '/lessons/simple-wearables',
     tags: ['Wearables', 'Beginners']
   },
   {
-    title: 'Raspberry Pi Piano',
-    description: 'Build an interactive piano glove using Raspberry Pi and conductive materials.',
-    link: '/rpiano',
+    title: 'RPi-ano',
+    description: 'Build an interactive GPIO piano using Raspberry Pi and momentary push buttons.',
+    link: '/lessons/rpiano',
     tags: ['Raspberry Pi', 'Music']
   },
   {
-    title: 'GPIO Basics',
-    description: 'Learn the fundamentals of General Purpose Input/Output (GPIO) programming.',
-    link: '/gpio',
-    tags: ['Hardware', 'Beginners']
-  },
-  {
-    title: 'Resistors Guide',
-    description: 'Understanding resistors and their role in electronic circuits.',
-    link: '/resistors',
-    tags: ['Electronics', 'Beginners']
-  },
-  {
-    title: 'Gemma Sample Code',
-    description: 'Sample code and projects for the Adafruit Gemma platform.',
-    link: '/gemma-sample-code',
-    tags: ['Code', 'Gemma']
+    title: 'Lesson Crumble',
+    description: 'Educational resource for using the Crumble Board - perfect for beginners of all ages.',
+    link: '/lessons/crumble',
+    tags: ['Crumble', 'Beginners']
   },
   {
     title: 'RC Car with AppShed',
-    description: 'Build and program a remote-controlled car using AppShed.',
-    link: '/rc-car-appshed',
+    description: 'Build and program a remote-controlled car using AppShed mobile app platform.',
+    link: '/lessons/rc-car',
     tags: ['Robotics', 'Mobile']
   }
 ];
@@ -60,17 +47,20 @@ const lessons = [
     <div class="container">
       <div class="lessons-grid">
         {lessons.map((lesson) => (
-          <article class="lesson-card">
-            <div class="lesson-content">
-              <h2>{lesson.title}</h2>
-              <p>{lesson.description}</p>
-              <div class="tags">
-                {lesson.tags.map((tag) => (
-                  <span class="tag">{tag}</span>
-                ))}
+          <a href={lesson.link} class="lesson-card">
+            <article>
+              <div class="lesson-content">
+                <h2>{lesson.title}</h2>
+                <p>{lesson.description}</p>
+                <div class="tags">
+                  {lesson.tags.map((tag) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+                <span class="view-lesson">View Lesson &rarr;</span>
               </div>
-            </div>
-          </article>
+            </article>
+          </a>
         ))}
       </div>
     </div>
@@ -122,11 +112,13 @@ const lessons = [
   }
 
   .lesson-card {
+    display: block;
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
   }
 
   .lesson-card:hover {
@@ -142,6 +134,11 @@ const lessons = [
     font-size: 1.3rem;
     margin-bottom: 0.75rem;
     color: #333;
+    transition: color 0.2s ease;
+  }
+
+  .lesson-card:hover h2 {
+    color: #dd3333;
   }
 
   .lesson-content p {
@@ -154,6 +151,7 @@ const lessons = [
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .tag {
@@ -162,6 +160,12 @@ const lessons = [
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
     font-size: 0.8rem;
+  }
+
+  .view-lesson {
+    color: #dd3333;
+    font-weight: 600;
+    font-size: 0.9rem;
   }
 
   .resources {

@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Simple Wearables" description="Introduction to creating simple wearable electronics with sewable circuits">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/lessons">Lessons</a> / Simple Wearables
+      </nav>
+      <h1>Simple Wearables</h1>
+      <p class="subtitle">Introduction to sewable circuits and wearable electronics</p>
+    </div>
+  </section>
+
+  <article class="lesson-content">
+    <div class="container">
+      <p class="intro">Learn the basics of wearable electronics by creating simple sewable LED circuits. This lesson is perfect for beginners and can be adapted for all ages.</p>
+
+      <h2 class="section-title">Kit List</h2>
+      <ul>
+        <li>Sewable LEDs (or regular LEDs with long leads)</li>
+        <li>Coin cell battery (CR2032)</li>
+        <li>Sewable battery holder</li>
+        <li>Conductive thread</li>
+        <li>Regular thread (for securing)</li>
+        <li>Needles</li>
+        <li>Scissors</li>
+        <li>Fabric or felt to sew onto</li>
+        <li>Fabric marker or chalk</li>
+      </ul>
+
+      <h2 class="section-title">Understanding the Circuit</h2>
+      <p>A simple LED circuit needs:</p>
+      <ul>
+        <li><strong>Power source</strong> - The coin cell battery provides the electricity</li>
+        <li><strong>LED</strong> - Converts electricity into light</li>
+        <li><strong>Conductive path</strong> - The conductive thread carries electricity from the battery to the LED</li>
+      </ul>
+
+      <div class="teaching-tip">
+        <strong>Important:</strong> LEDs have a positive (+) and negative (-) side. The positive side must connect to the positive side of the battery, and the negative to negative. If connected backwards, the LED won't light up!
+      </div>
+
+      <h2 class="section-title">Lesson Structure</h2>
+
+      <h3>Starter: Circuit Planning (10 mins)</h3>
+      <ol>
+        <li>Draw your design on paper first</li>
+        <li>Plan where the battery and LEDs will go</li>
+        <li>Draw the path the conductive thread will take</li>
+        <li>Remember: positive and negative paths must NOT cross!</li>
+      </ol>
+
+      <h3>Main Activity: Sewing the Circuit (30+ mins)</h3>
+
+      <h4>Step 1: Prepare your fabric</h4>
+      <ul>
+        <li>Mark where the battery holder will go</li>
+        <li>Mark where each LED will be placed</li>
+        <li>Lightly draw the thread paths</li>
+      </ul>
+
+      <h4>Step 2: Sew the battery holder</h4>
+      <ul>
+        <li>Use conductive thread</li>
+        <li>Make 3-4 tight loops through each hole</li>
+        <li>Leave long tails to continue the circuit</li>
+      </ul>
+
+      <h4>Step 3: Create the positive path</h4>
+      <ul>
+        <li>Sew from the positive (+) side of battery holder to the positive side of your LED</li>
+        <li>Keep stitches close together for good conductivity</li>
+        <li>Tie off securely at the LED connection point</li>
+      </ul>
+
+      <h4>Step 4: Create the negative path</h4>
+      <ul>
+        <li>Cut a new piece of conductive thread</li>
+        <li>Sew from the negative (-) side of battery holder to the negative side of your LED</li>
+        <li>Make sure paths don't cross!</li>
+      </ul>
+
+      <h4>Step 5: Test and troubleshoot</h4>
+      <ul>
+        <li>Insert the battery (+ side up usually)</li>
+        <li>If LED doesn't light, check connections and polarity</li>
+        <li>Look for loose threads or crossed paths</li>
+      </ul>
+
+      <h2 class="section-title">Troubleshooting Tips</h2>
+      <ul>
+        <li><strong>LED not lighting?</strong> Check battery polarity and that it's making good contact</li>
+        <li><strong>Dim LED?</strong> Your conductive thread path may be too long or connections too loose</li>
+        <li><strong>Intermittent light?</strong> Secure all connection points with more loops</li>
+        <li><strong>Short circuit?</strong> Look for places where positive and negative threads touch</li>
+      </ul>
+
+      <h2 class="section-title">Extension Activities</h2>
+      <ul>
+        <li>Add multiple LEDs in parallel</li>
+        <li>Create a simple switch using a snap or button</li>
+        <li>Design a wearable badge or patch</li>
+        <li>Add LEDs to a hat or bag</li>
+      </ul>
+
+      <div class="resource-links">
+        <h3>Additional Resources</h3>
+        <a href="https://learn.adafruit.com/conductive-thread" target="_blank" rel="noopener noreferrer">Adafruit Conductive Thread Guide</a>
+        <a href="https://learn.sparkfun.com/tutorials/lilypad-basics-e-sewing" target="_blank" rel="noopener noreferrer">SparkFun E-Sewing Tutorial</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+
+  .breadcrumb {
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb a {
+    color: #ccc;
+  }
+
+  .page-header h1 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .lesson-content {
+    padding: 3rem 0;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: #555;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .section-title {
+    color: #dd3333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+  }
+
+  .lesson-content h3, .lesson-content h4 {
+    color: #333;
+    margin-top: 1.5rem;
+  }
+
+  .lesson-content ul, .lesson-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .lesson-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .teaching-tip {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .resource-links {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  .resource-links h3 {
+    margin-top: 0;
+  }
+
+  .resource-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #dd3333;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+  .resource-links a:hover {
+    background: #bb2222;
+    color: #fff;
+  }
+</style>

@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Lesson for Gemma" description="Learn to create wearable technology with Adafruit Gemma and NeoPixels">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/lessons">Lessons</a> / Gemma
+      </nav>
+      <h1>Lesson for Gemma</h1>
+      <p class="subtitle">Wearable technology with Adafruit Gemma and NeoPixels</p>
+    </div>
+  </section>
+
+  <article class="lesson-content">
+    <div class="container">
+      <h2 class="section-title">Kit List</h2>
+      <ul>
+        <li>Gemma</li>
+        <li>2 x Coin Cell batteries</li>
+        <li>1 coin cell battery holder (for 2 coin cells or 2 holders chained together)</li>
+        <li>Conductive Thread</li>
+        <li>3 x Neopixels (sewable LEDs)</li>
+        <li>Needles</li>
+        <li>Scissors</li>
+        <li>Crocodile clips</li>
+        <li>Multimeter (optional)</li>
+        <li>T-shirt or material to stitch onto</li>
+      </ul>
+
+      <h2 class="section-title">Starter: 10mins</h2>
+      <h3>What are microcontrollers?</h3>
+      <p>A <strong>microcontroller</strong> (sometimes abbreviated uC or MCU) is a small computer on a single integrated circuit containing a processor core, memory, and programmable input/output peripherals. Microcontrollers are designed for embedded applications, in contrast to the microprocessors used in personal computers or other general purpose applications.</p>
+
+      <h3>What is Gemma?</h3>
+      <blockquote>
+        "Get started with Adafruit GEMMA with this lovely starter kit! Included is everything you need to make a basic project. There's a GEMMA board, four sewable bright RGB pixels, a battery holder and batteries, 2-ply conductive thread, alligator clips to help you test out your circuit, and a USB cable for programming GEMMA." - Adafruit.com
+      </blockquote>
+      <p>The Gemma does not have a <strong>Serial port</strong> connection for debugging so the serial port monitor will not be able to send/receive data. Unlike the Flora, the Gemma must be connected to a computer via a USB cable. Once programmed it will run any code uploaded onto it.</p>
+
+      <h2 class="section-title">Set up IDE or launch application</h2>
+      <ol>
+        <li>Set Up IDE (if not done already) - see Adafruit Learning System for instructions</li>
+        <li>Check your kit has everything</li>
+        <li>Check that you have spare Coin cell batteries (optional)</li>
+      </ol>
+
+      <p>Testing your microcontroller: Connect Gemma via USB to the computer and use Blinky code to test the onboard LED.</p>
+
+      <h3>Blinky Test Code</h3>
+      <pre><code is:raw>int led = 1;
+// blink the built in red LED
+// 26 - 03 - 14
+
+void setup() &#123;
+  pinMode(led, OUTPUT);
+&#125;
+
+void loop() &#123;
+  digitalWrite(led, HIGH);
+  delay(4000);
+  digitalWrite(led, LOW);
+  delay(8000);
+&#125;</code></pre>
+
+      <h2 class="section-title">What Can We Make?</h2>
+      <p>With Gemma and NeoPixels, you can create wearable light-up projects like:</p>
+      <ul>
+        <li>Light-up clothing and accessories</li>
+        <li>Wearable point-of-view displays</li>
+        <li>Interactive costumes</li>
+        <li>Dance performance wearables</li>
+      </ul>
+
+      <h3>How many Neopixels can the Gemma Run?</h3>
+      <p>Gemma was designed to drive short segments of NeoPixels. There is enough RAM on the ATtiny85 to drive 100 pixels, but depending on program RAM usage you may have to scale back to 60 or 40. Then you have to think about power - the brighter the LEDs, the more power required.</p>
+
+      <h3>To use with NeoPixels:</h3>
+      <ol>
+        <li>Connect the + power line of the strip to Vout on the Gemma, or to a separate 4-7VDC power source such as a 3 or 4 pack of AA batteries.</li>
+        <li>Connect the - common ground to the battery pack (if being used) and also to the Gemma GND pin</li>
+        <li>Connect the data in line to Gemma #1 - this will let you see when data is being sent because the #1 red LED will flicker. You can use other pins but start with #1 since it's easiest to debug and use</li>
+        <li>Install the NeoPixel library as detailed in Adafruit's Uber Guide, and change the PIN to 1 (it's 6 by default)</li>
+        <li>Upload and enjoy!</li>
+      </ol>
+
+      <h2 class="section-title">Main Activity: 45mins+</h2>
+
+      <h3>Task 1: Circuit Design - What are you making?</h3>
+      <p><strong>Draw the Circuit</strong> - Individual Task. This is a really good paper-based activity. Students draw the circuit for their project using colors/labels to highlight the different wires. They need to think about how much distance to use between each LED/Neopixel. Compare circuits with a fellow student. Check to see if the circuit would work. Correct any errors.</p>
+
+      <p><strong>Test the circuit:</strong> Using crocodile clips, create a simple 2 NeoPixel circuit with the Gemma to test the circuit. Don't forget to remove the battery pack when stitching onto the material.</p>
+
+      <h3>Task 2: Stitching</h3>
+      <p>Once you've tested your circuit with crocodile clips, you can start stitching with conductive thread. Take care to:</p>
+      <ul>
+        <li>Keep your stitches tight and consistent</li>
+        <li>Avoid crossing threads (this will cause a short circuit)</li>
+        <li>Secure knots well at connection points</li>
+        <li>Test as you go</li>
+      </ul>
+
+      <div class="resource-links">
+        <h3>Additional Resources</h3>
+        <a href="https://learn.adafruit.com/" target="_blank" rel="noopener noreferrer">Adafruit Learning System</a>
+        <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide" target="_blank" rel="noopener noreferrer">NeoPixel Uber Guide</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+
+  .breadcrumb {
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb a {
+    color: #ccc;
+  }
+
+  .page-header h1 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .lesson-content {
+    padding: 3rem 0;
+  }
+
+  .section-title {
+    color: #dd3333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+  }
+
+  .lesson-content h3 {
+    color: #333;
+    margin-top: 1.5rem;
+  }
+
+  .lesson-content ul, .lesson-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .lesson-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  blockquote {
+    background: #f9f9f9;
+    border-left: 4px solid #dd3333;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #555;
+  }
+
+  pre {
+    background: #1a1a2e;
+    color: #f8f8f2;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+
+  code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+  }
+
+  .resource-links {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  .resource-links h3 {
+    margin-top: 0;
+  }
+
+  .resource-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #dd3333;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+  .resource-links a:hover {
+    background: #bb2222;
+    color: #fff;
+  }
+</style>

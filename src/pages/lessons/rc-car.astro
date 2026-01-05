@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="RC Car with AppShed" description="Build and program a remote-controlled car using AppShed">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/lessons">Lessons</a> / RC Car
+      </nav>
+      <h1>RC Car with AppShed</h1>
+      <p class="subtitle">Build and program your own remote-controlled car</p>
+    </div>
+  </section>
+
+  <article class="lesson-content">
+    <div class="container">
+      <p class="intro">Learn to build and control a remote-controlled car using AppShed. This project combines hardware building with app-based programming.</p>
+
+      <h2 class="section-title">Overview</h2>
+      <p>In this project, you will:</p>
+      <ul>
+        <li>Build a simple RC car chassis</li>
+        <li>Connect motors and a microcontroller</li>
+        <li>Create a mobile app to control the car</li>
+        <li>Program the car to respond to your commands</li>
+      </ul>
+
+      <h2 class="section-title">Kit List</h2>
+      <ul>
+        <li>Car chassis kit (with wheels and motors)</li>
+        <li>Motor driver board</li>
+        <li>Microcontroller (Arduino or similar)</li>
+        <li>Bluetooth module</li>
+        <li>Battery pack</li>
+        <li>Jumper wires</li>
+        <li>Screwdriver</li>
+        <li>Mobile device (phone or tablet)</li>
+      </ul>
+
+      <h2 class="section-title">Building the Car</h2>
+
+      <h3>Step 1: Assemble the Chassis</h3>
+      <ol>
+        <li>Attach the motors to the chassis base</li>
+        <li>Connect the wheels to the motor shafts</li>
+        <li>Attach the caster wheel (front or back depending on design)</li>
+        <li>Secure the battery pack to the chassis</li>
+      </ol>
+
+      <h3>Step 2: Wire the Electronics</h3>
+      <ol>
+        <li>Connect the motor driver to the microcontroller</li>
+        <li>Connect the motors to the motor driver outputs</li>
+        <li>Connect the Bluetooth module to the microcontroller</li>
+        <li>Connect the power supply</li>
+      </ol>
+
+      <div class="teaching-tip">
+        <strong>Safety First:</strong> Always disconnect the battery when wiring up the electronics. Double-check all connections before powering on.
+      </div>
+
+      <h2 class="section-title">Programming with AppShed</h2>
+
+      <h3>What is AppShed?</h3>
+      <p>AppShed is a platform that lets you create mobile apps using a visual, block-based programming interface - similar to Scratch. You can use it to create a controller app for your RC car.</p>
+
+      <h3>Creating Your Controller App</h3>
+      <ol>
+        <li>Go to AppShed and create a new project</li>
+        <li>Add buttons for: Forward, Backward, Left, Right, Stop</li>
+        <li>Program each button to send a command via Bluetooth</li>
+        <li>Test the connection with your car</li>
+      </ol>
+
+      <h3>Basic Control Commands</h3>
+      <ul>
+        <li><strong>Forward:</strong> Both motors run forward</li>
+        <li><strong>Backward:</strong> Both motors run in reverse</li>
+        <li><strong>Left:</strong> Right motor forward, left motor stops (or reverses)</li>
+        <li><strong>Right:</strong> Left motor forward, right motor stops (or reverses)</li>
+        <li><strong>Stop:</strong> Both motors stop</li>
+      </ul>
+
+      <h2 class="section-title">Extension Activities</h2>
+      <ul>
+        <li>Add speed control using sliders</li>
+        <li>Add LED lights to your car</li>
+        <li>Create an obstacle course challenge</li>
+        <li>Add sensors for autonomous driving</li>
+        <li>Customize your app with different themes</li>
+      </ul>
+
+      <h2 class="section-title">Troubleshooting</h2>
+      <ul>
+        <li><strong>Car not responding?</strong> Check Bluetooth connection and pairing</li>
+        <li><strong>Motors not spinning?</strong> Check power connections and motor driver wiring</li>
+        <li><strong>Car going wrong direction?</strong> Swap the motor wire connections</li>
+        <li><strong>Erratic movement?</strong> Check battery level - low batteries cause issues</li>
+      </ul>
+
+      <div class="resource-links">
+        <h3>Additional Resources</h3>
+        <a href="https://appshed.com/" target="_blank" rel="noopener noreferrer">AppShed Platform</a>
+        <a href="https://www.arduino.cc/" target="_blank" rel="noopener noreferrer">Arduino Official Site</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+
+  .breadcrumb {
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb a {
+    color: #ccc;
+  }
+
+  .page-header h1 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .lesson-content {
+    padding: 3rem 0;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: #555;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .section-title {
+    color: #dd3333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+  }
+
+  .lesson-content h3 {
+    color: #333;
+    margin-top: 1.5rem;
+  }
+
+  .lesson-content ul, .lesson-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .lesson-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .teaching-tip {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .resource-links {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  .resource-links h3 {
+    margin-top: 0;
+  }
+
+  .resource-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #dd3333;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+  .resource-links a:hover {
+    background: #bb2222;
+    color: #fff;
+  }
+</style>

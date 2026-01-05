@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="RPi-ano" description="Make your own GPIO Piano with Raspberry Pi">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/lessons">Lessons</a> / RPi-ano
+      </nav>
+      <h1>RPi-ano | RPi + Momentary Push Buttons</h1>
+      <p class="subtitle">Make your own GPIO Piano with Raspberry Pi</p>
+    </div>
+  </section>
+
+  <article class="lesson-content">
+    <div class="container">
+      <h2 class="section-title">Kit List</h2>
+      <ul>
+        <li>Raspberry Pi</li>
+        <li>Breadboard (large enough for the number of buttons)</li>
+        <li>5 x Momentary Push Buttons</li>
+        <li>5 x 1k resistors</li>
+        <li>5 x LEDs</li>
+        <li>5 x 220ohm / 330 ohm resistors</li>
+        <li>GPIO expansion cable (or Male to Female jumper cables)</li>
+        <li>Jumper Cables</li>
+      </ul>
+
+      <h2 class="section-title">STEP 1: Setting up the Breadboard</h2>
+      <p><strong>TIPS:</strong> The momentary push buttons used to create the keys of the piano are a little tricky to push into the breadboard. Carefully check the pins are straight and that they are in the correct position. With a little force, push the buttons with two fingers either side of the push button. This is important because bent pins will not work.</p>
+
+      <p><strong>Why use a GPIO expansion cable (also known as a cobbler)?</strong> To avoid damage to the RPi GPIO pins. If they get broken/bent or are incorrectly connected, this could permanently damage your RPi. Why is it called a cobbler? Because "cobble" means to hack something together, and cobbler is also a dessert similar to pie!</p>
+
+      <h2 class="section-title">STEP 2: Installing Code Libraries</h2>
+      <p>In order for the push buttons to play a sound, we need to install some code <strong>libraries</strong> so that the RPi knows when we have pressed a button. Then we can program/code the button to play a certain sound.</p>
+
+      <p>There are many languages we could use to make our keyboard play sounds. For this project we are going to use Scratch with a <strong>GPIO</strong> library.</p>
+
+      <h3>GPIO Scratch Installation</h3>
+      <p>You may be working with a RPi that has all the libraries installed. On the desktop of the RPi you will see ScratchGPIO. If not, follow the instructions below:</p>
+
+      <h4>With Raspberry Pi connected to Internet:</h4>
+      <p>Open up an LX Terminal window and run:</p>
+      <pre><code>sudo wget http://goo.gl/Pthh62 -O isgh5.sh</code></pre>
+      <p>Once the installer has been downloaded, type:</p>
+      <pre><code>sudo bash isgh5.sh</code></pre>
+
+      <h2 class="section-title">STEP 3: Writing the Code</h2>
+      <p>There are many ways to write this code - here is just one example using Scratch GPIO blocks.</p>
+
+      <h2 class="section-title">STEP 4: Connecting RPi to Breadboard</h2>
+
+      <h3>Without using GPIO expansion cable:</h3>
+      <ul>
+        <li>Connect the ground cable (black) using one of the GROUND pins on the RPi to the - power rail on the breadboard</li>
+        <li>Connect one resistor per push button, ensuring they line up with one of the legs of the button. The other end is inserted into the negative (blue) power rail of the breadboard</li>
+        <li>Connect the jumper cable from the push button to one of the GPIO pins on the RPi. Note that not all pins are available in this version of Scratch GPIO. Check which ones are available by opening ScratchGPIO and using the dropdown on the code block.</li>
+      </ul>
+
+      <h3>With GPIO expansion cable:</h3>
+      <ul>
+        <li>Connect the cobbler to the breadboard</li>
+        <li>Follow the same wiring pattern but connect to the cobbler pins instead of directly to the Pi</li>
+        <li>This provides a safer and more organized connection</li>
+      </ul>
+
+      <h2 class="section-title">STEP 5: Testing and Jamming</h2>
+      <p>Test each button with a simple sound effect. This enables you to check that your button is working. You can record your own sounds - for example, Halloween sound effects for a game you've created, or music for mixing.</p>
+
+      <p>Use more buttons to create your own working games controller!</p>
+
+      <div class="resource-links">
+        <h3>Additional Resources</h3>
+        <a href="https://www.raspberrypi.org/documentation/usage/gpio/" target="_blank" rel="noopener noreferrer">Raspberry Pi GPIO Documentation</a>
+        <a href="https://cymplecy.wordpress.com/scratchgpio/" target="_blank" rel="noopener noreferrer">ScratchGPIO</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+
+  .breadcrumb {
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb a {
+    color: #ccc;
+  }
+
+  .page-header h1 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .lesson-content {
+    padding: 3rem 0;
+  }
+
+  .section-title {
+    color: #dd3333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+  }
+
+  .lesson-content h3, .lesson-content h4 {
+    color: #333;
+    margin-top: 1.5rem;
+  }
+
+  .lesson-content ul, .lesson-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .lesson-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  pre {
+    background: #1a1a2e;
+    color: #f8f8f2;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+
+  code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+  }
+
+  .resource-links {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  .resource-links h3 {
+    margin-top: 0;
+  }
+
+  .resource-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #dd3333;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+  .resource-links a:hover {
+    background: #bb2222;
+    color: #fff;
+  }
+</style>

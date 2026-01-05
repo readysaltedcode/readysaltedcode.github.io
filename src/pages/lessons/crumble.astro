@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Lesson Crumble" description="Educational resource for using the Crumble Board">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/lessons">Lessons</a> / Crumble
+      </nav>
+      <h1>Lesson Crumble</h1>
+      <p class="subtitle">Introduction to the Crumble Board for all ages</p>
+    </div>
+  </section>
+
+  <article class="lesson-content">
+    <div class="container">
+      <p class="intro">This is an educational resource for using the Crumble Board. This has been successfully delivered to students in Grade 2, 5 and 10. The time taken varies depending on the age and previous knowledge of Scratch.</p>
+
+      <h2 class="section-title">Lesson Structure</h2>
+      <ul>
+        <li>Starter</li>
+        <li>Task 1: Turning an LED on</li>
+        <li>Task 2: Blinking a single LED</li>
+        <li>Task 3: Alternate Blinking</li>
+        <li>Wrap Up</li>
+      </ul>
+
+      <h2 class="section-title">Kit List</h2>
+      <ul>
+        <li>Crumble</li>
+        <li>USB Cable</li>
+        <li>Crocodile Clips (for temporary projects)</li>
+        <li>Sparkles (Programmable LEDs)</li>
+        <li>Motors</li>
+      </ul>
+
+      <h2 class="section-title">New To Crumble</h2>
+      <h3>What is a Crumble and Understanding the Board</h3>
+      <p>A simple-to-use microcontroller, a starter board for all. It can drive 2 motors forwards and backwards at variable speeds. It has 4 IO (Input/Output) pads which allow connections to switches, LDRs, low power LEDs and so on.</p>
+
+      <p><a href="http://redfernelectronics.co.uk/crumble-software/" target="_blank" rel="noopener noreferrer">Download Software here</a></p>
+
+      <h3>External Power</h3>
+      <p>Battery or USB powered. The USB sends data and the board needs EXTERNAL power for the LED sparkles, motors and other crumbs. The on-board micro USB socket allows the Crumble to be programmed via a standard USB cable. The Crumble can be powered directly from USB, however, the motor driver and any external boards require an external power source of 4.5V to 5.5V (for example 3xAA batteries).</p>
+
+      <div class="teaching-tip">
+        <strong>Teaching Tip:</strong> Some LED strips are 12V as they are designed for built-in projects - these will not work with the power pack included in the starter kit.
+      </div>
+
+      <h3>Keywords</h3>
+      <ul>
+        <li><strong>Microcontroller</strong> - A small computer on a single chip</li>
+        <li><strong>LEDs</strong> - Sparkles are programmable LEDs</li>
+        <li><strong>Loops</strong> - Repeating code blocks</li>
+        <li><strong>Delay</strong> - Waits (in seconds or milliseconds)</li>
+      </ul>
+      <p><em>'0' - in computer science we start counting from zero</em></p>
+
+      <h2 class="section-title">Main Activities</h2>
+
+      <h3>Task 1: Plug-in (10mins)</h3>
+      <p>After downloading the Software, plug in the cable into the Crumble board. Be careful and ensure that the cable is plugged in the correct way around. Now connect to your computer.</p>
+
+      <div class="teaching-tip">
+        <strong>Teaching Tip:</strong> The board does NOT light up to show that it is connected or powered via USB only. It only lights up the onboard LEDs if using an external power supply. Use the code blocks to create your program.
+      </div>
+
+      <h3>Task 2: Blinky (Hello World of the hardware world)</h3>
+      <p>These small LEDs are connected to the section for motors which have the numbers 1 and 2 next to them. Program the board to turn on 1 LED and then turn it off again. Progress to looping the single LED and finally alternating between both onboard "motor" LEDs.</p>
+
+      <div class="teaching-tip">
+        <strong>Teaching Tip:</strong> When teaching this, be careful to explain that you will need to use the motor block code as they control the LEDs that are built on the board. This can be confusing for younger learners.
+      </div>
+
+      <p>For all programs we are going to use the following blocks: program start, motor, wait, loop</p>
+
+      <p><strong>Question for Learner:</strong> <em>Can you think of any other ways to flash the LEDs?</em></p>
+
+      <h3>Task 3: Adding the Sparkles (15+ mins)</h3>
+      <h4>Wiring it Up</h4>
+      <ol>
+        <li>Ensure that the CRUMBLE has an external power supply attached</li>
+        <li>Connect just 1 sparkle to the crumble:
+          <ul>
+            <li><span class="wire-red">RED</span> - Power</li>
+            <li><span class="wire-black">BLACK</span> - Ground</li>
+            <li><span class="wire-green">GREEN</span> - Data (this wire sends the code to the LED)</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h4>Code for Sparkle</h4>
+      <ol>
+        <li>Use the block: set sparkle () to (colour)</li>
+        <li>Use the wait() block</li>
+        <li>Change the colour of the sparkle</li>
+        <li>Click the coloured square box</li>
+        <li>Select a new colour</li>
+      </ol>
+
+      <h4>Add Next Sparkle</h4>
+      <ol>
+        <li>Connect the next Sparkle (1)</li>
+        <li>Using crocodile clips, connect from Sparkle(0) to the next Sparkle(1) in a chain</li>
+        <li>Connect: Ground, Power, Data</li>
+      </ol>
+
+      <div class="resource-links">
+        <h3>Additional Resources</h3>
+        <a href="http://redfernelectronics.co.uk/crumble/" target="_blank" rel="noopener noreferrer">Crumble Official Site</a>
+        <a href="http://redfernelectronics.co.uk/crumble-software/" target="_blank" rel="noopener noreferrer">Download Crumble Software</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+
+  .breadcrumb {
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb a {
+    color: #ccc;
+  }
+
+  .page-header h1 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .lesson-content {
+    padding: 3rem 0;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: #555;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .section-title {
+    color: #dd3333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+  }
+
+  .lesson-content h3, .lesson-content h4 {
+    color: #333;
+    margin-top: 1.5rem;
+  }
+
+  .lesson-content ul, .lesson-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .lesson-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .teaching-tip {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .wire-red { color: #dd3333; font-weight: bold; }
+  .wire-black { color: #333; font-weight: bold; }
+  .wire-green { color: #28a745; font-weight: bold; }
+
+  .resource-links {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  .resource-links h3 {
+    margin-top: 0;
+  }
+
+  .resource-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #dd3333;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+  .resource-links a:hover {
+    background: #bb2222;
+    color: #fff;
+  }
+</style>
