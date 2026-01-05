@@ -1,41 +1,10 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Google RISE award!" description="Google RISE award! - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Google RISE award!</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>Now the hard work starts (already started&#8230;) The award is for a Dance DataVisualisation project to enabling others to access computer science theory plus use and develop other works with the collected data. 'The Art of Computer Science' is a "dance meets data" visualisation project aims to reduce peoples fear of the subject and specifically to engage dancers into using and understanding technology. The choreography will reinterpret computer science theory into dance form.</p>
+<StoryLayout title="Google RISE award!" year={2014}>
+  <p>Now the hard work starts (already started&#8230;) The award is for a Dance DataVisualisation project to enabling others to access computer science theory plus use and develop other works with the collected data. 'The Art of Computer Science' is a "dance meets data" visualisation project aims to reduce peoples fear of the subject and specifically to engage dancers into using and understanding technology. The choreography will reinterpret computer science theory into dance form.</p>
       <p>The engagement comes from dance choreography and capturing data from the dancers, wearable technology such as using KiwiMove Kit to Lilypad/Flora Arduino. Other methods of data-capture will be using data from smart phones. During the data capture which will last at least 3 months, capturing data on different dancers both individual and groups.</p>
       <p>As Computing / Computer Science is becoming a core element of school curricular across the world.  The complexities of the subject require abstraction to understand concepts and theories. The technical nature of dance will allow the audience to visualise concepts through dance and the visualistions are there to support the understanding.</p>
       <p>BEYOND EXCITED!</p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

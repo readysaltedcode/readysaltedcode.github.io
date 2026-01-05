@@ -1,40 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Brighton Digital Festival 2015" description="Brighton Digital Festival 2015 - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Brighton Digital Festival 2015</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>If you haven't been to this amazing month long festival then you have been missing a treat. <strong><a href="http://brightondigitalfestival.co.uk/" target="_blank">Brighton Digital Festival</a></strong> is a celebration of digital culture that takes place across Brighton and Hove every September. 2015 marks the fifth consecutive year for the Festival. The variety of events is astounding, from digital ballet to major international conferences to small educational workshops. <img loading="lazy" src="http://sqmagazine.co.uk/wp-content/uploads/2013/07/Brighton-Digital-Festival.jpg" width="600" height="400" alt="Brighton Digital Festival Logo" class="alignleft" /></p>
+<StoryLayout title="Brighton Digital Festival 2015" year={2015}>
+  <p>If you haven't been to this amazing month long festival then you have been missing a treat. <strong><a href="http://brightondigitalfestival.co.uk/" target="_blank">Brighton Digital Festival</a></strong> is a celebration of digital culture that takes place across Brighton and Hove every September. 2015 marks the fifth consecutive year for the Festival. The variety of events is astounding, from digital ballet to major international conferences to small educational workshops. <img loading="lazy" src="http://sqmagazine.co.uk/wp-content/uploads/2013/07/Brighton-Digital-Festival.jpg" width="600" height="400" alt="Brighton Digital Festival Logo" class="alignleft" /></p>
       <p>This year we are set to debut <a href="https://www.readysaltedcode.org/art-of-computer-science/" title="[data]Storm" target="_blank"><strong>[data]Storm</strong></a> during the festival with an accompanying installation. </p>
       <p>This is what the Festival Manager had to say about our work.<br />
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

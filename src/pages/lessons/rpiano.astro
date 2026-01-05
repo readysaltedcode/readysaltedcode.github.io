@@ -15,6 +15,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   <article class="lesson-content">
     <div class="container">
+      <div class="legacy-notice">
+        <strong>Note:</strong> This lesson uses ScratchGPIO, which is a legacy tool. For modern Raspberry Pi projects, consider using Python with the gpiozero library or Scratch 3 with GPIO extensions. The concepts taught here remain valuable regardless of the tool used.
+      </div>
+
       <h2 class="section-title">Kit List</h2>
       <ul>
         <li>Raspberry Pi</li>
@@ -41,10 +45,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>You may be working with a RPi that has all the libraries installed. On the desktop of the RPi you will see ScratchGPIO. If not, follow the instructions below:</p>
 
       <h4>With Raspberry Pi connected to Internet:</h4>
-      <p>Open up an LX Terminal window and run:</p>
-      <pre><code>sudo wget http://goo.gl/Pthh62 -O isgh5.sh</code></pre>
-      <p>Once the installer has been downloaded, type:</p>
-      <pre><code>sudo bash isgh5.sh</code></pre>
+      <p>Visit the <a href="https://cymplecy.wordpress.com/scratchgpio/scratch-gpio-version-5/" target="_blank" rel="noopener noreferrer">ScratchGPIO installation page</a> for the latest installation instructions, or run the following in LXTerminal:</p>
+      <pre><code>wget https://raw.githubusercontent.com/cymplecy/scratch_gpio/V5/install_scratchgpio5.sh -O install_scratchgpio5.sh
+sudo bash install_scratchgpio5.sh</code></pre>
 
       <h2 class="section-title">STEP 3: Writing the Code</h2>
       <p>There are many ways to write this code - here is just one example using Scratch GPIO blocks.</p>
@@ -169,5 +172,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .resource-links a:hover {
     background: #bb2222;
     color: #fff;
+  }
+
+  .legacy-notice {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0 8px 8px 0;
+    color: #856404;
   }
 </style>

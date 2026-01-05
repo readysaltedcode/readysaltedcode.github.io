@@ -1,20 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Six year olds can code: Scratch at Stanford Infants" description="Six year olds can code: Scratch at Stanford Infants - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Six year olds can code: Scratch at Stanford Infants</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p><a href="http://scratch.org">Scratch</a> programming: who said kids can’t code!</p>
+<StoryLayout title="Six year olds can code: Scratch at Stanford Infants" year={2013}>
+  <p><a href="http://scratch.org">Scratch</a> programming: who said kids can’t code!</p>
       <p>Firstly I would like to thank Stanford Infants and Regent Class, for allowing me in to their classroom. You are amazing!</p>
       <p>The project: I am a secondary teacher who goes (on my day off) into one of three Yr2 classes at Stanford Infants to teach programming using Scratch and the Animation 12 competition. I initially developed the course as the workload on primary teachers is already huge; Then having to learn a new software package and the concepts behind it just too much. Why not use “Us” secondary experts to deliver that topic and the class teacher can learn at the same time as the student. One of the key things has been the support from the class teacher, especially when I am pitching to high level or going too fast. It has been an amazing experience for me as a practitioner.</p>
       <p>I was terrified before the first lesson. I didn’t sleep the night before; it was like going out on my first placement as a trainee teacher. Funny thinking of it now, 30 6-7 year olds, what can they do apart from think the class teacher is great. That all being said I much prefer the “banter” with the secondary students. I say banter, but as you teachers out there already know it can be very challenging.</p>
@@ -22,24 +11,4 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>By the time this blog goes I will have finished delivering the project. One of the lessons will be delivered by 3 of my yr9 students. They are also new to Scratch and have some great ideas about what the students could do and how they could help them in developing the Yr2 students programming skills. You would be surprise at the planning to get 3 students out of the classroom for 1 lesson. The risk assessment alone……</p>
       <p>Their knowledge acquisition was surprising to say the least. In the same lesson they were able to tell me how to stop the sprite from going off the stage by using the “if on edge bounce” block. Just Brilliant! The lessons fly by, it is a joy to teach. Any secondary who has the opportunity to go and teach at their local primary PLEASE jump at it. It is scary at first but it is also great fun and they think you’re great; something that doesn’t happen as often in secondary schools.</p>
       <p>I have learnt a lot from the class about my teaching and I would like to thank them for that.<br />
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

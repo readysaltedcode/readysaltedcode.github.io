@@ -1,39 +1,8 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Debugging with pointeshoes" description="Debugging with pointeshoes - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Debugging with pointeshoes</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>One of the more difficult things to do for [arra]stre and [data]Storm are the wearables.  As the dancers are in ballet costumes and pointeshoes they come with the own little challenges.  Each of the costumes for [arra]stre have over 10meters of chiffon on each one, that is a lot of material.  Lets just say that chiffon and conductive thread aren't the best of friends.  We are in the process of removing ALL the electronics from all the costumes and shoes as they currently aren't reliable enough for multiple performances.  Each dress took between 4 and 6 hours to hand stitch all the neopixels and mircontrollers.  Removing them took less than a third of the time for each dress.</p>
+<StoryLayout title="Debugging with pointeshoes" year={2015}>
+  <p>One of the more difficult things to do for [arra]stre and [data]Storm are the wearables.  As the dancers are in ballet costumes and pointeshoes they come with the own little challenges.  Each of the costumes for [arra]stre have over 10meters of chiffon on each one, that is a lot of material.  Lets just say that chiffon and conductive thread aren't the best of friends.  We are in the process of removing ALL the electronics from all the costumes and shoes as they currently aren't reliable enough for multiple performances.  Each dress took between 4 and 6 hours to hand stitch all the neopixels and mircontrollers.  Removing them took less than a third of the time for each dress.</p>
       <p>Today was time for the pointeshoes to have a bit of TLC. We achieved this by removing the Floras, Neopixel and velostat pressure switches with nail scissors are the stitching on the shoes is so tiny.  Unfortunately this left the beautiful pointeshoes looking a little rough so we decided to hand dye them "French Navy".  They look amazing&#8230;. currently drying in the airing cupboard to reharden.  We can wait to add the new electronics&#8230;. A flexible pcb.<br />
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

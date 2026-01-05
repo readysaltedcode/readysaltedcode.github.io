@@ -1,40 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="tech playground and a sprinkling of VR" description="tech playground and a sprinkling of VR - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>tech playground and a sprinkling of VR</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>As part of our on going work with the amazing charity <a href="http://www.aiksaath.com">Aik Saath</a> we ran a tech playground workshop.  What is a tech playground you might ask? Well, think of it like a sweet shop or a buffet of all things techie and wonderful.</p>
+<StoryLayout title="tech playground and a sprinkling of VR" year={2016}>
+  <p>As part of our on going work with the amazing charity <a href="http://www.aiksaath.com">Aik Saath</a> we ran a tech playground workshop.  What is a tech playground you might ask? Well, think of it like a sweet shop or a buffet of all things techie and wonderful.</p>
       <p>The one day event took place at YESS in the centre of Slough. We started with a bit of App controlled car using <a href="http://appshed.com">AppShed</a> and Arduino moving on to Pi-Top and physical computing not forgetting the amazing use of Sonic-Pi. We finished the day off with some CoSpaces and VR coding.  It was some much fun for everyone.  Can't wait for the Easter events when will take all this just that little bit further.</p>
       <p><img loading="lazy" class="alignnone size-medium wp-image-1527" src="https://www.readysaltedcode.org/images/FFFFFF-0.png?ZVq1p_MG9-TpnQszcAThUOHcEc9VVCmpYcEnw5Jf_hdUl8TMJYLkBGigc6NNBDFBqVUmj_EXw4k8_wogzQgYjWCzPVtegti46WAXdySaE_g=s300" alt="Tech Play Ground" width="300" height="300"> <img loading="lazy" class="alignnone size-medium wp-image-1528" src="https://www.readysaltedcode.org/images/FFFFFF-0.png?axQHO1vPQHDcQ5kVQY4CvdJJIMn_1FmztDRVrDnMd_dVFpAS9-l2xmTildId6Mz6yg3cCrwHS3hVKYlwmgIgjLl_KgPFWv4HwFl1Pgpz7A=s300" alt="Tech Play Ground" width="300" height="300"></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

@@ -1,44 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Genuino 101 or is it Arduino 101" description="Genuino 101 or is it Arduino 101 - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Genuino 101 or is it Arduino 101</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>All onboard refers to the onboard sensors built into the Curie Module.</p>
+<StoryLayout title="Genuino 101 or is it Arduino 101" year={2016}>
+  <p>All onboard refers to the onboard sensors built into the Curie Module.</p>
       <p>The new board from Intel and Arduino known outside of the USA as Genuino 101. It is the same size at the Uno and can be thought of as replacement for the UNO board. The difference is that the Genuino has the Curie Module, which has a gyroscope, accelerometer, and bluetooth. That is pretty cool. </p>
       <p>Now to the difficult bit - how to pronounce "Genuino"? Which is it&#8230; <em>Gen-U-eeno</em> or is it <em>Gen-Weeno</em>. Well, at ReadySaltedCode we pronouce Gen-Weeno because then we joke that they named the board after Genevieve. (FYI they didn't but it would be cool if they had)</p>
       <p>We have really enjoyed working with Genuino boards. We have been lucky enough to get early access to the boards, mid January this year. We are interested in using the Curie module on the costumes of the ballet dancers to access data from their movements and another additional sensors. Intel had a showcase of the new board at the BETT Show 20th January, UK. We use the Genuino as a wearable with 24Led neopixel rings. Genevieve and [data]Storm ballet dancers showcase our innovation project "The Art of Computer Science" where the worlds of computing and classical ballet collide.<br />
       <p><a href="http://www.artofcs.org/project/genuino-101-led-ring/" target="_blank">Click here to check out our DIY project</a></p>
       <p>The board uses the standard Arduino environment you just need to add the board library via the board manager. If you haven't used Arduino now have a whole new world without having to resources extra sensors and/or cables. Just a few API (application program interface) calls and you are on your way. </p>
       <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/129087728@N06/24648461746/in/dateposted-public/" title="Networks [data]storm"><img loading="lazy" src="https://farm2.staticflickr.com/1448/24648461746_a622f77de5.jpg" width="500" height="375" alt="Networks [data]storm"></a><script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8" type="6cf14bd7d7b99172cb857503-text/javascript"></script></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

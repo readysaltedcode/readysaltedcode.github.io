@@ -1,20 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="CAScade assessment in the new Computing PoS KS1-3" description="CAScade assessment in the new Computing PoS KS1-3 - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>CAScade assessment in the new Computing PoS KS1-3</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p><strong><span style="color: #ff0000;">CAScade: Online CPD from CAS Computing at School.</span></strong></p>
+<StoryLayout title="CAScade assessment in the new Computing PoS KS1-3" year={2014}>
+  <p><strong><span style="color: #ff0000;">CAScade: Online CPD from CAS Computing at School.</span></strong></p>
       <p><em>Today's hangout: </em></p>
       <p>The draft PoS Computing: <a href="http://computingatschool.org.uk/data/uploads/computing-04-02-13_001.pdf">Computing </a></p>
       <p><strong>What is an algorithm</strong>: A formula or set of steps for solving a particular problem. To be an algorithm, a set of rules must be unambiguous and have a clear halting point. (www.webopedia.com) <em>this is one answer, there are many others</em>. More definitions listed below in the chat room comments section.</p>
@@ -37,24 +26,4 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>Miles Berry<br />
       <p>Ben Smith<br />
       <p><a href="https://www.readysaltedcode.org/wp-content/uploads/2013/03/20130324-123732.jpg"><img class="alignnone size-full" alt="20130324-123732.jpg" src="https://www.readysaltedcode.org/wp-content/uploads/2013/03/20130324-123732.jpg" /></a></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

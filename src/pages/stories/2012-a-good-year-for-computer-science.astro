@@ -1,20 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="2012 a good year for Computer Science" description="2012 a good year for Computer Science - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>2012 a good year for Computer Science</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p><strong>What a year</strong></p>
+<StoryLayout title="2012 a good year for Computer Science" year={2012}>
+  <p><strong>What a year</strong></p>
       <p>I am self-professed geek and huge sci-fi fan. My teaching allows me to use sci-fi examples and technological innovations to engage and educate students.</p>
       <p>On <strong>January</strong> 11th I was quoted in the Guardian (front page article) in reference to Michael Gove's announcement regarding the ICT programme of study:</p>
       <p>Genevieve Smith Nunes, an IT and business studies teacher at Dorothy Stringer high school in Brighton, also welcomed the announcement. She said: "In my own school we have developed our own programme of study anyway, because of the constraints that ICT has – but still incorporating all of the elements that are there [in the existing curriculum].</p>
@@ -29,24 +18,4 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>What about 2013: Even MORE exciting than 2012.<br />
       <p><em>plus many more events that are still in the planning stage.</em></p>
       <p>It is going to be a great year!</p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

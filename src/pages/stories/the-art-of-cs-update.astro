@@ -1,41 +1,10 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="the Art of CS update" description="the Art of CS update - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>the Art of CS update</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>I have a PLAN!</p>
+<StoryLayout title="the Art of CS update" year={2013}>
+  <p>I have a PLAN!</p>
       <p>The whole process of planning the project was initially daunting. Linking all the elements to learning, understanding and appreciation together has been more challenging that ususal as I want others to be able to share, use and repurpose what I have done.  As an educator (teacher) I am always wrting for the understanding of others but this project is different.  The contact that I may or may not have with the individauls using the resources, data and more will be very different.  Therefore, I must ensure that what is available to others does NOT require a PHD to understand the data and alike.</p>
       <p>I have spent a lot time talking with data experts, teachers and artists about what their ideal information would look like.  Very different groups with different needs and requirements. For me the most important thing is enable others , techie or not,  to try something and tinker. Have fun and not feel frustrated by it.</p>
       <p>Desconstructing the project into its component parts has really helped.  Along with the use of evernote and trello. I am feeling ready [and salted] to deliver this project.</p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

@@ -1,43 +1,12 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="The creative and physical role of wearable technology" description="The creative and physical role of wearable technology - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>The creative and physical role of wearable technology</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>When we think about wearable technology and what it means, most people think of smart watches and fitness trackers, but they are only part of what the sector has to offer. The wearable tech market is developing constantly, with the potential to cover many different sectors and affect all of our lives; it will be worth vast sums of money by 2025. </p>
+<StoryLayout title="The creative and physical role of wearable technology" year={2015}>
+  <p>When we think about wearable technology and what it means, most people think of smart watches and fitness trackers, but they are only part of what the sector has to offer. The wearable tech market is developing constantly, with the potential to cover many different sectors and affect all of our lives; it will be worth vast sums of money by 2025. </p>
       <p>Wearables are increasingly used in dance and theatre performances and are about visuals, lights, movement, location and connecting with people. Wearable technology is reaching the forefront of the fashion industry with companies like <a href="http://http://cutecircuit.com/" target="_blank"><strong>Cute Circuit</strong></a> and their haut couture collection showcasing beautiful digital fashion pieces at Mercedes Benz fashion week, and celebrities such as Nicole Scherzinger and Katy Perry wearing Twitter dresses and light-up Victorian frocks down the red carpet. </p>
       <p>Wearable technology is of course also playing a key part in the fitness and sport sector. Wearable tech is used to track biometric data from the wearer. Smart clothing, such as <a href="http://www.omsignal.com/" target="_blank"><strong>OMsignal Biometric Smartwear</strong></a>, utilises data in a way that can help make fitness training more efficient. The clothes record the heart rate, monitor breathing, blood pressure and sweat of the wearer, which can then be used to modify the wearer’s fitness and training programme. </p>
       <p>Wearable tech also offers some real benefits in health. There are types of wearables that enable people to live active lives; this is where biomedical engineering plays a huge role.  Medical devices that deliver constant drug supply at the correct dose to keep the person alive. Not a traditional concept of wearable but an important one none the less.</p>
       <p>Current devices known as  “high frequency spinal cord stimulators” can also be implanted into the body to reduce chronic pain for those suffering spinal pain, the ultimate wearable tech. They are actually inserted into the body around the spinal cord, but like all smart tech, these have be charged everyday in a similar way to an apple watch. </p>
       <p>Wearable technology is playing significant roles both as visually inspiring fashion and design pieces on the catwalks of New York, and as significant medical and fitness enhancing aids. It already serves an important role in the creative and physical spheres and will continue to develop into more and more sectors in the future. </p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

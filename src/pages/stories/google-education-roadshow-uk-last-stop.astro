@@ -1,41 +1,10 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Google Education Roadshow UK - last stop" description="Google Education Roadshow UK - last stop - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Google Education Roadshow UK - last stop</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>What a whirl wind tour of the UK to some amazing schools and colleges. I have had an amazing time sharing resources, ideas and computing content with all of the educators on the Tour. Each educational venue has had very different time allocation, teaching resources and budget but they have all had passion and verve to create the best opportunities for their students in their schools.</p>
+<StoryLayout title="Google Education Roadshow UK - last stop" year={2015}>
+  <p>What a whirl wind tour of the UK to some amazing schools and colleges. I have had an amazing time sharing resources, ideas and computing content with all of the educators on the Tour. Each educational venue has had very different time allocation, teaching resources and budget but they have all had passion and verve to create the best opportunities for their students in their schools.</p>
       <p>There was always something surprising at each place for example in Wigan. Wigan UTC has a vertical farm, pcb fabrication and an indoor climbing wall. These are just some of the fantastic course and subjects that all the schools have been providing for their communities. </p>
       <p>I even shared <a href="http://www.arrastre.org" target="_blank"><strong>[arra]stre</strong></a> and [data]storm content, showing how to inspire and engage with computer science in non traditional ways. </p>
       <p>The last stop is in Edinburgh for 20 Primary educators using Scratch and the Crumble board. I am really looking forward to seeing their approaches to Computer Science as the Scottish courses are so creative. For information relating to Computing and Computer Science Scotland <a href="http://www.educationscotland.gov.uk/nationalqualifications/subjects/computing.asp" target="_blank"><strong>click here</strong></a></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

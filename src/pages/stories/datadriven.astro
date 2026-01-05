@@ -1,44 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="DataDrivenDance" description="DataDrivenDance - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>DataDrivenDance</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>DataDrivenDance -Innovation, creative and learning through classical ballet and computer science.</p>
+<StoryLayout title="DataDrivenDance" year={2015}>
+  <p>DataDrivenDance -Innovation, creative and learning through classical ballet and computer science.</p>
       <p>We use the dance projects as art pieces in their own right as well as the driving force for our engagement with computer science. They are an abstract form of the theory to engage different audiences with a focus on encouraging girls in the STEAM fields. Science, Technology, Engineering, ARTS and Math. We, at readysaltedcode, feel that creativity is vital in developing code and programs.</p>
       <p>DataDrivenDance has 2 pieces so far with another 2 in progress. The first piece [arra]stre (pronouced array - stre) use theory and concepts taken directly from England’s Computing Education program of study. Specifically the Key Stage 3 curriculum, aimed at 11-14 year olds students. Computing was introduce into England’s curriculum in 2014; Although many teachers were already adding this to their ICT content. The key concepts use in the ballet included: boolean and Binary, Debugging, Algorithm, Big Data and Computational Thinking.</p>
       <p>Each piece uses different technologies to enhance the performance. For data capture we use the kinect 360 and Xbox One sensors bars plus data from wearable arduinos and mobile phones. The skeleton data is turned into JSON using our Slurp program. This is then used for the data visualisations that are projected behind the dancers in the theatre. We have hosted each of the data visualisations with stored data online at datadrivendance so that anyone can see the working code and run the visualisation in real time. Anyone is able to remix the code should they wish to as out code is open source. Our code is hosted on github <a href="https://github.com/readysaltedcode" target="_blank">https://github.com/readysaltedcode</a></p>
       <p>Other data capture sources came from the use of an app “DATA LOGGER” which exports data is CVS format. This app does not appear to be available anymore. There are other apps that capture sensor or you could build one yourself. We use Adafruit Flora’s with accelerometers and bluetooth modules to capture & send the data from the dancers costumes including their pointe shoes. For the second ballet we modify the pointe shoe wearable to use a smaller board and simulated sensor data. The reason for the change was that the LEDs only triggered when up on pointe which did not happen through out the piece. We wanted the shoes to simulate data movement. In [pain]Byte the pointe shoes will trigger on sensor data, we are testing different versions and sensor data at the moment.</p>
       <p>We will post further updates on the sensors and boards that we are going to use in the costumes for [pain]Byte</p>
       <p><iframe width="680" height="510" src="https://www.youtube.com/embed/KqOmDZAhEUk?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

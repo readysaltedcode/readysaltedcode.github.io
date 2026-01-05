@@ -1,43 +1,12 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="#RISEsummit2014" description="#RISEsummit2014 - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>#RISEsummit2014</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>We are coming up to the last day of the Summit. What an experience.</p>
+<StoryLayout title="#RISEsummit2014" year={2014}>
+  <p>We are coming up to the last day of the Summit. What an experience.</p>
       <p>The time difference on my capacity to absorb information has not helped with some many brilliant speakers.  It has all blended into one giant data dump that needs some TLC and filtering. It has been very interesting to talk to the other educators and groups about the differences in curricular around the world.  I think that in the UK we are luckier than most in this regard.</p>
       <p>We have a national program of study.  This is so different to what happens here in the USA.  From what the educators have said, it varies from State to State and then School district to school district. I am not sure how that even works. Hopefully this will improve with the introduction of more CS lessons or as a subject over time. This <span style="color: #ff0000;"><a href="http://csta.acm.org/Curriculum/sub/K12Standards.html" target="_blank"><span style="color: #ff0000;">site</span></a></span> has been helpful for me as a Brit to understand what is going on the US Computer Science education system.</p>
       <p>I digress: back to the Summit.  We had a great time doing 10x Thinking.  (Think bigger, bolder, brighter or Moonshot thinking). It was a fun activity. Our team was looking at big data and coming up with bonkers ideas to do with that. So we came up with physical and digital installation of a Big Data Forest. I had selected big data on the thinking that I would be instructed on it&#8230; Little did I know that it involve play dough, pipe-cleaners and shiny things.</p>
       <p>So many brilliant projects that I haven't had time to check out during the summit.</p>
       <p>Back to work for the final day. :)</p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

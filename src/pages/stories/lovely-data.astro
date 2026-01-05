@@ -1,42 +1,11 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Lovely data" description="Lovely data - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Lovely data</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>Data is beautiful in all forms but especially when used in data visualisations.  A lot of dataviz is used to show large data sets these can be dynamic or static.  The important thing is to help the audience see the information from the data. We use a lot of data visualisation in our #datadrivendance performances</p>
+<StoryLayout title="Lovely data" year={2013}>
+  <p>Data is beautiful in all forms but especially when used in data visualisations.  A lot of dataviz is used to show large data sets these can be dynamic or static.  The important thing is to help the audience see the information from the data. We use a lot of data visualisation in our #datadrivendance performances</p>
       <p>Wind Map   Live data available <span style="color: #ff0000;"><a style="color: #ff0000;" href="http://www.hint.fm/wind" target="_blank">Hint FM wind data</a></span></p>
       <p><img loading="lazy" class="alignnone" src="http://hint.fm/wind/gallery/thumbs/wind-data-oct-30.js.png" width="310" height="200" /></p>
       <p>[data]Storm is about ocean storm and computer science theory. The theory for this ballet is all about data transmission, security, protocols, internet, networks and linked to weather data. We worked with The Met Office and climate data to influence the choreography and visuals of the ballet. We have a paper on Simulated Networks and data driven dance in <span style="color: #ff0000;">EVA-London 2016</span> and two submission to The Graphical Web</p>
       <p><iframe src="https://www.youtube.com/embed/w_EoqJYX4NQ?rel=0" width="320" height="150" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

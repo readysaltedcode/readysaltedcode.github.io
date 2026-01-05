@@ -1,0 +1,57 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  year: number;
+}
+
+const { title, year } = Astro.props;
+---
+
+<BaseLayout title={title} description={`${title} - readysaltedcode story archive`}>
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/stories">Stories Archive</a>
+      </nav>
+      <span class="archive-badge">Archive {year}</span>
+      <h1>{title}</h1>
+    </div>
+  </section>
+
+  <article class="story-content">
+    <div class="container">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+  .breadcrumb { margin-bottom: 1rem; }
+  .breadcrumb a { color: #ccc; }
+  .archive-badge {
+    display: inline-block;
+    background: #6c757d;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
+  .story-content { padding: 3rem 0; }
+  .story-content .container { max-width: 800px; }
+  .story-content :global(p) { margin-bottom: 1.5rem; line-height: 1.8; }
+  .story-content :global(img) { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
+  .story-content :global(a) { color: #dd3333; }
+  .story-content :global(blockquote) { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
+  .story-content :global(strong) { font-weight: 600; }
+  .story-content :global(iframe) { max-width: 100%; margin: 1.5rem 0; }
+</style>

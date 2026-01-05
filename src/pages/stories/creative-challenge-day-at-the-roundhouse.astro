@@ -1,42 +1,11 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Creative Challenge Day at the RoundHouse" description="Creative Challenge Day at the RoundHouse - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Creative Challenge Day at the RoundHouse</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>What a day!</p>
+<StoryLayout title="Creative Challenge Day at the RoundHouse" year={2014}>
+  <p>What a day!</p>
       <p>Starting off with a fairly open brief to the young creatives "create your own light and sound installation". We started off with their interests in music and sound by creating music and sound effects using <a href="https://www.madewithcode.com/projects/beats" target="_blank"><strong>Beats with Code</strong></a> plus their <a href="https://www.madewithcode.com/projects/music" target="_blank"><strong>music mixer</strong></a>. These are both great ways to play around with sound and code in a simple and accessible format that most students are familiar with. It uses blockly which is a "scratch" like coding environment. It doesn't need to be installed or plugins just go to the website and start playing.</p>
       <p>Next we work on the hardware that we would be using which included <a href="http://www.makeymakey.com/" target="_blank"><strong>MakeyMakeys</strong></a>, <strong><a href="http://redfernelectronics.co.uk/crumble/" target="_blank">Crumble Boards</a></strong> and <a href="https://www.microbit.co.uk/" target="_blank">Microbit</a>. The interactive element of the installation include touch and motion.</p>
       <p>A short video of some of the work the students produced in 6 hours from scratch!</p>
       <p><iframe width="680" height="383" src="https://www.youtube.com/embed/KIDImT31Tzg?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

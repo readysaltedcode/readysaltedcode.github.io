@@ -1,41 +1,10 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Circus meets Code" description="Circus meets Code - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Circus meets Code</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>it is nearly time for CircusCode.  <a class="twitter-share-button" href="https://twitter.com/share" data-url="http://www.roundhouse.org.uk/young-creatives/summer-2014/circus-meets-code-video-project/" data-text="Unique video & coding project for 15-19’s @RoundhouseLDN ,work with circus performers to bring data to life! http://rhou.se/circusmeetscode" data-via="readysaltedcode" data-hashtags="circusfestartofCS">Tweet</a><br />
+<StoryLayout title="Circus meets Code" year={2014}>
+  <p>it is nearly time for CircusCode.  <a class="twitter-share-button" href="https://twitter.com/share" data-url="http://www.roundhouse.org.uk/young-creatives/summer-2014/circus-meets-code-video-project/" data-text="Unique video & coding project for 15-19’s @RoundhouseLDN ,work with circus performers to bring data to life! http://rhou.se/circusmeetscode" data-via="readysaltedcode" data-hashtags="circusfestartofCS">Tweet</a><br />
       <p>A 4 day workshop for 15 -19 yr olds looking at data visulaisation with Circus performers as the conten.</p>
       <p>The engagement comes from the tinkering with technology and the “Circus” live performance enables data capture from the artists. <span style="line-height: 1.7;">We will using various different technologies to capture data from the performer such as the Kinect, Smartphone data and wearable technology, were appropriate. The data capture which will take place of the first 2-3 days, capturing data on different performers both individual and groups. </span></p>
       <p>Sign up here: <span style="color: #ff0000;"><a href="http://www.roundhouse.org.uk/young-creatives/summer-2014/circus-meets-code-video-project/" target="_blank"><span style="color: #ff0000;">CircusCode</span></a></span></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

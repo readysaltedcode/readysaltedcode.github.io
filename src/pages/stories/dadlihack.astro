@@ -1,41 +1,10 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="#dadlihack" description="#dadlihack - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>#dadlihack</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>As part of <a href="http://oceangeneration.org">OceanGeneration</a> #dadlihack weekend looking at how technology can help with disaster preparedness and relief.</p>
+<StoryLayout title="#dadlihack" year={2016}>
+  <p>As part of <a href="http://oceangeneration.org">OceanGeneration</a> #dadlihack weekend looking at how technology can help with disaster preparedness and relief.</p>
       <p>Working on behalf of FireTechCamp to run teen computer science workshops for schools in Antigua. It was an amazing experience for everyone involved.  The differences in curricula around the world is fascinating. In England with the national curriculum introducing the subject at K-12 is somewhat different to Antigua and the Caribbean regional in general. The main introduction of the computing /computer science is around grade 10.  Some schools are introducing the subject earlier and there are out of school programs at places like iLab.</p>
       <p>The students and there teachers were a pleasure to teach, their first time coding with Scratch, Ruby and Python. Nothing beats some LEDs and music with the use of physical computing with the amazing <a href="http://sonic-pi.net">Sonic-Pi</a>. We ran 2 x Three All Day workshops with 22 -30 kids in each group using Pi-Top CEED as the hardware for the workshop programme. This pilot programme took place in Antigua January 2018.  Can't wait for the next phase in Summer 2018.</p>
       <p><img loading="lazy" class=" wp-image-1522" src="https://www.readysaltedcode.org/images/FFFFFF-0.png?K5zvVeIuuTujEU8ye8Yvjn0ZJnzbDL7L28dRh3PsqnW5Hpp6CmDJ-W_kZHW6wh1NIb3cG738qkfhMB4hL-9J1-f5Otur4-N6fG6JndrERA=s300" alt="GirlsCanCode" width="138" height="181" /><img loading="lazy" class=" wp-image-1524" src="https://www.readysaltedcode.org/images/FFFFFF-0.png?p-XC4ThYVS5n-BjqB-PxZHEBGW5zBFr19MxCNVbEk3L0IncHCdLMsVaDPpKPHlZln0AslI7aXg1qh5LVGH3Nv_0_eOGg8CISvV-henwoOk0=s300" alt="Wrap up at teen Dadlihack" width="237" height="182" /><img loading="lazy" class=" wp-image-1523" src="https://www.readysaltedcode.org/images/FFFFFF-0.png?FVffHwK7f2z4lY3RCuz_4OaVzDhQA8-4OU3IGpIuqfPEsqvNWoQ2ADBrA8-XmPpXQaRdZrHQNtQade0Ei46Ie6EL7fRiVjgiDX7CrDSY6Ls=s300" alt="Sonic-Pi" width="181" height="181" /></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

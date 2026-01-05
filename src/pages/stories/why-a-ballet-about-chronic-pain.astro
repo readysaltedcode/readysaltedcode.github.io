@@ -1,41 +1,10 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Why a ballet about Chronic Pain?" description="Why a ballet about Chronic Pain? - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Why a ballet about Chronic Pain?</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>[pain]Byte is a datadrivendance classical ballet performance and website looking ballet, biomedical engineering, chronic Pain (Spinal) and networks using projection mapping and other techniques . The website will have the ability to remix share the data visualisations using our motion/Skeleton data to create different effects. A kind of create your own performance.</p>
+<StoryLayout title="Why a ballet about Chronic Pain?" year={2016}>
+  <p>[pain]Byte is a datadrivendance classical ballet performance and website looking ballet, biomedical engineering, chronic Pain (Spinal) and networks using projection mapping and other techniques . The website will have the ability to remix share the data visualisations using our motion/Skeleton data to create different effects. A kind of create your own performance.</p>
       <p>What does it mean to have chronic pain, how does it feel? The choreographer and producer both suffer from chronic pain and have different spinal implants. Using their data and experience we want the audience to connect emotionally with the idea of living with pain without you, the audience, experiencing any pain. How is pain transmitted in the body? How to does this relate to data signal transmitted across a network or within the brain.</p>
       <p>Using data visualisation of networks to aid the audiences experience and understanding. We initially developed this idea in [data]Storm, using network simulations and ballet to visualise transmission and viruses. The academic paper, <a href="http://www.eva-london.org/" target="_blank"><strong>EVA London</strong></a> Conference 2016, can be read <a href="https://drive.google.com/file/d/0Byms9v3IoIFMOVkxMkxURWQ0cTA/view?usp=sharing" target="_blank">here</a>. </p>
       <p>We use classical ballet and live data as a medium for storytelling alongside projection mapping and wearables for a more immersive experience. All of our data and code is open source. This is shared on the <a href="https://github.com/readysaltedcode" target="_blank">github</a> which could then be used, with permission, in other live performances or other activities. All resources and tutorials, where possible, will be made available online.<br />
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

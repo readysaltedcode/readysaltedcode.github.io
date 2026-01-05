@@ -1,41 +1,10 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="[data]storm in pictures" description="[data]storm in pictures - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>[data]storm in pictures</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>A selection of images from our live performance during the <a href="http://brightondigitalfestival.co.uk" target="_blank">B<strong>righton Digital Festival</strong></a> 2015 A recording of the performance is available at our sister site <a href="http://datadrivendance.org" target="_blank"><strong>datadrivendance</strong></a></p>
+<StoryLayout title="[data]storm in pictures" year={2015}>
+  <p>A selection of images from our live performance during the <a href="http://brightondigitalfestival.co.uk" target="_blank">B<strong>righton Digital Festival</strong></a> 2015 A recording of the performance is available at our sister site <a href="http://datadrivendance.org" target="_blank"><strong>datadrivendance</strong></a></p>
       <p><img src="https://www.readysaltedcode.org/images/FFFFFF-0.png?CbLzjCB81J2gEFE3k3hK2OZwUB7m7SCPggNcK7fmdQ_3U87RCMpAVIbXTEzyVOXaeA5Nxxx5zg57dBrFCJmHRGJo24IMrxvinLSx0BEj4w=s1024" alt="datastorm deparature" width="1024" class="alignleft size-large wp-image-1337" /></p>
       <p><img src="https://www.readysaltedcode.org/images/FFFFFF-0.png?FDQZboJ8gBEpYZErTPqGIxr4lwwWTN34zhBxq2N2pvQGhRBo7lvggMQljcAVtQ-e2q2kV1u3EKDV3R1e4LTjZdkQTYA8Tf2OGn6uwPiI=s1024" alt="datastorm" width="1024" class="alignleft size-large wp-image-1338" /></p>
       <p><img src="https://www.readysaltedcode.org/images/FFFFFF-0.png?OKUwI48tYLxmH0VhVLx7I-cNxkFgSHENtBsyriTxojqgwH6ducb_NSFHLFxu-FPgyh2VinnqXqqHUkGCyWBPvZ766lHXfzkcTcGdBjqReg=s1024" alt="datastorm forecast" width="1024" class="alignleft size-large wp-image-1340" /></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

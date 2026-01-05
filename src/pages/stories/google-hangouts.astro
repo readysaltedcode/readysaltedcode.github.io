@@ -1,20 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Google Hangouts" description="Google Hangouts - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Google Hangouts</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p><strong>Lets hangout</strong>!</p>
+<StoryLayout title="Google Hangouts" year={2013}>
+  <p><strong>Lets hangout</strong>!</p>
       <p>This is my post about using google hangouts in my teaching practice and why I think that hangouts are just AWESOME!</p>
       <p>Google hangouts are video conferencing with extras. They are fabulous resource for sharing practice, virtual face2face meetings, training and more. The best thing from my perspective is that you can have up to 10 active users and it is FREE. And us teachers all love the word FREE.</p>
       <p>The reason for initially using hangouts was to offer training to 3 others schools located across the UK ( I am in Brighton). I wanted to be able to share documents, chat and see them hence HANGOUTS :) I can hear the groans, what about Skype? Skype is another fantastic tool but once there are 3 or more you have to pay plus it doesn't have the ease of sharing G-docs. The picture quality is probably better, especially when looking at code, but not enough to make the switch. It is hangouts all the way!</p>
@@ -23,24 +12,4 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>As they have worked so well we are continuing to worked together in the multiple-school project groups and develop some further projects! Exciting times to be teaching! I am putting together a program of hangouts for next academic year. Let's see if am I brave enough to share with everyone. If you are interested just let me know.</p>
       <p>Hangouts for expert speakers: I also teach app development using the <a href="http://appsforgood.org"><strong>Apps For Good</strong></a> course, with a few modifications due to time constraints within the curriculum. Which, by the way, is amazing sign up. The support, training, resources and near around the clock help is staggering. Part of the course they arrange and you can do this yourself too, expert speakers. Well next week 6-8 of my students will be talking to the Head of Mobile Technology at Reuters, New York via hangouts! They have never used hangouts before so we had a little test and it worked perfectly. I explained the reason why I use hangouts and they were impressed! Do we have a convert?</p>
       <p>Enough of me rambling on, sign up to <a href="https://www.google.com/tools/dlpage/res/talkvideo/hangouts/"><strong>Google+</strong></a> and you are away. It is a fantastic teaching resource that should be used more often!</p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

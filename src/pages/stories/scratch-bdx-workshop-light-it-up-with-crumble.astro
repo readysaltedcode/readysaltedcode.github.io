@@ -1,40 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Scratch BDX  workshop Light it up with Crumble" description="Scratch BDX  workshop Light it up with Crumble - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Scratch BDX  workshop Light it up with Crumble</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>A delivered a workshop at the international Scratch conference in Bordeaux (2017)</p>
+<StoryLayout title="Scratch BDX  workshop Light it up with Crumble" year={2015}>
+  <p>A delivered a workshop at the international Scratch conference in Bordeaux (2017)</p>
       <p>I love using the <a href="http://redfernelectronics.co.uk/crumble/">crumble</a> board with all ages of students.  The board becomes the enabler for the projects and not the centre piece. It has a very simple and clean interface programmed with "scratch" like blocks.  We have made disco lights, miniture faire ground rides, drag cars and even motorised lego Creepers.</p>
       <p><iframe src="https://player.vimeo.com/video/234522453" width="680" height="383" frameborder="0" title="SCRATCH2017BDX WORKSHOP Genevieve Smith-Nunes" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

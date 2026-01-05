@@ -1,40 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="On the road with Google for Education 2015" description="On the road with Google for Education 2015 - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>On the road with Google for Education 2015</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>The <a href="http://www.googleforeducationroadshow.com/" target="_blank"><strong><font color="red">Google for Education roadshow</strong> </font></a> is a unique series of events giving a behind-the-scenes look at how schools around the country are transforming their approach to teaching and learning. The classroom environment in a Dome structure showing various classroom areas and the technology that google can bring to the classroom. The Dome classroom is amazing and I wish that there we all had the opportunity to teach in such a cool and creative space. </p>
+<StoryLayout title="On the road with Google for Education 2015" year={2015}>
+  <p>The <a href="http://www.googleforeducationroadshow.com/" target="_blank"><strong><font color="red">Google for Education roadshow</strong> </font></a> is a unique series of events giving a behind-the-scenes look at how schools around the country are transforming their approach to teaching and learning. The classroom environment in a Dome structure showing various classroom areas and the technology that google can bring to the classroom. The Dome classroom is amazing and I wish that there we all had the opportunity to teach in such a cool and creative space. </p>
       <p>readysaltedcode's role is to provide Computing CPD (continual professional development) to the teachers of the Host schools on the tour. We be looking at using ChromeOS in computing classes as well as terminology and computational thinking. A few browswer based coding activities including arduino. </p>
       <p>It has been a really interesting project to find innovative and yet practial browser based computing activites suitable for teachers and schools. Using SSH & VNC to the raspberryPi and coding arduino via ChromeOS with out installs are two examples of things that are possible. Once the roadshow has finished we will post back here with some of the best bits from the seven cities.<br />
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

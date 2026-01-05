@@ -1,39 +1,8 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="[data]Storm update" description="[data]Storm update - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>[data]Storm update</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>What a fun day.<br />
+<StoryLayout title="[data]Storm update" year={2015}>
+  <p>What a fun day.<br />
       <p>We also featured in the Argus paper. The article is about <a href="http://brightondigitalfestival.co.uk/" target="_blank"><strong>Brighton Digital Festival 2015</strong></a> which talks about the ballet [data]storm. We are described as a dance group but we are really a creative computer science education organisation :) I suppose when you do things that are a little off the wall it is hard to describe in a few words. The featured image is <a href="http://www.arrastre.org" target="_blank"><strong>[arra]stre</strong></a> from last years Brighton Digital Festival.<br />
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

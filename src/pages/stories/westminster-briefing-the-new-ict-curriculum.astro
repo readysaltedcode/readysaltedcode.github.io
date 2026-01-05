@@ -1,20 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Westminster Briefing: The New ICT curriculum" description="Westminster Briefing: The New ICT curriculum - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Westminster Briefing: The New ICT curriculum</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p><strong>Welcome to Westminster briefing</strong></p>
+<StoryLayout title="Westminster Briefing: The New ICT curriculum" year={2012}>
+  <p><strong>Welcome to Westminster briefing</strong></p>
       <p>Where do I start. Twitter! I was contacted via twitter by <a href="http://www.westminster-briefing.com">The House</a> to see if I was interested in speaking at a policy and practice briefing relating to the "new" ICT curriculum. Well, one can't say no to that.</p>
       <p>There were four main speakers Prof Steve Furber, Royal Society report. An excellent talk on the current state of ICT in schools and ideas about the [insert slide image] future. It was an honour to be able to speak to him after the event. This is THE Steve Furber who was instrumental in the creation of the BBC Micro. My inner geek was extremely happy. I was too nervous to ask for a photo. Incredibly intelligent and very humble. As you can read I was a very happy bunny.</p>
       <p>rachel ager NAACE, Karen price E-SKILLS: they both offered information regarding where they see the curriculum developing and the reasons for them. Though I was a little concerned by the term digital wisdom that is at the Heart of the Naace curriculum- what does that mean. To me it didn't mean a lot- how could I explain that to a student or parent when I don't really know what digital wisdom is. They were both interesting talks. [ insert slide image ]</p>
@@ -24,24 +13,4 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>I am self taught and continue to learn new skills and languages. We IT (ICT) teachers have a fantastic subject area to continue our own learning as well as (hopefully) inspire the young. It is hardwork and we are rewriting schemes of work every term, or it feels like that sometimes. But that is why I enjoy the subject so much.</p>
       <p>I digress. My turn. I was the last speaker of the day. For those of you who have the unfortunate experience of me at teach meet Brighton, my timings were better. I was very good and didn't speak for more that my allotted 15mins. Mainly because everyone looked exhausted and wanted to get home.</p>
       <p>The theme of my talk was about sharing, yes I know I go on about sharing but it is the best way to succeed. The creative global classroom was the title of my talk. I spoke about the successful use of google hangouts in teaching and sharing practice with schools around the UK. Tools like socrative for recording assessment and adding a bit of competition into the classroom. Finally, about the projects I am working on why I do them. I didn't even list allthe extra work that I do&#8230; It looked too much on one slide.</p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

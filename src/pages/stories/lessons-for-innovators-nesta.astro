@@ -1,20 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Lessons for Innovators (NESTA)" description="Lessons for Innovators (NESTA) - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Lessons for Innovators (NESTA)</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>Lessons for Innovators was a lunchtime talk at NESTA.</p>
+<StoryLayout title="Lessons for Innovators (NESTA)" year={2013}>
+  <p>Lessons for Innovators was a lunchtime talk at NESTA.</p>
       <p>If you have never been, as I hadn't, I was impressed by their 'cool' offices. Obviously not of a par with Google Cool but definitely cool. The space was well designed and accented with vibrant colours. It would make a very creative learning space. AKA my classroom&#8230;. One can dream.</p>
       <p>Anyway back to the talk: which did have a little irony in the fact they were talking about MOOCs and online learning/ teaching innovation for it to be delivered in a traditional seminar /lecture format. Not that there is anything wrong with that and it was the best possible delivery method given all factors. They could have broadcast/ live streamed the lecture? Maybe next time.</p>
       <p>There were 2 speakers, both of whom were excellent at the lectern.</p>
@@ -23,24 +12,4 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>A very interesting thought considering the exam and content reforms that are happening. the news this morning was of Gove's announcement to change A levels to terminal exams? memory test? Lets leave that for another post;)</p>
       <p>Back to Martin: in his 25 very successful years in arena of education in some form or another he has developed 8 rules.</p>
       <p><em>Game Changing</em></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

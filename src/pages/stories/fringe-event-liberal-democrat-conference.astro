@@ -1,20 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="Fringe Event Liberal Democrat Conference" description="Fringe Event Liberal Democrat Conference - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>Fringe Event Liberal Democrat Conference</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>Originally published by Institute for Learning: Shane Cowen.<br />
+<StoryLayout title="Fringe Event Liberal Democrat Conference" year={2012}>
+  <p>Originally published by Institute for Learning: Shane Cowen.<br />
       <p>Liberal Democrat conference, Monday 24 September 2012.</p>
       <p>Shane wrote a much better account than me.</p>
       <p>The relevance and 'functionality' of the curriculum is of constant debate in most subject areas and none more so than in the area of ICT and computing. Whilst these subjects are discrete and different by definition, recent debates around the national curriculum in schools have brought computer science to the fore at the expense of the arguably more traditional approach taken through delivery of ICT.</p>
@@ -24,24 +13,4 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p>Whilst this session was mostly geared towards the education of primary and secondary school pupils, there were parallels to be drawn to FE and skills. The types of skills that Simon believes all young people need to be equipped with are being developed in some vocational subject areas all of the time. The engineering apprentices I visited at EAGIT recently were trained in programming across a variety of platforms to ensure that they had the skills to do the job depending on the age and type of the machinery being used. But more broadly, with the Coalition's early removal of tax breaks in the UK's gaming industry and exclusion of computer science or ICT from the EBacc, there was concern about the current direction of travel expressed by some in the room. Nonetheless, the move towards a "more rigorous computer science approach" has been muted by secretary of state Michael Gove as a preferred way forward in schools at least, which he made clear earlier this year.</p>
       <p>Shane Chowen, IfL policy officer</p>
       <p><a href="https://pegleggen.files.wordpress.com/2012/11/20121104-132633.jpg"><img class="alignnone size-full" alt="20121104-132633.jpg" src="https://pegleggen.files.wordpress.com/2012/11/20121104-132633.jpg" /></a></p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>

@@ -1,20 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import StoryLayout from '../../layouts/StoryLayout.astro';
 ---
 
-<BaseLayout title="The Art Computer Science - Project Update" description="The Art Computer Science - Project Update - readysaltedcode story">
-  <section class="page-header">
-    <div class="container">
-      <nav class="breadcrumb">
-        <a href="/stories">Stories</a>
-      </nav>
-      <h1>The Art Computer Science - Project Update</h1>
-    </div>
-  </section>
-
-  <article class="story-content">
-    <div class="container">
-      <p>Project: The Art of Computer Science. Phase I</p>
+<StoryLayout title="The Art Computer Science - Project Update" year={2013}>
+  <p>Project: The Art of Computer Science. Phase I</p>
       <p>We developed two site to accompany the project  arrastre.org for the [arra]stre performance & data visualisations and the education site theartofcs.org</p>
       <p><a href="https://www.readysaltedcode.org/the-art-computer-science-project-update/www.artofcs.org"><img class="alignleft size-medium wp-image-1356" src="https://www.readysaltedcode.org/images/FFFFFF-0.png?yvw8qMdbSLBTYH8jQwY41zYfIj84frLLPUITYARvgdHcNKHSlkqiqV16m7I9tv7fxg_OfyLp9wPWuJCVTdKXstN-zUjxoawr7Hmi4GDISg=s300" alt="Screen-Shot-2015-01-28-at-12.39.03" width="300" /></a></p>
       <p><a href="https://www.readysaltedcode.org/the-art-computer-science-project-update/www.arrastre.org" target="_blank"><img class="alignleft size-medium wp-image-1353" src="https://www.readysaltedcode.org/images/FFFFFF-0.png?Mpk9PKuUUyJq0-58M99Dtz8f5qgZrRimV8bK9LvCyfLAdbj_IikYXjjJd6hgN97mCjUOaG2bmqxD8b_L3CFuTEeQ00CE3Qcy5WGGTG1wKQ=s300" alt="Screen-Shot-2015-01-28-at-12.42.37" width="300" /></a></p>
@@ -28,24 +17,4 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p><iframe width="680" height="383" src="https://www.youtube.com/embed/tY1g7PLrsSE?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
       <p><iframe width="680" height="510" src="https://www.youtube.com/embed/qUoN4uWZank?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
       <p>This video wasn't taken during the dancehack about 1am so I apologies for the portrait view of the video. We were using Technology Will Save Us: prototype mover kit.  Which is awesome, even though it was wired.  The final version will be wireless.  I can't wait for that to come out!</p>
-    </div>
-  </article>
-</BaseLayout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  .breadcrumb { margin-bottom: 1rem; }
-  .breadcrumb a { color: #ccc; }
-  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
-  .story-content { padding: 3rem 0; }
-  .story-content .container { max-width: 800px; }
-  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
-  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
-  .story-content a { color: #dd3333; }
-  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
-  .story-content strong { font-weight: 600; }
-</style>
+</StoryLayout>
