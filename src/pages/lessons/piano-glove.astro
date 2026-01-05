@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Lesson for Piano Glove" description="Create a wearable musical instrument using Flora, audio codec, and color sensor">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/lessons">Lessons</a> / Piano Glove
+      </nav>
+      <h1>Lesson for Piano Glove</h1>
+      <p class="subtitle">Create a wearable musical instrument with Flora and color sensing</p>
+    </div>
+  </section>
+
+  <article class="lesson-content">
+    <div class="container">
+      <h2 class="section-title">Overview</h2>
+      <p>This project is creating a wearable musical instrument. This is not a beginners project as the soldering of the audio codec board requires some experience. This project is a 1-6 lesson project depending on if you do the whole project.</p>
+
+      <p>I used this project in a 4 day workshop for 11-13 year olds alongside using MakeyMakey and RPI. I pre-soldered the audio board, neopixel, colour sensor and Flora. I modified the Flora soldering to have jumper cables which the students then wired up on a solderless breadboard. It is this approach that is included in this lesson plan.</p>
+
+      <p><strong>Theories covered in this project:</strong> Soldering, Circuits, Sensors, LEDs, Power and Programming (Loops, data types, data conversions, code libraries)</p>
+
+      <div class="teaching-tip">
+        <strong>Note:</strong> This project involves a lot of soldering. This can be challenging in a class setting. Depending on your class' ability and interest you could solder the boards prior to the project and use the breadboard option for the lessons.
+      </div>
+
+      <h2 class="section-title">Kit List</h2>
+      <ul>
+        <li>Flora (Adafruit microcontroller)</li>
+        <li>Audio Codec Board</li>
+        <li>Headphone Jack</li>
+        <li>NeoPixel</li>
+        <li>Color Sensor (TCS34725)</li>
+        <li>Perma-Proto Board</li>
+        <li>Conductive Thread</li>
+        <li>Jumper Wires</li>
+        <li>Solderless Breadboard (for classroom option)</li>
+        <li>Glove</li>
+        <li>LiPo Battery</li>
+        <li>Headphones</li>
+      </ul>
+
+      <h2 class="section-title">Lesson Breakdown</h2>
+      <p>Take as much time as each step requires:</p>
+      <ol>
+        <li><strong>Solder audio codec and headphone jack</strong> (possibly 2 lessons if soldering in class)</li>
+        <li><strong>Solder NeoPixel and color sensor to the Flora</strong> or SEW these connections using conductive thread</li>
+        <li><strong>Solder Flora to Audio Codec Board</strong> or solder jumper cables so the students can wire it up themselves on a breadboard</li>
+        <li><strong>Load the code, libraries and breadboarding section</strong></li>
+        <li><strong>Stitch onto a glove and test</strong> the code with anything coloured</li>
+        <li><strong>Debug any issues as a group</strong> - share good practice. For students who have a working glove and are not required to help out other students then they can start step 7</li>
+        <li><strong>Create a musical score image</strong> for the students to play. Play and video each piece (Showcase)</li>
+      </ol>
+
+      <h2 class="section-title">Starting the Project</h2>
+
+      <h3>Required Code Libraries</h3>
+      <p>For the project you will need three code libraries:</p>
+      <ul>
+        <li>NeoPixel Library</li>
+        <li>Color Sensor Library (TCS34725)</li>
+        <li>Audio Codec Library</li>
+      </ul>
+
+      <h3>Wiring Steps</h3>
+      <ol>
+        <li><strong>Step 1:</strong> Solder the audio codec board - there are many fine soldering points</li>
+        <li><strong>Step 2:</strong> Wire up the components according to the wiring diagram. This can be completed with conductive thread for a permanent solution</li>
+        <li><strong>Step 3:</strong> Connect the Flora to the soldered audio codec board</li>
+        <li><strong>Step 4:</strong> Stitch the codec proto board to the glove</li>
+      </ol>
+
+      <h3>Connecting the Battery</h3>
+      <p>Make sure that the Flora power switch is off. Connect the battery to the Flora's JST connector - this is the white plastic cube opposite the USB connection. The battery can be secured between the Flora and the Glove. Be careful to connect and disconnect the battery without pulling by the power and ground wires themselves. For a more permanent attachment the wire can be stitched to the glove.</p>
+
+      <h2 class="section-title">Creativity Phase: 2+ lessons</h2>
+      <p>Once the piano glove is built or breadboarded together this is when the creativity can be encouraged:</p>
+      <ul>
+        <li>Play sounds using a simple colour grid to give the students an idea of what each colour sounds like</li>
+        <li>Following this, use different images such as photographs or pieces of art work</li>
+        <li>Students can create their own art piece as part of Computing Lessons or work in a cross-curricular project with your Art Department</li>
+        <li>On the LAST lesson use this for a show and tell or have an event for the school/community showcasing the work that the students have done</li>
+      </ul>
+
+      <h3>Using Colour to Create a Score Sheet</h3>
+      <p>Students can design their own musical "score" by creating colored images. When the glove passes over different colors, it plays different sounds - turning visual art into music!</p>
+
+      <h2 class="section-title">Curriculum Mapping</h2>
+
+      <h3>UK Keystage 3/4</h3>
+      <ul>
+        <li>Use two or more programming languages, at least one of which is textual, to solve a variety of computational problems</li>
+        <li>Make appropriate use of data structures such as lists, tables or arrays</li>
+        <li>Design and develop modular programs that use procedures or functions</li>
+        <li>Understand simple Boolean logic (such as AND, OR and NOT) and some of its uses in circuits and programming</li>
+        <li>Understand how numbers can be represented in binary</li>
+        <li>Undertake creative projects that involve selecting, using, and combining multiple applications</li>
+        <li>Develop capability, creativity and knowledge in computer science, digital media and information technology</li>
+        <li>Develop and apply analytic, problem-solving, design, and computational thinking skills</li>
+      </ul>
+
+      <h3>Australia/New Zealand</h3>
+      <ul>
+        <li>Digital Technologies knowledge and understanding</li>
+        <li>Digital Technologies processes and production skills</li>
+        <li>Design and Technologies knowledge and understanding</li>
+        <li>Design and Technologies processes and production skills</li>
+      </ul>
+
+      <div class="resource-links">
+        <h3>Additional Resources</h3>
+        <a href="https://learn.adafruit.com/flora-color-sensor" target="_blank" rel="noopener noreferrer">Flora Color Sensor Guide</a>
+        <a href="https://learn.adafruit.com/getting-started-with-flora" target="_blank" rel="noopener noreferrer">Getting Started with Flora</a>
+        <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide" target="_blank" rel="noopener noreferrer">NeoPixel Uber Guide</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+
+  .breadcrumb {
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb a {
+    color: #ccc;
+  }
+
+  .page-header h1 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .lesson-content {
+    padding: 3rem 0;
+  }
+
+  .section-title {
+    color: #dd3333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+  }
+
+  .lesson-content h3 {
+    color: #333;
+    margin-top: 1.5rem;
+  }
+
+  .lesson-content ul, .lesson-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .lesson-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .teaching-tip {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .resource-links {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  .resource-links h3 {
+    margin-top: 0;
+  }
+
+  .resource-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #dd3333;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+  .resource-links a:hover {
+    background: #bb2222;
+    color: #fff;
+  }
+</style>
