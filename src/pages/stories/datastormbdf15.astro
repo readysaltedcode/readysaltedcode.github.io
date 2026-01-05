@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="[data]Storm live performance #BDF15" description="[data]Storm live performance #BDF15 - readysaltedcode story">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/stories">Stories</a>
+      </nav>
+      <h1>[data]Storm live performance #BDF15</h1>
+    </div>
+  </section>
+
+  <article class="story-content">
+    <div class="container">
+      <p>What an exciting start to the Brighton Digital Festival #BDF15</p>
+      <p>Mini Maker Faire, Spark Festival and many many more events. </p>
+      <p>We are only 4 days away from the live performance on Sunday at the Old Market Theatre <a class="button  " href="https://tiny.cc/datastorm" target="_self">dataStorm Live</a> It has been an exciting roller coaster of a journey to get to today. From Concept to completed code, we are all incredible excited and proud of this new work. The projection mapping in the performance is probably the most technically challenging as the 3D structures only appear in the second half of the ballet. Challenging but amazing at the same time. If you fancy having a go at projecting inside an unusual shape or wrapping images and video around a box then checkout our <a href="http://www.artofcs.org/project/meshwarpserver/"><strong>learning resource</strong></a>.</p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+  .breadcrumb { margin-bottom: 1rem; }
+  .breadcrumb a { color: #ccc; }
+  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
+  .story-content { padding: 3rem 0; }
+  .story-content .container { max-width: 800px; }
+  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
+  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
+  .story-content a { color: #dd3333; }
+  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
+  .story-content strong { font-weight: 600; }
+</style>

@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="STEAM Challenge Day | microbit" description="STEAM Challenge Day | microbit - readysaltedcode story">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/stories">Stories</a>
+      </nav>
+      <h1>STEAM Challenge Day | microbit</h1>
+    </div>
+  </section>
+
+  <article class="story-content">
+    <div class="container">
+      <p><iframe src="https://www.youtube.com/embed/s5T9jHtTgDU" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+      <p>On Friday 10 June, BBC's micro:bit initiative was launched for the Year 7 boys used this fantastic technology to solve problems. A post exam treat for the year group and what an exciting and inspiring day for them all. The day included Computing, Economics, Maths and Philosophical challenges through out the day.  Applying Computational Thinking to all aspects of each challenge and making some of those challenges unsolvable.  Genevieve was invited to give 2 talks on Creative and Computing through the use of the arts. She obviously had some flashing LEDs to add a some sparkle to her presentation.</p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+  .breadcrumb { margin-bottom: 1rem; }
+  .breadcrumb a { color: #ccc; }
+  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
+  .story-content { padding: 3rem 0; }
+  .story-content .container { max-width: 800px; }
+  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
+  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
+  .story-content a { color: #dd3333; }
+  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
+  .story-content strong { font-weight: 600; }
+</style>

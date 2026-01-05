@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Playing around with CODEPEN.io" description="Playing around with CODEPEN.io - readysaltedcode story">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/stories">Stories</a>
+      </nav>
+      <h1>Playing around with CODEPEN.io</h1>
+    </div>
+  </section>
+
+  <article class="story-content">
+    <div class="container">
+      <p>CodePen is a playground for the front end side of the web. It's all about inspiration, education, and sharing.</p>
+      <p>Need to build a reduced test case to demonstrate and figure out a bug? CodePen is great for that. Want to show off your latest creation and get feedback from your peers? CodePen is great for that. Want to find example of a particular design pattern for you project? CodePen is great for that. I am already having fun and only signed up about 20mins ago.</p>
+      <p>As my dance project has lots of data visulisation using javascript, I thought that i would play around with an online tool - not my best code so be kind.</p>
+      <p><object width="”650″" height="”600″" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://codepen.io/readysaltedcode/pen/xryDu" /><embed width="”650″" height="”600″" type="application/x-shockwave-flash" src="https://codepen.io/readysaltedcode/pen/xryDu" /></object></p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+  .breadcrumb { margin-bottom: 1rem; }
+  .breadcrumb a { color: #ccc; }
+  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
+  .story-content { padding: 3rem 0; }
+  .story-content .container { max-width: 800px; }
+  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
+  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
+  .story-content a { color: #dd3333; }
+  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
+  .story-content strong { font-weight: 600; }
+</style>

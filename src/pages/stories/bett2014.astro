@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="#BETT2014" description="#BETT2014 - readysaltedcode story">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/stories">Stories</a>
+      </nav>
+      <h1>#BETT2014</h1>
+    </div>
+  </section>
+
+  <article class="story-content">
+    <div class="container">
+      <p>Had a great time at #BETT2014.  I was only able to go up on the Thursday, on the @AppShed stand. I thought that if I was going to be on a stand talking about  javascript and PHP development using the <a title="AppShed" href="http://appshed.com/">AppShed</a> framework then I will need a bit of bling.  Possibly too much - glitter in the hair, belt and shoes plus the arduino power flashing lights on my jeans.  All of this glitter still didn't make any of the London commuters smile. It made me smile though.</p>
+      <p>It was a great day.  Talking about the new computing program of study in the UK, common core in the States to Ontario's Science and Technology curriculum plus many others from around the world.  Giving quick mater classes on javascript and the amazing google <a title="Blockly" href="https://blockly-demo.appspot.com/static/apps/index.html?lang=en">blocky</a> (visual programming).  If you have tried it have a go it is great for teaching logic, computational thinking and programming.</p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+  .breadcrumb { margin-bottom: 1rem; }
+  .breadcrumb a { color: #ccc; }
+  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
+  .story-content { padding: 3rem 0; }
+  .story-content .container { max-width: 800px; }
+  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
+  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
+  .story-content a { color: #dd3333; }
+  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
+  .story-content strong { font-weight: 600; }
+</style>

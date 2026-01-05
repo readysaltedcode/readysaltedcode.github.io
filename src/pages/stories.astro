@@ -2,90 +2,81 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const stories = [
-  {
-    title: 'Off to Budapest - Scratch Conference 2017',
-    date: '2017',
-    excerpt: 'Attending the Scratch conference in Budapest to share our creative computing work.',
-    slug: 'off-to-budapest-scratchbud2017'
-  },
-  {
-    title: 'Graphical Web Conference 2016',
-    date: '2016',
-    excerpt: 'Presenting datadrivendance and exploring the intersection of web technology and creative arts.',
-    slug: 'graphical-web-conference-2016'
-  },
-  {
-    title: 'Scratch 2016 - MIT Boston',
-    date: '2016',
-    excerpt: 'Sharing our work at the Scratch conference at MIT.',
-    slug: 'scratch-2016-mit-boston'
-  },
-  {
-    title: 'painByte Live VR',
-    date: '2016',
-    excerpt: 'Exploring chronic pain through VR ballet and biometric data.',
-    slug: 'painbyte-live-vr'
-  },
-  {
-    title: 'BETT Show Learn Live Lab',
-    date: '2016',
-    excerpt: 'Demonstrating creative computing at the BETT education technology show.',
-    slug: 'bett-show-learn-live-lab'
-  },
-  {
-    title: 'BDF16: TENSE - A Digital Discourse on Pain',
-    date: '2016',
-    excerpt: 'Brighton Digital Festival showcase of our pain visualization project.',
-    slug: 'bdf16-tense-a-digital-discourse-on-pain'
-  },
-  {
-    title: 'DataStorm at BDF15',
-    date: '2015',
-    excerpt: 'Performing [data]storm at Brighton Digital Festival.',
-    slug: 'datastormbdf15'
-  },
-  {
-    title: 'Google Education Roadshow UK',
-    date: '2015',
-    excerpt: 'Participating in the Google for Education roadshow across the UK.',
-    slug: 'google-education-roadshow-uk-last-stop'
-  },
-  {
-    title: 'RISE Summit 2014',
-    date: '2014',
-    excerpt: 'Attending the Google RISE Summit as award recipients.',
-    slug: 'risesummit2014'
-  },
-  {
-    title: 'Google RISE Award',
-    date: '2014',
-    excerpt: 'Receiving the Google RISE Award for computer science education.',
-    slug: 'google-rise-award'
-  },
-  {
-    title: 'Brighton Digital Festival 2013',
-    date: '2013',
-    excerpt: 'Our first major digital festival participation.',
-    slug: 'brighton-digital-festival-2013-bdf2013'
-  },
-  {
-    title: 'CircusFest at the Roundhouse London',
-    date: '2013',
-    excerpt: 'Bringing creative computing to the circus arts.',
-    slug: 'circusfest-at-the-roundhouse-london'
-  },
-  {
-    title: 'Cascade Project',
-    date: '2013',
-    excerpt: 'Working on the CASCADE project for computing curriculum.',
-    slug: 'cascade-project'
-  },
-  {
-    title: '2012: A Good Year for Computer Science',
-    date: '2012',
-    excerpt: 'Reflecting on the growth of computer science education.',
-    slug: '2012-a-good-year-for-computer-science'
-  }
+  { title: '2012 a good year for Computer Science', slug: '2012-a-good-year-for-computer-science', excerpt: 'What a year - reflecting on the growth of computer science education.' },
+  { title: 'Anjin 1600', slug: 'anjin-1600', excerpt: 'Exploring the Anjin 1600 project.' },
+  { title: '[arra]stre in Minecraft', slug: 'arrastre-in-minecraft', excerpt: 'What better than to re-create the ballet in a Minecraft world.' },
+  { title: 'Brighton Digital Festival 2015', slug: 'bdf15', excerpt: 'Brighton Digital Festival is a celebration of digital culture throughout September.' },
+  { title: 'BDF16 TENSE - a digital discourse on PAIN', slug: 'bdf16-tense-a-digital-discourse-on-pain', excerpt: 'An evening of digital artists and producers curating installations exploring pain.' },
+  { title: 'BETT Show Learn Live Lab', slug: 'bett-show-learn-live-lab', excerpt: 'Article written for BETT show marketing about creative computing.' },
+  { title: '#BETT2014', slug: 'bett2014', excerpt: 'Had a great time at BETT2014 on the AppShed stand.' },
+  { title: 'Brighton Digital Festival 2012', slug: 'brighton-digital-festival-2012', excerpt: 'Our first Brighton Digital Festival experience.' },
+  { title: 'Brighton Digital Festival 2013', slug: 'brighton-digital-festival-2013-bdf2013', excerpt: 'Events including TinyGames Game Jam at the Lighthouse.' },
+  { title: 'CAScade Assessment KS1-3', slug: 'cascade-assessment-in-the-new-computing-curriculum-ks1-3', excerpt: 'Online CPD from Computing at School for assessment.' },
+  { title: '#CAScade Project', slug: 'cascade-project', excerpt: 'The CAScade project - online learning space for Computer Science educators.' },
+  { title: 'Circus meets Code', slug: 'circus-meets-code', excerpt: 'CircusCode - where circus arts meet programming.' },
+  { title: '#CircusFest at the RoundHouse London', slug: 'circusfest-at-the-roundhouse-london', excerpt: 'Saturday April 12th Family Day at the CircusFest.' },
+  { title: '#CircusFest update', slug: 'circusfest-update', excerpt: 'Updates from CircusFest and RISE Summit events.' },
+  { title: 'Classical Ballet & VR Storytelling', slug: 'classical-ballet-vr-storytelling-paper', excerpt: 'Research paper on classical ballet and VR storytelling.' },
+  { title: 'Creative Challenge Day at the RoundHouse', slug: 'creative-challenge-day-at-the-roundhouse', excerpt: 'What a day at the RoundHouse creative challenge!' },
+  { title: 'Creative Computing - Light it Up', slug: 'creative-computing-light-it-up', excerpt: 'Computing and DT inspired day at Pyebank CE Primary School.' },
+  { title: '#dadlihack', slug: 'dadlihack', excerpt: 'OceanGeneration weekend looking at disaster preparedness technology.' },
+  { title: 'DataDrivenDance', slug: 'datadriven', excerpt: 'Innovation, creativity and learning through classical ballet and computer science.' },
+  { title: 'datadrivendance', slug: 'datadrivendance', excerpt: 'The datadrivendance project and painByte performance.' },
+  { title: '[data]storm in pictures', slug: 'datastorm-in-pictures', excerpt: 'A selection of images from our live performance during Brighton Digital Festival 2015.' },
+  { title: '[data]Storm update', slug: 'datastorm-update', excerpt: 'Updates from the data storm project.' },
+  { title: '[data]Storm live performance #BDF15', slug: 'datastormbdf15', excerpt: 'Exciting start to Brighton Digital Festival with datastorm performance.' },
+  { title: 'DataViz Playground at Decoded London', slug: 'dataviz-playground-for-computing-curriculum-hosted-by-decoded-london', excerpt: 'DataViz Playground for Computing Curriculum at Decoded London.' },
+  { title: 'Debugging with pointeshoes', slug: 'debugging-with-pointeshoes', excerpt: 'The challenges of wearables with ballet costumes and pointeshoes.' },
+  { title: 'Fringe Event Liberal Democrat Conference', slug: 'fringe-event-liberal-democrat-conference', excerpt: 'Originally published by Institute for Learning.' },
+  { title: 'Genuino 101 / Arduino 101', slug: 'genuino', excerpt: 'Exploring the onboard sensors built into the Curie Module.' },
+  { title: 'Google for Education Roadshow 2015', slug: 'gferoadshow2015', excerpt: 'Behind-the-scenes look at how schools are transforming with technology.' },
+  { title: 'Global Movements - dance, data & cultural tolerance', slug: 'global-movements-dance-data-cultural-tolerance', excerpt: 'Exhibition exploring dance, data and cultural tolerance.' },
+  { title: 'Google Education Roadshow UK - last stop', slug: 'google-education-roadshow-uk-last-stop', excerpt: 'Whirlwind tour of the UK visiting amazing schools and colleges.' },
+  { title: 'Google Hangouts', slug: 'google-hangouts', excerpt: 'Lets hangout! Using Google Hangouts for education.' },
+  { title: 'Google RISE Award', slug: 'google-rise-award', excerpt: 'Dance DataVisualisation project enabling access to computer science.' },
+  { title: 'Google Teach First Conference', slug: 'google-teach-first-conference', excerpt: 'Google and Teach First conference participation.' },
+  { title: 'Graphical Web Conference 2016', slug: 'graphical-web-conference-2016', excerpt: 'Presenting at Graphical Web Conference at the Met Office in Exeter.' },
+  { title: 'Greenfoot boot camp', slug: 'greenfoot-boot-camp', excerpt: 'Summer training camp for teachers on Java using Greenfoot.' },
+  { title: 'Guest Post - GlastonBridge Software [arra]stre', slug: 'guest-post-from-glastonbridge-software-arrastre', excerpt: 'Working on groundbreaking ballet performance combining data visualisation and computer science.' },
+  { title: '#hackshop 2013', slug: 'hackshop-2013', excerpt: 'Plans for 2013 bringing Computer Science to more people.' },
+  { title: 'Hello world!', slug: 'hello-world-2', excerpt: 'Teaching IT since 2006 and a lot has changed.' },
+  { title: 'Lessons for Innovators (NESTA)', slug: 'lessons-for-innovators-nesta', excerpt: 'Lunchtime talk at NESTA about innovation in education.' },
+  { title: 'Light up with Gemma', slug: 'light-up-with-gemma', excerpt: 'Creating a flashing wearable using Adafruit Gemma and Neopixels.' },
+  { title: 'Lovely data', slug: 'lovely-data', excerpt: 'Data is beautiful in all forms, especially in data visualisations.' },
+  { title: 'Brighton Maker Faire', slug: 'makerfairebtn-brighton-maker-faire', excerpt: 'Participating in Brighton Maker Faire.' },
+  { title: 'Messing Around with Music', slug: 'messing-around-with-music', excerpt: 'Wearables and sound workshop at the RoundHouse in London.' },
+  { title: 'Next up!', slug: 'next-up', excerpt: 'Upcoming events and activities.' },
+  { title: 'Now where have we been...', slug: 'now-where-have-we-been', excerpt: 'Catching up on activities since June.' },
+  { title: 'Off to Budapest - Scratch Conference 2017', slug: 'off-to-budapest-scratchbud2017', excerpt: 'Keynote at ScratchBUD2017 on datadrivendance project.' },
+  { title: 'Online Learning', slug: 'online-learning', excerpt: 'Taking Stanford/Coursera online courses.' },
+  { title: 'Open Badges at Mozilla London', slug: 'open-badges', excerpt: 'Working meeting with CAS, OCR, and Mozilla on Open Badges.' },
+  { title: 'PainByte', slug: 'painbyte', excerpt: 'The PainByte performance project.' },
+  { title: '[pain]Byte Live & VR', slug: 'painbyte-live-vr', excerpt: 'Amazing Sunday evening with painByte Live and VR.' },
+  { title: 'Planning for Hackday', slug: 'planning-for-hackday', excerpt: 'Planning and preparation for hackday events.' },
+  { title: 'Playing around with CODEPEN.io', slug: 'playing-around-with-codepen-io', excerpt: 'CodePen - playground for the front end side of the web.' },
+  { title: 'Raspberry Pi CAS event', slug: 'raspberry-pi-cas-event', excerpt: 'Python Pi day during CS week in December.' },
+  { title: 'Raspberry Pi & NodeJS', slug: 'raspberry-pi-nodejs', excerpt: 'ST4i workshop on stuff that talks to the internet.' },
+  { title: 'RC Car with Appshed', slug: 'rc-car-appshed', excerpt: 'Building a mini remote control car using IOIO OTG board.' },
+  { title: 'RC Car - Building your own car', slug: 'rc-car-building-your-own-car', excerpt: 'Step by step guide to building your RC car.' },
+  { title: 'RC Car custom CSS', slug: 'rc-car-custom-css', excerpt: 'Customizing the RC car app with CSS.' },
+  { title: 'Celebrating Women in Technology @ Royal Institution', slug: 'ri_arrastre', excerpt: 'Celebrating women in technology at the Royal Institution.' },
+  { title: 'RI Masterclass - London MET University', slug: 'rimasterclass_ldnmetuni', excerpt: 'Royal Institution Masterclass at London MET University.' },
+  { title: '#RISEsummit2014', slug: 'risesummit2014', excerpt: 'Coming up to the last day of the Google RISE Summit.' },
+  { title: 'RPi-ano', slug: 'rpiano', excerpt: 'RPi + Momentary Push Buttons project.' },
+  { title: 'SCRATCH 2016 MIT, Boston', slug: 'scratch-2016-mit-boston', excerpt: 'Scratch Conference August 2016 at MIT, Boston.' },
+  { title: 'Scratch BDX - Light it up with Crumble', slug: 'scratch-bdx-workshop-light-it-up-with-crumble', excerpt: 'Workshop at international Scratch conference in Bordeaux.' },
+  { title: 'Simple Wearables', slug: 'simple-wearables', excerpt: 'Introduction to simple wearable electronics.' },
+  { title: 'Six year olds can code', slug: 'six-year-olds-can-code-scratch-at-stanford-infants', excerpt: 'Scratch programming - who said kids cant code!' },
+  { title: 'STEAM Challenge Day - microbit', slug: 'steam-challenge-day-microbit', excerpt: 'STEAM Challenge Day using micro:bit.' },
+  { title: 'Teachmeet Brighton Digital Festival 2013', slug: 'teachmeet-brighton-digital-festival-2013-bdf2013', excerpt: 'Fantastic ideas and partnerships at Teachmeet.' },
+  { title: 'Tech playground and VR', slug: 'tech-playground-and-a-sprinkling-of-vr', excerpt: 'Tech playground workshop with Aik Saath charity.' },
+  { title: 'The Art of Computer Science - Project Update', slug: 'the-art-computer-science-project-update', excerpt: 'Project update: The Art of Computer Science Phase I.' },
+  { title: 'The Art of Computer Science', slug: 'the-art-of-computer-science-2', excerpt: 'The art of computer science project.' },
+  { title: 'The Art of CS update', slug: 'the-art-of-cs-update', excerpt: 'I have a PLAN! Art of CS project update.' },
+  { title: 'Wearable Technology - Creative and Physical Role', slug: 'the-creative-and-physical-role-of-wearable-technology', excerpt: 'Beyond smart watches and fitness trackers.' },
+  { title: 'Wearables & Biometric data', slug: 'wearables-biometric-data', excerpt: 'Ensuring student personal data is completely safe.' },
+  { title: 'Westminster Briefing - New ICT curriculum', slug: 'westminster-briefing-the-new-ict-curriculum', excerpt: 'Westminster briefing on the new ICT curriculum.' },
+  { title: 'Why a ballet about Chronic Pain?', slug: 'why-a-ballet-about-chronic-pain', excerpt: 'painByte - classical ballet exploring chronic pain through data.' },
 ];
 ---
 
@@ -101,11 +92,13 @@ const stories = [
     <div class="container">
       <div class="stories-list">
         {stories.map((story) => (
-          <article class="story-card">
-            <span class="date">{story.date}</span>
-            <h2>{story.title}</h2>
-            <p>{story.excerpt}</p>
-          </article>
+          <a href={`/stories/${story.slug}`} class="story-card">
+            <article>
+              <h2>{story.title}</h2>
+              <p>{story.excerpt}</p>
+              <span class="read-more">Read more &rarr;</span>
+            </article>
+          </a>
         ))}
       </div>
     </div>
@@ -134,31 +127,29 @@ const stories = [
   }
 
   .stories-list {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
   }
 
   .story-card {
-    padding: 2rem 0;
-    border-bottom: 1px solid #eee;
+    display: block;
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
   }
 
-  .story-card:last-child {
-    border-bottom: none;
-  }
-
-  .date {
-    display: inline-block;
-    background: #f0f0f0;
-    color: #666;
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    margin-bottom: 0.75rem;
+  .story-card:hover {
+    border-color: #dd3333;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 
   .story-card h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: #333;
     transition: color 0.2s ease;
@@ -170,12 +161,20 @@ const stories = [
 
   .story-card p {
     color: #666;
-    margin: 0;
+    margin: 0 0 0.75rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .read-more {
+    color: #dd3333;
+    font-weight: 600;
+    font-size: 0.9rem;
   }
 
   @media (max-width: 768px) {
     .story-card h2 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
 </style>

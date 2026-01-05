@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Remote Control Car with Appshed" description="Remote Control Car with Appshed - readysaltedcode story">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/stories">Stories</a>
+      </nav>
+      <h1>Remote Control Car with Appshed</h1>
+    </div>
+  </section>
+
+  <article class="story-content">
+    <div class="container">
+      <p>In this project your will be building a mini remote control "car" using the IOIO OTG board and controlling via an app.</p>
+      <p>The hour of code is an international week long event promoting Computer Science / Computing Education in Schools around the world. readysaltedcode CIC are running several different events during the week from light up christmas tree decorations to smartphone remote controlled cars. This document covers the RC Car using appshed.com workshop(s)</p>
+      <p>Internet Access<br />
+      <p><strong>For the RC car</strong><br />
+      <p>During this series of workshops you will create 2 apps. 1 app talks and controls the “car directly. The second app allows others to control the car via instructions (events) trigger in the remote sent via the web to the master controller app near the car.  You can remote control from anywhere in the world. All you need is internet access.  Having remote controlled a car based in South Africa from the UK we already know how awesome it feels.  This project gives you a little insight into The Internet of Things (IoT), how things like satellites communicate with ground (earth) based control centres or any other remote controlled device.</p>
+      <p>Remember when designing your app you have a maximum of 5 tabs. The control of the remote vehicle is based on the movement of the phone itself or trigger by button presses within each tab of the app. What order do you think they should be in?</p>
+      <p><strong>INFO</strong>: Explains what your app does and how to use it<br />
+      <p>https://www.youtube.com/watch?v=j03U0k-8HFU</p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+  .breadcrumb { margin-bottom: 1rem; }
+  .breadcrumb a { color: #ccc; }
+  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
+  .story-content { padding: 3rem 0; }
+  .story-content .container { max-width: 800px; }
+  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
+  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
+  .story-content a { color: #dd3333; }
+  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
+  .story-content strong { font-weight: 600; }
+</style>

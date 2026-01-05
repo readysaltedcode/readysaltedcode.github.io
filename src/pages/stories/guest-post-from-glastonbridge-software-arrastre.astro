@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Guest Post from GlastonBridge Software [arra]stre" description="Guest Post from GlastonBridge Software [arra]stre - readysaltedcode story">
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/stories">Stories</a>
+      </nav>
+      <h1>Guest Post from GlastonBridge Software [arra]stre</h1>
+    </div>
+  </section>
+
+  <article class="story-content">
+    <div class="container">
+      <p>In 2014 we’ve had the tremendous privilege of working on a groundbreaking ballet performance combining data visualisation, computer science concepts, and, well, classical ballet.  The [arra]stre performance is a part of the Art of Computer Science project conceived and executed by Brightonian arts and education visionaries <a title="ReadySaltedCode" href="../index.html">ReadySaltedCode</a>.</p>
+      <p><a href="http://www.glastonbridge.com/wp/" target="_blank">Glastonbridge</a> provided the <a title="KinectJSON" href="https://github.com/readysaltedcode/art-of-computer-science/tree/master/KinectJSON">data capture software</a>, using Microsoft Kinect to generate JSON streams of ballet performers.  All the software for the project is available on <a href="https://github.com/readysaltedcode/art-of-computer-science" target="_blank">github</a>. This was turned into beautiful <a title="Peter Cook" href="http://prcweb.co.uk/">visualisations by Peter Cook</a>, representing concepts in big data and software development.  Paul Golz and Camilla O'Neale of <a title="Ephemeris Dance" href="http://ephemeris-dance.com/">Ephemeris Dance</a> took computer science theory and turned it into a choreography.  The talented young ballet dancers of Battle Abbey School brought it alive on the stage.  There was also plenty of other stuff to do, like workshops, rehearsals, sewing conductive thread into pointe shoes, and so forth!</p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 3rem 0;
+  }
+  .breadcrumb { margin-bottom: 1rem; }
+  .breadcrumb a { color: #ccc; }
+  .page-header h1 { color: #fff; margin-bottom: 0.5rem; }
+  .story-content { padding: 3rem 0; }
+  .story-content .container { max-width: 800px; }
+  .story-content p { margin-bottom: 1.5rem; line-height: 1.8; }
+  .story-content img { max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 8px; }
+  .story-content a { color: #dd3333; }
+  .story-content blockquote { border-left: 4px solid #dd3333; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555; }
+  .story-content strong { font-weight: 600; }
+</style>
