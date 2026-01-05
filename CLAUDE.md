@@ -1,5 +1,29 @@
 # CLAUDE.md - readysaltedcode.org
 
+## Current Status (January 2026)
+
+**Branch**: `business-revival` - Ready for client approval
+**Preview URL**: https://business-revival.readysaltedcode-github-io.pages.dev/
+
+### What's Been Done
+- Migrated from GitHub Pages to Cloudflare Pages (Astro static site)
+- Updated all 6 lessons for modern hardware (Circuit Playground Express, micro:bit, MIT App Inventor, Python/gpiozero)
+- Added "Updated January 2026" badges to lessons
+- Replaced Twitter/X with Substack across site
+- Linked About section to Genevieve's academic profile (genevievesmithnunes.me)
+- Added archive badges to 75 stories (2012-2017)
+- Removed unimplemented features (newsletter signup, Calendly booking)
+- Fixed navigation active state bug (About was always highlighted)
+- Updated contact email to genevieve@readysaltedcode.org
+
+### Next Steps (After Client Approval)
+1. Merge `business-revival` branch to `main`
+2. Configure Cloudflare Pages for production domain (readysaltedcode.org)
+3. Update DNS if needed
+4. Uncomment ReadySaltedCode in CV on genevievesmithnunes.me
+
+---
+
 ## Site Purpose
 
 **readysaltedcode** is a commercial STEM education business founded by Dr. Genevieve Smith-Nunes. It provides creative computing resources and services to schools and educators.
