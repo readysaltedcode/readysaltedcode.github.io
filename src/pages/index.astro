@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About Us">
+  <section class="hero">
+    <div class="container">
+      <h1><span class="accent">About Us</span></h1>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/so2hyczuJ9o"
+          title="readysaltedcode introduction"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <div class="social-links">
+        <a
+          href="https://twitter.com/readysaltedcode"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="twitter-btn"
+        >
+          Follow @readysaltedcode
+        </a>
+      </div>
+
+      <p class="lead">
+        readysaltedcode providing innovative digital computer science STEAM focused education
+        & curriculum opportunities. We provide workshops, training and produce data driven
+        dance performance to highlight, engage and encourage people into loving computer
+        science education, as much as we do.
+      </p>
+
+      <p class="awards">
+        Awarded Grants for Arts | Arts Council England and Google's RISE Award for Computer
+        Science Education through project Art of Computer Science and the Ballets
+        "datadrivendance" [arra]stre, [data]storm & [pain]Byte
+      </p>
+    </div>
+  </section>
+
+  <section class="highlights">
+    <div class="container">
+      <h2>What We Do</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Workshops & Training</h3>
+          <p>
+            Creative computing workshops for schools, educators, and organizations.
+            From physical computing to data visualization.
+          </p>
+        </div>
+        <div class="card">
+          <h3>datadrivendance</h3>
+          <p>
+            Ballet performances that blend dance with data, technology, and storytelling.
+            Including [arra]stre, [data]storm, and [pain]Byte.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Curriculum Development</h3>
+          <p>
+            STEAM-focused educational resources and curriculum materials for the
+            new computing age.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding: 3rem 0;
+    background: #f9f9f9;
+  }
+
+  .hero h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .about {
+    padding: 3rem 0;
+  }
+
+  .social-links {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .twitter-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #1da1f2;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+  }
+
+  .twitter-btn:hover {
+    background: #0d8ed9;
+    color: #fff;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    color: #666;
+  }
+
+  .awards {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #888;
+    font-style: italic;
+  }
+
+  .highlights {
+    padding: 4rem 0;
+    background: #fff;
+  }
+
+  .highlights h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #dd3333;
+  }
+
+  .card h3 {
+    color: #dd3333;
+    margin-bottom: 1rem;
+  }
+
+  .card p {
+    margin: 0;
+    color: #666;
+  }
+</style>

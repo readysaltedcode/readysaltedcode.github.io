@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const performances = [
+  {
+    title: '[arra]stre',
+    description: 'A data-driven dance performance exploring the historical gold mining process of arrastre, translated into movement and technology.',
+    year: '2014',
+    image: '/images/1/Arrestre_logo_Large.png',
+    awards: ['Arts Council England Grant', 'Google RISE Award']
+  },
+  {
+    title: '[data]storm',
+    description: 'An immersive performance piece combining live dance with real-time data visualization, exploring themes of digital chaos and human connection.',
+    year: '2015',
+    image: '/images/1/data_storm2.png',
+    awards: ['Brighton Digital Festival']
+  },
+  {
+    title: '[pain]Byte',
+    description: 'A VR ballet exploring chronic pain through biometric data, wearable technology, and classical dance. Transforming invisible pain into visible digital art.',
+    year: '2016-present',
+    image: '/images/1/DataStorm-moodboard-copy.jpg',
+    awards: ['Arts Council England Grant']
+  }
+];
+---
+
+<BaseLayout title="datadrivendance" description="Data-driven dance performances blending technology and art">
+  <section class="page-header">
+    <div class="container">
+      <h1><span class="accent">datadrivendance</span></h1>
+      <p class="subtitle">Where data meets dance, technology meets art</p>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="container">
+      <div class="intro-content">
+        <p>
+          datadrivendance is a series of innovative performance pieces that explore the
+          intersection of classical ballet, biometric data, wearable technology, and
+          computer science education.
+        </p>
+        <p>
+          Each performance transforms data into movement, making the invisible visible
+          through the universal language of dance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="performances">
+    <div class="container">
+      <h2>Performances</h2>
+      {performances.map((performance) => (
+        <article class="performance-card">
+          <div class="performance-image">
+            {performance.image && <img src={performance.image} alt={performance.title} />}
+          </div>
+          <div class="performance-content">
+            <div class="performance-header">
+              <h3>{performance.title}</h3>
+              <span class="year">{performance.year}</span>
+            </div>
+            <p>{performance.description}</p>
+            {performance.awards && performance.awards.length > 0 && (
+              <div class="awards">
+                {performance.awards.map((award) => (
+                  <span class="award">{award}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Interested in our work?</h2>
+      <p>Get in touch to learn more about our performances or to discuss collaborations.</p>
+      <a href="https://twitter.com/readysaltedcode" target="_blank" rel="noopener noreferrer" class="btn">
+        Contact Us on Twitter
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: #fff;
+    font-size: 3rem;
+  }
+
+  .page-header .accent {
+    color: #dd3333;
+  }
+
+  .subtitle {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .intro {
+    padding: 3rem 0;
+    background: #f9f9f9;
+  }
+
+  .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro-content p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .performances {
+    padding: 3rem 0;
+  }
+
+  .performances h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .performance-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+  }
+
+  .performance-image {
+    background: #1a1a2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 200px;
+  }
+
+  .performance-image img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .performance-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .performance-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .performance-header h3 {
+    margin: 0;
+    color: #dd3333;
+    font-size: 1.8rem;
+  }
+
+  .year {
+    color: #999;
+    font-size: 0.9rem;
+  }
+
+  .performance-content p {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+
+  .awards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .award {
+    background: #dd3333;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .cta {
+    padding: 4rem 0;
+    background: #f9f9f9;
+    text-align: center;
+  }
+
+  .cta h2 {
+    margin-bottom: 1rem;
+  }
+
+  .cta p {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #dd3333;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+  }
+
+  .btn:hover {
+    background: #bb2222;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .performance-card {
+      grid-template-columns: 1fr;
+    }
+
+    .performance-image {
+      min-height: 150px;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+    }
+  }
+</style>

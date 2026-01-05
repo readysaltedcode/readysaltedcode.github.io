@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lessons = [
+  {
+    title: 'Light Up with Gemma',
+    description: 'Learn to create wearable technology projects using the Adafruit Gemma microcontroller and NeoPixels.',
+    link: '/light-up-with-gemma',
+    image: '/images/1/Light-Up-with-Gemma.mp4',
+    tags: ['Wearables', 'Physical Computing']
+  },
+  {
+    title: 'Simple Wearables',
+    description: 'Introduction to creating simple wearable electronics projects with sewable circuits.',
+    link: '/simple-wearables',
+    tags: ['Wearables', 'Beginners']
+  },
+  {
+    title: 'Raspberry Pi Piano',
+    description: 'Build an interactive piano glove using Raspberry Pi and conductive materials.',
+    link: '/rpiano',
+    tags: ['Raspberry Pi', 'Music']
+  },
+  {
+    title: 'GPIO Basics',
+    description: 'Learn the fundamentals of General Purpose Input/Output (GPIO) programming.',
+    link: '/gpio',
+    tags: ['Hardware', 'Beginners']
+  },
+  {
+    title: 'Resistors Guide',
+    description: 'Understanding resistors and their role in electronic circuits.',
+    link: '/resistors',
+    tags: ['Electronics', 'Beginners']
+  },
+  {
+    title: 'Gemma Sample Code',
+    description: 'Sample code and projects for the Adafruit Gemma platform.',
+    link: '/gemma-sample-code',
+    tags: ['Code', 'Gemma']
+  },
+  {
+    title: 'RC Car with AppShed',
+    description: 'Build and program a remote-controlled car using AppShed.',
+    link: '/rc-car-appshed',
+    tags: ['Robotics', 'Mobile']
+  }
+];
+---
+
+<BaseLayout title="Lessons" description="Creative computing lessons and tutorials">
+  <section class="page-header">
+    <div class="container">
+      <h1>Lessons</h1>
+      <p class="subtitle">Creative computing tutorials and resources for educators and learners</p>
+    </div>
+  </section>
+
+  <section class="lessons">
+    <div class="container">
+      <div class="lessons-grid">
+        {lessons.map((lesson) => (
+          <article class="lesson-card">
+            <div class="lesson-content">
+              <h2>{lesson.title}</h2>
+              <p>{lesson.description}</p>
+              <div class="tags">
+                {lesson.tags.map((tag) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="resources">
+    <div class="container">
+      <h2>Additional Resources</h2>
+      <div class="resource-links">
+        <a href="https://learn.adafruit.com/" target="_blank" rel="noopener noreferrer">
+          Adafruit Learning System
+        </a>
+        <a href="https://www.raspberrypi.org/learn/" target="_blank" rel="noopener noreferrer">
+          Raspberry Pi Learning Resources
+        </a>
+        <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">
+          Scratch Programming
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: #f9f9f9;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .lessons {
+    padding: 3rem 0;
+  }
+
+  .lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .lesson-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .lesson-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  }
+
+  .lesson-content {
+    padding: 1.5rem;
+  }
+
+  .lesson-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+
+  .lesson-content p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    background: #f0f0f0;
+    color: #666;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+  }
+
+  .resources {
+    padding: 3rem 0;
+    background: #f9f9f9;
+  }
+
+  .resources h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .resource-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .resource-links a {
+    padding: 0.75rem 1.5rem;
+    background: #dd3333;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+  }
+
+  .resource-links a:hover {
+    background: #bb2222;
+    color: #fff;
+  }
+</style>

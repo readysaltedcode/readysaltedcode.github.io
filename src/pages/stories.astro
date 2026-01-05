@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const stories = [
+  {
+    title: 'Off to Budapest - Scratch Conference 2017',
+    date: '2017',
+    excerpt: 'Attending the Scratch conference in Budapest to share our creative computing work.',
+    slug: 'off-to-budapest-scratchbud2017'
+  },
+  {
+    title: 'Graphical Web Conference 2016',
+    date: '2016',
+    excerpt: 'Presenting datadrivendance and exploring the intersection of web technology and creative arts.',
+    slug: 'graphical-web-conference-2016'
+  },
+  {
+    title: 'Scratch 2016 - MIT Boston',
+    date: '2016',
+    excerpt: 'Sharing our work at the Scratch conference at MIT.',
+    slug: 'scratch-2016-mit-boston'
+  },
+  {
+    title: 'painByte Live VR',
+    date: '2016',
+    excerpt: 'Exploring chronic pain through VR ballet and biometric data.',
+    slug: 'painbyte-live-vr'
+  },
+  {
+    title: 'BETT Show Learn Live Lab',
+    date: '2016',
+    excerpt: 'Demonstrating creative computing at the BETT education technology show.',
+    slug: 'bett-show-learn-live-lab'
+  },
+  {
+    title: 'BDF16: TENSE - A Digital Discourse on Pain',
+    date: '2016',
+    excerpt: 'Brighton Digital Festival showcase of our pain visualization project.',
+    slug: 'bdf16-tense-a-digital-discourse-on-pain'
+  },
+  {
+    title: 'DataStorm at BDF15',
+    date: '2015',
+    excerpt: 'Performing [data]storm at Brighton Digital Festival.',
+    slug: 'datastormbdf15'
+  },
+  {
+    title: 'Google Education Roadshow UK',
+    date: '2015',
+    excerpt: 'Participating in the Google for Education roadshow across the UK.',
+    slug: 'google-education-roadshow-uk-last-stop'
+  },
+  {
+    title: 'RISE Summit 2014',
+    date: '2014',
+    excerpt: 'Attending the Google RISE Summit as award recipients.',
+    slug: 'risesummit2014'
+  },
+  {
+    title: 'Google RISE Award',
+    date: '2014',
+    excerpt: 'Receiving the Google RISE Award for computer science education.',
+    slug: 'google-rise-award'
+  },
+  {
+    title: 'Brighton Digital Festival 2013',
+    date: '2013',
+    excerpt: 'Our first major digital festival participation.',
+    slug: 'brighton-digital-festival-2013-bdf2013'
+  },
+  {
+    title: 'CircusFest at the Roundhouse London',
+    date: '2013',
+    excerpt: 'Bringing creative computing to the circus arts.',
+    slug: 'circusfest-at-the-roundhouse-london'
+  },
+  {
+    title: 'Cascade Project',
+    date: '2013',
+    excerpt: 'Working on the CASCADE project for computing curriculum.',
+    slug: 'cascade-project'
+  },
+  {
+    title: '2012: A Good Year for Computer Science',
+    date: '2012',
+    excerpt: 'Reflecting on the growth of computer science education.',
+    slug: '2012-a-good-year-for-computer-science'
+  }
+];
+---
+
+<BaseLayout title="Stories" description="News, events, and updates from readysaltedcode">
+  <section class="page-header">
+    <div class="container">
+      <h1>Stories</h1>
+      <p class="subtitle">News, events, and updates from our creative computing journey</p>
+    </div>
+  </section>
+
+  <section class="stories">
+    <div class="container">
+      <div class="stories-list">
+        {stories.map((story) => (
+          <article class="story-card">
+            <span class="date">{story.date}</span>
+            <h2>{story.title}</h2>
+            <p>{story.excerpt}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: #f9f9f9;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .stories {
+    padding: 3rem 0;
+  }
+
+  .stories-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .story-card {
+    padding: 2rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .story-card:last-child {
+    border-bottom: none;
+  }
+
+  .date {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #666;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .story-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    transition: color 0.2s ease;
+  }
+
+  .story-card:hover h2 {
+    color: #dd3333;
+  }
+
+  .story-card p {
+    color: #666;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .story-card h2 {
+      font-size: 1.2rem;
+    }
+  }
+</style>
