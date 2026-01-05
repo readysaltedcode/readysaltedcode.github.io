@@ -8,7 +8,19 @@ const navItems = [
   { href: '/', label: 'About' },
 ];
 
-const currentPath = Astro.url.pathname;
+// Normalize path by removing trailing slash (except for root)
+const rawPath = Astro.url.pathname;
+const currentPath = rawPath === '/' ? '/' : rawPath.replace(/\/$/, '');
+
+// Check if a nav item should be active
+function isActive(itemHref: string): boolean {
+  // Homepage/About - only active on exact match
+  if (itemHref === '/') {
+    return currentPath === '/';
+  }
+  // Other pages - active on exact match or child pages
+  return currentPath === itemHref || currentPath.startsWith(itemHref + '/');
+}
 ---
 
 <header>
@@ -27,7 +39,7 @@ const currentPath = Astro.url.pathname;
           <li>
             <a
               href={item.href}
-              class:list={[{ active: currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href)) }]}
+              class:list={[{ active: isActive(item.href) }]}
             >
               {item.label}
             </a>
