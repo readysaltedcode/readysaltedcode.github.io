@@ -2,21 +2,26 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Lesson for Piano Glove" description="Create a wearable musical instrument using Flora, audio codec, and color sensor">
+<BaseLayout title="Piano Glove" description="Create a wearable musical instrument using color sensing technology">
   <section class="page-header">
     <div class="container">
       <nav class="breadcrumb">
         <a href="/lessons">Lessons</a> / Piano Glove
       </nav>
-      <h1>Lesson for Piano Glove</h1>
-      <p class="subtitle">Create a wearable musical instrument with Flora and color sensing</p>
+      <h1>Piano Glove</h1>
+      <p class="subtitle">Create a wearable musical instrument with color sensing</p>
+      <span class="updated-badge">Updated January 2026</span>
     </div>
   </section>
 
   <article class="lesson-content">
     <div class="container">
+      <div class="hardware-note">
+        <strong>Hardware Options:</strong> This lesson was originally designed for Adafruit Flora. For new projects, we recommend the <strong>Circuit Playground Express</strong> which has built-in sensors, speaker, and NeoPixels - making it easier to get started. The concepts and approach work with either board.
+      </div>
+
       <h2 class="section-title">Overview</h2>
-      <p>This project is creating a wearable musical instrument. This is not a beginners project as the soldering of the audio codec board requires some experience. This project is a 1-6 lesson project depending on if you do the whole project.</p>
+      <p>This project creates a wearable musical instrument that plays sounds based on colours it detects. This is an intermediate project - the soldering of the audio codec board requires some experience. This project spans 1-6 lessons depending on scope.</p>
 
       <p>I used this project in a 4 day workshop for 11-13 year olds alongside using MakeyMakey and RPI. I pre-soldered the audio board, neopixel, colour sensor and Flora. I modified the Flora soldering to have jumper cables which the students then wired up on a solderless breadboard. It is this approach that is included in this lesson plan.</p>
 
@@ -27,20 +32,30 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
 
       <h2 class="section-title">Kit List</h2>
+
+      <h3>Option A: Flora Setup (Original)</h3>
       <ul>
-        <li>Flora (Adafruit microcontroller)</li>
-        <li>Audio Codec Board</li>
-        <li>Headphone Jack</li>
-        <li>NeoPixel</li>
+        <li>Adafruit Flora</li>
+        <li>Audio Codec Board + Headphone Jack</li>
+        <li>Flora NeoPixel</li>
         <li>Color Sensor (TCS34725)</li>
         <li>Perma-Proto Board</li>
-        <li>Conductive Thread</li>
-        <li>Jumper Wires</li>
+        <li>Conductive Thread + Jumper Wires</li>
         <li>Solderless Breadboard (for classroom option)</li>
-        <li>Glove</li>
-        <li>LiPo Battery</li>
-        <li>Headphones</li>
+        <li>Glove + LiPo Battery + Headphones</li>
       </ul>
+
+      <h3>Option B: Circuit Playground Express (Recommended for new projects)</h3>
+      <ul>
+        <li>Circuit Playground Express (has built-in speaker, NeoPixels, and light sensor)</li>
+        <li>Color Sensor (TCS34725) - for full colour detection</li>
+        <li>Alligator clips or conductive thread</li>
+        <li>Glove + AAA battery pack or LiPo battery</li>
+      </ul>
+
+      <div class="tip-box">
+        <strong>Why Circuit Playground Express?</strong> It has a built-in speaker (no audio codec needed), 10 NeoPixels, and a light sensor. You only need to add the colour sensor for this project. Much less soldering required!
+      </div>
 
       <h2 class="section-title">Lesson Breakdown</h2>
       <p>Take as much time as each step requires:</p>
@@ -111,7 +126,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <div class="resource-links">
         <h3>Additional Resources</h3>
-        <a href="https://learn.adafruit.com/flora-color-sensor" target="_blank" rel="noopener noreferrer">Flora Color Sensor Guide</a>
+        <a href="https://learn.adafruit.com/adafruit-circuit-playground-express" target="_blank" rel="noopener noreferrer">Circuit Playground Express Guide</a>
+        <a href="https://learn.adafruit.com/adafruit-color-sensors" target="_blank" rel="noopener noreferrer">Color Sensor Guide</a>
         <a href="https://learn.adafruit.com/getting-started-with-flora" target="_blank" rel="noopener noreferrer">Getting Started with Flora</a>
         <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide" target="_blank" rel="noopener noreferrer">NeoPixel Uber Guide</a>
       </div>
@@ -145,8 +161,35 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     margin: 0;
   }
 
+  .updated-badge {
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+
   .lesson-content {
     padding: 3rem 0;
+  }
+
+  .hardware-note {
+    background: #e8f4fd;
+    border-left: 4px solid #0066cc;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .tip-box {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
   }
 
   .section-title {

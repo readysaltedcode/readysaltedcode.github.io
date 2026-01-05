@@ -10,12 +10,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </nav>
       <h1>Lesson Crumble</h1>
       <p class="subtitle">Introduction to the Crumble Board for all ages</p>
+      <span class="updated-badge">Updated January 2026</span>
     </div>
   </section>
 
   <article class="lesson-content">
     <div class="container">
       <p class="intro">This is an educational resource for using the Crumble Board. This has been successfully delivered to students in Grade 2, 5 and 10. The time taken varies depending on the age and previous knowledge of Scratch.</p>
+
+      <div class="hardware-note">
+        <strong>Alternative Options:</strong> If you don't have Crumble boards, the <strong>BBC micro:bit</strong> is a popular alternative with similar block-based programming via MakeCode. The micro:bit has built-in LEDs, buttons, and sensors, making it excellent for beginners. The concepts in this lesson transfer well to micro:bit projects.
+      </div>
 
       <h2 class="section-title">Lesson Structure</h2>
       <ul>
@@ -141,6 +146,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     margin: 0;
   }
 
+  .updated-badge {
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+
   .lesson-content {
     padding: 3rem 0;
   }
@@ -151,6 +167,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     background: #f9f9f9;
     padding: 1rem;
     border-radius: 8px;
+  }
+
+  .hardware-note {
+    background: #e8f4fd;
+    border-left: 4px solid #0066cc;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0 8px 8px 0;
   }
 
   .section-title {

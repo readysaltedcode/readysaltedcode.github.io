@@ -10,73 +10,180 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </nav>
       <h1>RPi-ano | RPi + Momentary Push Buttons</h1>
       <p class="subtitle">Make your own GPIO Piano with Raspberry Pi</p>
+      <span class="updated-badge">Updated January 2026</span>
     </div>
   </section>
 
   <article class="lesson-content">
     <div class="container">
-      <div class="legacy-notice">
-        <strong>Note:</strong> This lesson uses ScratchGPIO, which is a legacy tool. For modern Raspberry Pi projects, consider using Python with the gpiozero library or Scratch 3 with GPIO extensions. The concepts taught here remain valuable regardless of the tool used.
+      <p class="intro">Build a simple musical keyboard using Raspberry Pi GPIO pins, push buttons, and Python. Press buttons to play sounds - a great introduction to physical computing and programming!</p>
+
+      <div class="hardware-note">
+        <strong>Programming Options:</strong> This lesson uses <strong>Python with gpiozero</strong>, the recommended approach for modern Raspberry Pi projects. gpiozero is pre-installed on Raspberry Pi OS and provides a simple, beginner-friendly API for GPIO programming.
       </div>
 
       <h2 class="section-title">Kit List</h2>
       <ul>
-        <li>Raspberry Pi</li>
+        <li>Raspberry Pi (any model with GPIO pins)</li>
         <li>Breadboard (large enough for the number of buttons)</li>
         <li>5 x Momentary Push Buttons</li>
-        <li>5 x 1k resistors</li>
-        <li>5 x LEDs</li>
-        <li>5 x 220ohm / 330 ohm resistors</li>
-        <li>GPIO expansion cable (or Male to Female jumper cables)</li>
-        <li>Jumper Cables</li>
+        <li>5 x LEDs (optional - for visual feedback)</li>
+        <li>5 x 330 ohm resistors (for LEDs)</li>
+        <li>GPIO breakout board (optional but recommended)</li>
+        <li>Jumper Cables (male-to-female)</li>
+        <li>Speakers or headphones</li>
       </ul>
+
+      <div class="teaching-tip">
+        <strong>Note on resistors:</strong> With gpiozero, we use the internal pull-up resistors on the GPIO pins, so external resistors for buttons are not required. This simplifies the wiring!
+      </div>
 
       <h2 class="section-title">STEP 1: Setting up the Breadboard</h2>
-      <p><strong>TIPS:</strong> The momentary push buttons used to create the keys of the piano are a little tricky to push into the breadboard. Carefully check the pins are straight and that they are in the correct position. With a little force, push the buttons with two fingers either side of the push button. This is important because bent pins will not work.</p>
+      <p><strong>TIPS:</strong> The momentary push buttons used to create the keys of the piano can be tricky to push into the breadboard. Carefully check the pins are straight and that they are in the correct position. With a little force, push the buttons with two fingers either side of the push button.</p>
 
-      <p><strong>Why use a GPIO expansion cable (also known as a cobbler)?</strong> To avoid damage to the RPi GPIO pins. If they get broken/bent or are incorrectly connected, this could permanently damage your RPi. Why is it called a cobbler? Because "cobble" means to hack something together, and cobbler is also a dessert similar to pie!</p>
+      <h3>Button Wiring (Simple Method)</h3>
+      <p>For each button, you only need two connections:</p>
+      <ol>
+        <li>Connect one leg of the button to a GPIO pin (e.g., GPIO 17, 18, 27, 22, 23)</li>
+        <li>Connect the opposite leg to GND (ground)</li>
+      </ol>
 
-      <h2 class="section-title">STEP 2: Installing Code Libraries</h2>
-      <p>In order for the push buttons to play a sound, we need to install some code <strong>libraries</strong> so that the RPi knows when we have pressed a button. Then we can program/code the button to play a certain sound.</p>
+      <p>The internal pull-up resistor in the Raspberry Pi keeps the GPIO pin HIGH. When you press the button, it connects to GND and goes LOW - our code detects this change.</p>
 
-      <p>There are many languages we could use to make our keyboard play sounds. For this project we are going to use Scratch with a <strong>GPIO</strong> library.</p>
-
-      <h3>GPIO Scratch Installation</h3>
-      <p>You may be working with a RPi that has all the libraries installed. On the desktop of the RPi you will see ScratchGPIO. If not, follow the instructions below:</p>
-
-      <h4>With Raspberry Pi connected to Internet:</h4>
-      <p>Visit the <a href="https://cymplecy.wordpress.com/scratchgpio/scratch-gpio-version-5/" target="_blank" rel="noopener noreferrer">ScratchGPIO installation page</a> for the latest installation instructions, or run the following in LXTerminal:</p>
-      <pre><code>wget https://raw.githubusercontent.com/cymplecy/scratch_gpio/V5/install_scratchgpio5.sh -O install_scratchgpio5.sh
-sudo bash install_scratchgpio5.sh</code></pre>
-
-      <h2 class="section-title">STEP 3: Writing the Code</h2>
-      <p>There are many ways to write this code - here is just one example using Scratch GPIO blocks.</p>
-
-      <h2 class="section-title">STEP 4: Connecting RPi to Breadboard</h2>
-
-      <h3>Without using GPIO expansion cable:</h3>
+      <h2 class="section-title">STEP 2: Prepare Your Sound Files</h2>
+      <p>You'll need sound files for each key. You can:</p>
       <ul>
-        <li>Connect the ground cable (black) using one of the GROUND pins on the RPi to the - power rail on the breadboard</li>
-        <li>Connect one resistor per push button, ensuring they line up with one of the legs of the button. The other end is inserted into the negative (blue) power rail of the breadboard</li>
-        <li>Connect the jumper cable from the push button to one of the GPIO pins on the RPi. Note that not all pins are available in this version of Scratch GPIO. Check which ones are available by opening ScratchGPIO and using the dropdown on the code block.</li>
+        <li>Download piano note samples from free sound libraries</li>
+        <li>Record your own sounds using Audacity</li>
+        <li>Use any .wav files - sound effects, drum samples, etc.</li>
+      </ul>
+      <p>Place your sound files in a folder, for example: <code>/home/pi/sounds/</code></p>
+
+      <h2 class="section-title">STEP 3: Writing the Python Code</h2>
+      <p>Create a new file called <code>piano.py</code>:</p>
+
+      <pre><code is:raw>from gpiozero import Button
+import pygame
+
+# Initialize pygame mixer for sound
+pygame.mixer.init()
+
+# Load sound files
+sounds = {
+    17: pygame.mixer.Sound('/home/pi/sounds/note_c.wav'),
+    18: pygame.mixer.Sound('/home/pi/sounds/note_d.wav'),
+    27: pygame.mixer.Sound('/home/pi/sounds/note_e.wav'),
+    22: pygame.mixer.Sound('/home/pi/sounds/note_f.wav'),
+    23: pygame.mixer.Sound('/home/pi/sounds/note_g.wav'),
+}
+
+# Create buttons with internal pull-up resistors
+buttons = {
+    17: Button(17),
+    18: Button(18),
+    27: Button(27),
+    22: Button(22),
+    23: Button(23),
+}
+
+# Function to play sound when button pressed
+def play_sound(pin):
+    sounds[pin].play()
+
+# Connect button press events to sound playback
+for pin, button in buttons.items():
+    button.when_pressed = lambda p=pin: play_sound(p)
+
+print("RPi-ano ready! Press buttons to play.")
+print("Press Ctrl+C to exit.")
+
+# Keep the program running
+try:
+    while True:
+        pass
+except KeyboardInterrupt:
+    print("\nGoodbye!")
+    pygame.mixer.quit()</code></pre>
+
+      <h3>Running Your Piano</h3>
+      <p>Open a terminal and run:</p>
+      <pre><code>python3 piano.py</code></pre>
+
+      <h2 class="section-title">STEP 4: Adding LEDs (Optional)</h2>
+      <p>Add visual feedback by lighting up an LED when each key is pressed:</p>
+
+      <pre><code is:raw>from gpiozero import Button, LED
+import pygame
+
+pygame.mixer.init()
+
+# Define GPIO pins for buttons and LEDs
+keys = [
+    {'button': 17, 'led': 5, 'sound': '/home/pi/sounds/note_c.wav'},
+    {'button': 18, 'led': 6, 'sound': '/home/pi/sounds/note_d.wav'},
+    {'button': 27, 'led': 13, 'sound': '/home/pi/sounds/note_e.wav'},
+    {'button': 22, 'led': 19, 'sound': '/home/pi/sounds/note_f.wav'},
+    {'button': 23, 'led': 26, 'sound': '/home/pi/sounds/note_g.wav'},
+]
+
+# Set up buttons, LEDs, and sounds
+for key in keys:
+    key['button_obj'] = Button(key['button'])
+    key['led_obj'] = LED(key['led'])
+    key['sound_obj'] = pygame.mixer.Sound(key['sound'])
+
+# Play sound and light LED
+def play_key(key):
+    key['sound_obj'].play()
+    key['led_obj'].on()
+
+def release_key(key):
+    key['led_obj'].off()
+
+# Connect events
+for key in keys:
+    key['button_obj'].when_pressed = lambda k=key: play_key(k)
+    key['button_obj'].when_released = lambda k=key: release_key(k)
+
+print("RPi-ano with LEDs ready!")
+
+try:
+    while True:
+        pass
+except KeyboardInterrupt:
+    pygame.mixer.quit()</code></pre>
+
+      <h2 class="section-title">STEP 5: Testing and Playing</h2>
+      <ol>
+        <li>Check all wiring connections</li>
+        <li>Run the Python script</li>
+        <li>Press each button to test the sounds</li>
+        <li>If a button doesn't work, check its GPIO connection</li>
+      </ol>
+
+      <h2 class="section-title">Extension Activities</h2>
+      <ul>
+        <li>Add more buttons for a full octave</li>
+        <li>Create a drum machine with percussion sounds</li>
+        <li>Build a memory game - the Pi plays a sequence, you repeat it</li>
+        <li>Add recording functionality to capture your compositions</li>
+        <li>Use different sound effects for a gaming controller</li>
       </ul>
 
-      <h3>With GPIO expansion cable:</h3>
+      <h2 class="section-title">Troubleshooting</h2>
       <ul>
-        <li>Connect the cobbler to the breadboard</li>
-        <li>Follow the same wiring pattern but connect to the cobbler pins instead of directly to the Pi</li>
-        <li>This provides a safer and more organized connection</li>
+        <li><strong>No sound?</strong> Check audio output settings with <code>raspi-config</code>, ensure speakers/headphones are connected</li>
+        <li><strong>Button not responding?</strong> Double-check GPIO pin numbers and ground connections</li>
+        <li><strong>Sound delayed?</strong> Pre-load sounds at startup (as shown in code), use smaller audio files</li>
+        <li><strong>Multiple sounds at once?</strong> pygame.mixer supports multiple channels by default</li>
       </ul>
-
-      <h2 class="section-title">STEP 5: Testing and Jamming</h2>
-      <p>Test each button with a simple sound effect. This enables you to check that your button is working. You can record your own sounds - for example, Halloween sound effects for a game you've created, or music for mixing.</p>
-
-      <p>Use more buttons to create your own working games controller!</p>
 
       <div class="resource-links">
         <h3>Additional Resources</h3>
-        <a href="https://www.raspberrypi.org/documentation/usage/gpio/" target="_blank" rel="noopener noreferrer">Raspberry Pi GPIO Documentation</a>
-        <a href="https://cymplecy.wordpress.com/scratchgpio/" target="_blank" rel="noopener noreferrer">ScratchGPIO</a>
+        <a href="https://gpiozero.readthedocs.io/" target="_blank" rel="noopener noreferrer">gpiozero Documentation</a>
+        <a href="https://www.raspberrypi.com/documentation/computers/os.html#gpio-and-the-40-pin-header" target="_blank" rel="noopener noreferrer">Raspberry Pi GPIO Guide</a>
+        <a href="https://www.pygame.org/docs/ref/mixer.html" target="_blank" rel="noopener noreferrer">Pygame Mixer Documentation</a>
+        <a href="https://freesound.org/" target="_blank" rel="noopener noreferrer">Free Sound Library</a>
       </div>
     </div>
   </article>
@@ -108,8 +215,44 @@ sudo bash install_scratchgpio5.sh</code></pre>
     margin: 0;
   }
 
+  .updated-badge {
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+
   .lesson-content {
     padding: 3rem 0;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: #555;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hardware-note {
+    background: #e8f4fd;
+    border-left: 4px solid #0066cc;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .teaching-tip {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
   }
 
   .section-title {
@@ -148,6 +291,13 @@ sudo bash install_scratchgpio5.sh</code></pre>
     font-size: 0.9rem;
   }
 
+  p code {
+    background: #f4f4f4;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    color: #333;
+  }
+
   .resource-links {
     background: #f9f9f9;
     padding: 1.5rem;
@@ -172,14 +322,5 @@ sudo bash install_scratchgpio5.sh</code></pre>
   .resource-links a:hover {
     background: #bb2222;
     color: #fff;
-  }
-
-  .legacy-notice {
-    background: #fff3cd;
-    border-left: 4px solid #ffc107;
-    padding: 1rem 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 0 8px 8px 0;
-    color: #856404;
   }
 </style>
