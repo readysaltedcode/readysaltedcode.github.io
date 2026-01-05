@@ -1,0 +1,653 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const workshops = [
+  {
+    title: 'Creative Computing Hackday',
+    duration: 'Full day',
+    price: '£650',
+    capacity: 'Up to 60 pupils',
+    description: 'An immersive day of creative coding, problem-solving, and making. Students work in teams to tackle real-world challenges using physical computing, data, and code.',
+    includes: [
+      'Challenge briefing and team formation',
+      'Guided making sessions',
+      'Final presentations and judging',
+      'Certificates for all participants'
+    ],
+    suitable: 'KS2-4, Youth groups',
+    featured: true
+  },
+  {
+    title: 'Wearables Workshop',
+    duration: 'Half day',
+    price: '£400',
+    capacity: 'Up to 30 pupils',
+    description: 'Hands-on introduction to wearable technology. Students create light-up wearables using sewable circuits, LEDs, and conductive thread.',
+    includes: [
+      'Introduction to e-textiles',
+      'Circuit design activity',
+      'Practical making session',
+      'Take-home project'
+    ],
+    suitable: 'KS2-3',
+    featured: false
+  },
+  {
+    title: 'Data & Dance Experience',
+    duration: 'Full day',
+    price: '£750',
+    capacity: 'Up to 60 pupils',
+    description: 'Our signature workshop combining data visualization with movement. Students explore how data can be captured, visualized, and interpreted through dance and creative coding.',
+    includes: [
+      'Introduction to biometric data',
+      'Data capture activities',
+      'Creative visualization workshop',
+      'Performance showcase'
+    ],
+    suitable: 'KS3-4, Universities',
+    featured: true
+  },
+  {
+    title: 'Physical Computing Fundamentals',
+    duration: 'Full day',
+    price: '£650',
+    capacity: 'Up to 30 pupils',
+    description: 'Get hands-on with micro:bit, Raspberry Pi, or Arduino. Students learn inputs, outputs, and programming through practical projects.',
+    includes: [
+      'Platform introduction',
+      'Input/output experiments',
+      'Programming challenges',
+      'Final project build'
+    ],
+    suitable: 'KS3-4',
+    featured: false
+  },
+  {
+    title: 'Teacher CPD Session',
+    duration: 'Half day',
+    price: '£350',
+    capacity: 'Up to 20 teachers',
+    description: 'Practical training for teachers wanting to bring creative computing into their classroom. Build confidence with new tools and pedagogies.',
+    includes: [
+      'Hands-on with equipment',
+      'Lesson planning time',
+      'Resource pack to take away',
+      'Follow-up email support'
+    ],
+    suitable: 'Primary & Secondary teachers',
+    featured: false
+  }
+];
+
+const testimonials = [
+  {
+    quote: "The hackday was incredibly engaging. Students who normally struggle in computing were leading their teams by the end of the day.",
+    author: "Head of Computing",
+    school: "Secondary Academy, Brighton"
+  },
+  {
+    quote: "Genevieve brought something completely different to our school. The combination of creativity and computing was exactly what our students needed.",
+    author: "STEM Coordinator",
+    school: "Primary School, London"
+  }
+];
+---
+
+<BaseLayout title="Workshops" description="In-person creative computing workshops and hackdays for schools">
+  <section class="page-header">
+    <div class="container">
+      <h1>Workshops & Hackdays</h1>
+      <p class="subtitle">Inspiring the next generation of creative technologists</p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro-content">
+        <h2>Bring Creative Computing to Your School</h2>
+        <p>Our workshops combine the best of arts and technology to engage all learners. Led by Dr. Genevieve Smith-Nunes, a Google RISE Award recipient and experienced computing educator, each session is designed to inspire creativity, build confidence, and develop real skills.</p>
+        <div class="stats">
+          <div class="stat">
+            <span class="number">15+</span>
+            <span class="label">Years Teaching</span>
+          </div>
+          <div class="stat">
+            <span class="number">100+</span>
+            <span class="label">Workshops Delivered</span>
+          </div>
+          <div class="stat">
+            <span class="number">5000+</span>
+            <span class="label">Students Reached</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workshop Options -->
+  <section class="workshops">
+    <div class="container">
+      <h2>Workshop Options</h2>
+
+      <div class="workshops-grid">
+        {workshops.map((workshop) => (
+          <div class={`workshop-card ${workshop.featured ? 'featured' : ''}`}>
+            {workshop.featured && <span class="featured-badge">Popular</span>}
+            <div class="workshop-header">
+              <h3>{workshop.title}</h3>
+              <div class="workshop-meta">
+                <span class="duration">{workshop.duration}</span>
+                <span class="price">{workshop.price}</span>
+              </div>
+            </div>
+            <p class="description">{workshop.description}</p>
+            <div class="capacity">
+              <strong>Capacity:</strong> {workshop.capacity}
+            </div>
+            <div class="suitable">
+              <strong>Suitable for:</strong> {workshop.suitable}
+            </div>
+            <div class="includes">
+              <strong>Includes:</strong>
+              <ul>
+                {workshop.includes.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <a href="#enquire" class="enquire-btn">Enquire</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <h3>Get in Touch</h3>
+          <p>Tell us about your school, year groups, and what you're hoping to achieve.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">2</span>
+          <h3>We Plan Together</h3>
+          <p>We'll customise the workshop to fit your curriculum, space, and equipment.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">3</span>
+          <h3>Delivery Day</h3>
+          <p>We bring everything needed and deliver an inspiring, hands-on experience.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">4</span>
+          <h3>Follow Up</h3>
+          <p>You receive resources to continue the learning after we leave.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Schools Say</h2>
+      <div class="testimonials-grid">
+        {testimonials.map((testimonial) => (
+          <blockquote class="testimonial">
+            <p>"{testimonial.quote}"</p>
+            <footer>
+              <strong>{testimonial.author}</strong>
+              <span>{testimonial.school}</span>
+            </footer>
+          </blockquote>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel -->
+  <section class="travel">
+    <div class="container">
+      <h2>Travel & Logistics</h2>
+      <div class="travel-info">
+        <div class="travel-item">
+          <h3>Within 50 miles</h3>
+          <p>Travel included in workshop price</p>
+        </div>
+        <div class="travel-item">
+          <h3>50-100 miles</h3>
+          <p>+£50 travel supplement</p>
+        </div>
+        <div class="travel-item">
+          <h3>100+ miles</h3>
+          <p>+£100 (or +£150 with overnight stay)</p>
+        </div>
+      </div>
+      <p class="travel-note">We're based in the South East but travel nationwide. International workshops by arrangement.</p>
+    </div>
+  </section>
+
+  <!-- Enquiry Form -->
+  <section class="enquire" id="enquire">
+    <div class="container">
+      <h2>Book a Workshop</h2>
+      <p>Interested in bringing a workshop to your school? Get in touch and we'll help you find the right option.</p>
+
+      <div class="enquiry-options">
+        <a href="mailto:hello@readysaltedcode.org?subject=Workshop Enquiry" class="enquiry-btn primary">
+          Email Us
+        </a>
+        <p class="or">or</p>
+        <a href="https://calendly.com" target="_blank" rel="noopener" class="enquiry-btn secondary">
+          Book a Call
+        </a>
+      </div>
+
+      <p class="response-time">We typically respond within 2 working days.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  /* Intro */
+  .intro {
+    padding: 4rem 0;
+    background: #f9f9f9;
+  }
+
+  .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro h2 {
+    margin-bottom: 1rem;
+  }
+
+  .intro p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat .number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #dd3333;
+  }
+
+  .stat .label {
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  /* Workshops */
+  .workshops {
+    padding: 4rem 0;
+  }
+
+  .workshops h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .workshops-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .workshop-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: relative;
+    transition: box-shadow 0.2s;
+  }
+
+  .workshop-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .workshop-card.featured {
+    border-color: #dd3333;
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #dd3333;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .workshop-header {
+    margin-bottom: 1rem;
+  }
+
+  .workshop-header h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .workshop-meta {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .workshop-meta .duration {
+    background: #f0f0f0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+
+  .workshop-meta .price {
+    font-weight: 700;
+    color: #dd3333;
+    font-size: 1.1rem;
+  }
+
+  .workshop-card .description {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .workshop-card .capacity,
+  .workshop-card .suitable {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+
+  .workshop-card .includes {
+    margin: 1rem 0;
+  }
+
+  .workshop-card .includes strong {
+    font-size: 0.9rem;
+  }
+
+  .workshop-card .includes ul {
+    margin: 0.5rem 0 0 1.25rem;
+    padding: 0;
+    font-size: 0.85rem;
+    color: #666;
+  }
+
+  .workshop-card .includes li {
+    margin-bottom: 0.25rem;
+  }
+
+  .enquire-btn {
+    display: block;
+    text-align: center;
+    background: #dd3333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background 0.2s;
+  }
+
+  .enquire-btn:hover {
+    background: #bb2222;
+  }
+
+  /* How It Works */
+  .how-it-works {
+    padding: 4rem 0;
+    background: #f9f9f9;
+  }
+
+  .how-it-works h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .step {
+    text-align: center;
+  }
+
+  .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #dd3333;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .step h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .step p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  /* Testimonials */
+  .testimonials {
+    padding: 4rem 0;
+  }
+
+  .testimonials h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .testimonial {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #dd3333;
+    margin: 0;
+  }
+
+  .testimonial p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .testimonial footer {
+    font-size: 0.9rem;
+  }
+
+  .testimonial footer strong {
+    display: block;
+    color: #333;
+  }
+
+  .testimonial footer span {
+    color: #888;
+  }
+
+  /* Travel */
+  .travel {
+    padding: 3rem 0;
+    background: #1a1a2e;
+    color: #fff;
+  }
+
+  .travel h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+
+  .travel-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .travel-item {
+    text-align: center;
+    min-width: 150px;
+  }
+
+  .travel-item h3 {
+    color: #dd3333;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .travel-item p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+  }
+
+  .travel-note {
+    text-align: center;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin: 1rem 0 0 0;
+  }
+
+  /* Enquire */
+  .enquire {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .enquire h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .enquire > p {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .enquiry-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .enquiry-btn {
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+
+  .enquiry-btn.primary {
+    background: #dd3333;
+    color: #fff;
+  }
+
+  .enquiry-btn.primary:hover {
+    background: #bb2222;
+  }
+
+  .enquiry-btn.secondary {
+    background: #fff;
+    color: #333;
+    border: 2px solid #333;
+  }
+
+  .enquiry-btn.secondary:hover {
+    background: #333;
+    color: #fff;
+  }
+
+  .or {
+    color: #888;
+    margin: 0;
+  }
+
+  .response-time {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .workshops-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stats {
+      gap: 2rem;
+    }
+  }
+</style>

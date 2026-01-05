@@ -1,0 +1,722 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const freeResources = [
+  {
+    title: 'Getting Started with Wearables',
+    description: 'Introduction to sewable circuits and conductive thread. Perfect for beginners.',
+    type: 'PDF Guide',
+    icon: '📄'
+  },
+  {
+    title: 'Physical Computing Poster',
+    description: 'Classroom poster showing the basics of microcontrollers and circuits.',
+    type: 'Printable',
+    icon: '🖼️'
+  },
+  {
+    title: 'Lesson Planning Template',
+    description: 'Template for planning creative computing lessons with learning objectives.',
+    type: 'Template',
+    icon: '📝'
+  }
+];
+
+const lessonPacks = [
+  {
+    title: 'Wearables with Gemma',
+    description: 'Complete lesson pack for creating wearable technology with Adafruit Gemma and NeoPixels. Includes teacher guide, student worksheets, and assessment rubrics.',
+    price: '£59',
+    lessons: '6 lessons',
+    level: 'KS2-3',
+    tags: ['Wearables', 'Physical Computing']
+  },
+  {
+    title: 'Simple Sewable Circuits',
+    description: 'Introduction to e-textiles and sewable electronics. Perfect for beginners and cross-curricular projects with textiles/DT.',
+    price: '£49',
+    lessons: '4 lessons',
+    level: 'KS2-3',
+    tags: ['Wearables', 'Beginner']
+  },
+  {
+    title: 'RPi-ano: GPIO Piano',
+    description: 'Build an interactive piano using Raspberry Pi and GPIO. Covers inputs, outputs, and Python programming.',
+    price: '£59',
+    lessons: '5 lessons',
+    level: 'KS3-4',
+    tags: ['Raspberry Pi', 'Python']
+  },
+  {
+    title: 'Crumble Computing',
+    description: 'Getting started with the Crumble board. Block-based programming for physical computing.',
+    price: '£49',
+    lessons: '4 lessons',
+    level: 'KS1-2',
+    tags: ['Crumble', 'Beginner']
+  },
+  {
+    title: 'Piano Glove Project',
+    description: 'Advanced wearable musical instrument using Flora, audio codec, and color sensors. Includes cross-curricular music and art links.',
+    price: '£79',
+    lessons: '6+ lessons',
+    level: 'KS3-4',
+    tags: ['Wearables', 'Advanced', 'Music']
+  },
+  {
+    title: 'RC Car with AppShed',
+    description: 'Build and program a remote-controlled car with mobile app control. Great for robotics clubs.',
+    price: '£59',
+    lessons: '5 lessons',
+    level: 'KS3-4',
+    tags: ['Robotics', 'Mobile Apps']
+  }
+];
+
+const subscriptionTiers = [
+  {
+    name: 'Starter',
+    price: '£149',
+    period: '/year',
+    pupils: '0-150 pupils',
+    features: [
+      'All lesson packs included',
+      'Termly content updates',
+      'Editable resources (Word/PPT)',
+      'Email support'
+    ],
+    highlight: false
+  },
+  {
+    name: 'Standard',
+    price: '£199',
+    period: '/year',
+    pupils: '150-300 pupils',
+    features: [
+      'Everything in Starter',
+      'Video CPD library',
+      'Assessment materials',
+      'Priority email support'
+    ],
+    highlight: true
+  },
+  {
+    name: 'Premium',
+    price: '£249',
+    period: '/year',
+    pupils: '300+ pupils',
+    features: [
+      'Everything in Standard',
+      'Scheme of work documents',
+      'Curriculum mapping',
+      'Termly Q&A calls'
+    ],
+    highlight: false
+  }
+];
+---
+
+<BaseLayout title="Resources" description="Free and premium creative computing resources for teachers">
+  <section class="page-header">
+    <div class="container">
+      <h1>Teaching Resources</h1>
+      <p class="subtitle">Creative computing resources that bring code to life</p>
+    </div>
+  </section>
+
+  <!-- Free Resources Section -->
+  <section class="free-resources">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Free</span>
+        <h2>Free Resources</h2>
+        <p>Download these resources for free. Sign up to our newsletter to get notified when we release new materials.</p>
+      </div>
+
+      <div class="free-grid">
+        {freeResources.map((resource) => (
+          <div class="free-card">
+            <span class="icon">{resource.icon}</span>
+            <h3>{resource.title}</h3>
+            <p>{resource.description}</p>
+            <span class="type">{resource.type}</span>
+            <a href="#newsletter" class="download-btn">Download Free</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter" id="newsletter">
+    <div class="container">
+      <div class="newsletter-box">
+        <h2>Get Free Resources + Teaching Tips</h2>
+        <p>Join our newsletter for free resources, teaching ideas, and updates on new materials.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="small">No spam. Unsubscribe anytime. We send 1-2 emails per month.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lesson Packs Section -->
+  <section class="lesson-packs">
+    <div class="container">
+      <div class="section-header">
+        <h2>Lesson Packs</h2>
+        <p>Complete, ready-to-teach lesson packs with everything you need.</p>
+      </div>
+
+      <div class="packs-grid">
+        {lessonPacks.map((pack) => (
+          <div class="pack-card">
+            <div class="pack-header">
+              <div class="tags">
+                {pack.tags.map((tag) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+              <span class="price">{pack.price}</span>
+            </div>
+            <h3>{pack.title}</h3>
+            <p>{pack.description}</p>
+            <div class="pack-meta">
+              <span>{pack.lessons}</span>
+              <span>{pack.level}</span>
+            </div>
+            <a href="#contact" class="buy-btn">Buy Now</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- School Subscriptions -->
+  <section class="subscriptions">
+    <div class="container">
+      <div class="section-header">
+        <h2>School Subscriptions</h2>
+        <p>Get access to all resources with a school subscription. Best value for schools teaching creative computing across year groups.</p>
+      </div>
+
+      <div class="pricing-grid">
+        {subscriptionTiers.map((tier) => (
+          <div class={`pricing-card ${tier.highlight ? 'highlighted' : ''}`}>
+            {tier.highlight && <span class="popular">Most Popular</span>}
+            <h3>{tier.name}</h3>
+            <p class="pupils">{tier.pupils}</p>
+            <div class="price">
+              <span class="amount">{tier.price}</span>
+              <span class="period">{tier.period}</span>
+            </div>
+            <ul class="features">
+              {tier.features.map((feature) => (
+                <li>{feature}</li>
+              ))}
+            </ul>
+            <a href="#contact" class="subscribe-btn">Get Started</a>
+          </div>
+        ))}
+      </div>
+
+      <div class="mat-info">
+        <h3>Multi-Academy Trust?</h3>
+        <p>We offer discounted licensing for MATs and school groups. <a href="#contact">Contact us</a> for a custom quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="included">
+    <div class="container">
+      <h2>What's Included</h2>
+      <div class="included-grid">
+        <div class="included-item">
+          <h3>Detailed Lesson Plans</h3>
+          <p>Step-by-step teacher guides with learning objectives, differentiation, and timing.</p>
+        </div>
+        <div class="included-item">
+          <h3>Student Worksheets</h3>
+          <p>Engaging activities and worksheets ready to print or share digitally.</p>
+        </div>
+        <div class="included-item">
+          <h3>Editable Resources</h3>
+          <p>Word and PowerPoint files you can customise for your school.</p>
+        </div>
+        <div class="included-item">
+          <h3>Assessment Materials</h3>
+          <p>Rubrics, success criteria, and exemplar work to support assessment.</p>
+        </div>
+        <div class="included-item">
+          <h3>Curriculum Mapping</h3>
+          <p>Clear links to National Curriculum computing objectives.</p>
+        </div>
+        <div class="included-item">
+          <h3>CPD Support</h3>
+          <p>Video tutorials and guides to build your confidence with new topics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact/Enquiry -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p>Questions about resources or subscriptions? Want a demo or custom quote?</p>
+      <a href="mailto:hello@readysaltedcode.org" class="contact-btn">Contact Us</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-header h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .section-header p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Free Resources */
+  .free-resources {
+    padding: 4rem 0;
+    background: #f9f9f9;
+  }
+
+  .free-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .free-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .free-card .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .free-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .free-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .free-card .type {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+
+  .download-btn {
+    display: block;
+    background: #28a745;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+
+  .download-btn:hover {
+    background: #218838;
+  }
+
+  /* Newsletter */
+  .newsletter {
+    padding: 3rem 0;
+    background: #dd3333;
+    color: #fff;
+  }
+
+  .newsletter-box {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .newsletter h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .newsletter p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  .newsletter-form button {
+    background: #1a1a2e;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .newsletter-form button:hover {
+    background: #2a2a3e;
+  }
+
+  .newsletter .small {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  /* Lesson Packs */
+  .lesson-packs {
+    padding: 4rem 0;
+  }
+
+  .packs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .pack-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s;
+  }
+
+  .pack-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .pack-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .pack-header .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .pack-header .tag {
+    background: #f0f0f0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #666;
+  }
+
+  .pack-header .price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #dd3333;
+  }
+
+  .pack-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pack-card > p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .pack-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 1rem;
+  }
+
+  .buy-btn {
+    display: block;
+    text-align: center;
+    background: #dd3333;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+
+  .buy-btn:hover {
+    background: #bb2222;
+  }
+
+  /* Subscriptions */
+  .subscriptions {
+    padding: 4rem 0;
+    background: #f9f9f9;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .pricing-card {
+    background: #fff;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .pricing-card.highlighted {
+    border-color: #dd3333;
+  }
+
+  .pricing-card .popular {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #dd3333;
+    color: #fff;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .pricing-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .pricing-card .pupils {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .pricing-card .price {
+    margin-bottom: 1.5rem;
+  }
+
+  .pricing-card .amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .pricing-card .period {
+    color: #888;
+  }
+
+  .pricing-card .features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+  }
+
+  .pricing-card .features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+  }
+
+  .pricing-card .features li:before {
+    content: '✓';
+    color: #28a745;
+    margin-right: 0.5rem;
+    font-weight: bold;
+  }
+
+  .subscribe-btn {
+    display: block;
+    background: #dd3333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .subscribe-btn:hover {
+    background: #bb2222;
+  }
+
+  .mat-info {
+    text-align: center;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .mat-info h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .mat-info p {
+    margin: 0;
+    color: #666;
+  }
+
+  .mat-info a {
+    color: #dd3333;
+  }
+
+  /* What's Included */
+  .included {
+    padding: 4rem 0;
+  }
+
+  .included h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .included-item {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .included-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #dd3333;
+  }
+
+  .included-item p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  /* Contact */
+  .contact {
+    padding: 4rem 0;
+    background: #1a1a2e;
+    color: #fff;
+    text-align: center;
+  }
+
+  .contact h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact p {
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    background: #dd3333;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .contact-btn:hover {
+    background: #bb2222;
+  }
+
+  @media (max-width: 768px) {
+    .newsletter-form {
+      flex-direction: column;
+    }
+
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

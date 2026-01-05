@@ -2,10 +2,102 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About Us">
+<BaseLayout title="Creative Computing Resources & Workshops" description="Teaching resources and workshops that bring code to life through creativity, wearables, and data">
+  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h1><span class="accent">About Us</span></h1>
+      <div class="hero-content">
+        <span class="tagline">Where Creativity Meets Code</span>
+        <h1>Teaching Resources & Workshops for <span class="accent">Creative Computing</span></h1>
+        <p class="hero-text">Engaging lesson packs, in-school workshops, and CPD that bring computing to life through wearables, data, and the arts.</p>
+        <div class="hero-ctas">
+          <a href="/resources" class="btn primary">Browse Resources</a>
+          <a href="/workshops" class="btn secondary">Book a Workshop</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credibility Bar -->
+  <section class="credibility">
+    <div class="container">
+      <div class="cred-items">
+        <div class="cred-item">
+          <span class="cred-icon">🏆</span>
+          <span class="cred-text">Google RISE Award Recipient</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-icon">🎓</span>
+          <span class="cred-text">Led by Dr. Genevieve Smith-Nunes</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-icon">🏫</span>
+          <span class="cred-text">15+ Years in Computing Education</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Offer -->
+  <section class="offerings">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <div class="offerings-grid">
+        <div class="offering-card">
+          <div class="offering-icon">📚</div>
+          <h3>Teaching Resources</h3>
+          <p>Ready-to-teach lesson packs for creative computing. Wearables, physical computing, data visualization, and more.</p>
+          <ul>
+            <li>Complete lesson plans</li>
+            <li>Student worksheets</li>
+            <li>Assessment materials</li>
+            <li>CPD videos</li>
+          </ul>
+          <a href="/resources" class="offering-link">View Resources &rarr;</a>
+        </div>
+        <div class="offering-card">
+          <div class="offering-icon">🛠️</div>
+          <h3>Workshops & Hackdays</h3>
+          <p>Hands-on, in-school workshops that inspire students and build confidence with creative technology.</p>
+          <ul>
+            <li>Creative Computing Hackdays</li>
+            <li>Wearables workshops</li>
+            <li>Data & Dance experiences</li>
+            <li>Teacher CPD sessions</li>
+          </ul>
+          <a href="/workshops" class="offering-link">Book a Workshop &rarr;</a>
+        </div>
+        <div class="offering-card">
+          <div class="offering-icon">💃</div>
+          <h3>datadrivendance</h3>
+          <p>Our signature project combining classical ballet with data visualization and computing education.</p>
+          <ul>
+            <li>[arra]stre - Arrays in dance</li>
+            <li>[data]storm - Live data performance</li>
+            <li>[pain]Byte - Chronic pain & data</li>
+            <li>School residencies available</li>
+          </ul>
+          <a href="/datadrivendance" class="offering-link">Learn More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Resources CTA -->
+  <section class="free-cta">
+    <div class="container">
+      <div class="free-cta-content">
+        <h2>Get Free Teaching Resources</h2>
+        <p>Sign up to receive free lesson samples, teaching tips, and updates on new materials.</p>
+        <a href="/resources#newsletter" class="btn primary">Get Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="container">
+      <h2>See Our Work</h2>
       <div class="video-container">
         <iframe
           src="https://www.youtube.com/embed/so2hyczuJ9o"
@@ -16,71 +108,251 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- About Section -->
   <section class="about">
     <div class="container">
-      <div class="social-links">
-        <a
-          href="https://twitter.com/readysaltedcode"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="twitter-btn"
-        >
-          Follow @readysaltedcode
-        </a>
+      <div class="about-content">
+        <h2>About readysaltedcode</h2>
+        <p>readysaltedcode was founded by Dr. Genevieve Smith-Nunes, a computing educator with over 15 years of experience teaching in schools and universities. Our unique approach combines arts, creativity, and technology to engage all learners in computing.</p>
+        <p>We believe that computing education should be creative, inclusive, and inspiring. Our resources and workshops are designed to build confidence in teachers and spark curiosity in students.</p>
+        <div class="about-awards">
+          <p><strong>Awards & Recognition:</strong></p>
+          <p>Google RISE Award for Computer Science Education | Arts Council England Grants | IEEE Contributor</p>
+        </div>
+        <div class="about-links">
+          <a href="https://twitter.com/readysaltedcode" target="_blank" rel="noopener noreferrer" class="social-link">Twitter/X</a>
+          <a href="https://www.linkedin.com/in/genevievesmithnunes/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+          <a href="https://github.com/readysaltedcode" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+        </div>
       </div>
-
-      <p class="lead">
-        readysaltedcode providing innovative digital computer science STEAM focused education
-        & curriculum opportunities. We provide workshops, training and produce data driven
-        dance performance to highlight, engage and encourage people into loving computer
-        science education, as much as we do.
-      </p>
-
-      <p class="awards">
-        Awarded Grants for Arts | Arts Council England and Google's RISE Award for Computer
-        Science Education through project Art of Computer Science and the Ballets
-        "datadrivendance" [arra]stre, [data]storm & [pain]Byte
-      </p>
     </div>
   </section>
 
-  <section class="highlights">
+  <!-- Contact CTA -->
+  <section class="contact-cta">
     <div class="container">
-      <h2>What We Do</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Workshops & Training</h3>
-          <p>
-            Creative computing workshops for schools, educators, and organizations.
-            From physical computing to data visualization.
-          </p>
-        </div>
-        <div class="card">
-          <h3>datadrivendance</h3>
-          <p>
-            Ballet performances that blend dance with data, technology, and storytelling.
-            Including [arra]stre, [data]storm, and [pain]Byte.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Curriculum Development</h3>
-          <p>
-            STEAM-focused educational resources and curriculum materials for the
-            new computing age.
-          </p>
-        </div>
+      <h2>Ready to Get Started?</h2>
+      <p>Whether you need resources for your classroom or want to book a workshop, we're here to help.</p>
+      <div class="contact-buttons">
+        <a href="/resources" class="btn primary">Browse Resources</a>
+        <a href="mailto:hello@readysaltedcode.org" class="btn secondary">Contact Us</a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  /* Hero */
   .hero {
-    padding: 3rem 0;
-    background: #f9f9f9;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 5rem 0;
+  }
+
+  .hero-content {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .tagline {
+    display: inline-block;
+    background: rgba(221, 51, 51, 0.2);
+    color: #ff6b6b;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
   }
 
   .hero h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero .accent {
+    color: #dd3333;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .btn.primary {
+    background: #dd3333;
+    color: #fff;
+  }
+
+  .btn.primary:hover {
+    background: #bb2222;
+  }
+
+  .btn.secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+
+  .btn.secondary:hover {
+    background: #fff;
+    color: #1a1a2e;
+  }
+
+  /* Credibility */
+  .credibility {
+    background: #f9f9f9;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .cred-items {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .cred-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  .cred-icon {
+    font-size: 1.2rem;
+  }
+
+  /* Offerings */
+  .offerings {
+    padding: 4rem 0;
+  }
+
+  .offerings h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .offering-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: box-shadow 0.2s;
+  }
+
+  .offering-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  .offering-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .offering-card h3 {
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+
+  .offering-card > p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .offering-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .offering-card li {
+    padding: 0.4rem 0;
+    color: #666;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f5f5f5;
+  }
+
+  .offering-card li:before {
+    content: '✓';
+    color: #28a745;
+    margin-right: 0.5rem;
+  }
+
+  .offering-link {
+    color: #dd3333;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .offering-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Free CTA */
+  .free-cta {
+    background: #dd3333;
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .free-cta h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .free-cta p {
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .free-cta .btn.primary {
+    background: #fff;
+    color: #dd3333;
+  }
+
+  .free-cta .btn.primary:hover {
+    background: #f0f0f0;
+  }
+
+  /* Video */
+  .video-section {
+    padding: 4rem 0;
+    background: #f9f9f9;
+  }
+
+  .video-section h2 {
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -105,76 +377,86 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   }
 
+  /* About */
   .about {
-    padding: 3rem 0;
-  }
-
-  .social-links {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .twitter-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: #1da1f2;
-    color: #fff;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: background 0.2s ease;
-  }
-
-  .twitter-btn:hover {
-    background: #0d8ed9;
-    color: #fff;
-  }
-
-  .lead {
-    font-size: 1.2rem;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 1.5rem;
-    color: #666;
-  }
-
-  .awards {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #888;
-    font-style: italic;
-  }
-
-  .highlights {
     padding: 4rem 0;
-    background: #fff;
   }
 
-  .highlights h2 {
+  .about-content {
+    max-width: 700px;
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 2.5rem;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+  .about h2 {
+    margin-bottom: 1.5rem;
   }
 
-  .card {
-    background: #f9f9f9;
-    padding: 2rem;
-    border-radius: 8px;
-    border-left: 4px solid #dd3333;
-  }
-
-  .card h3 {
-    color: #dd3333;
+  .about p {
+    color: #555;
+    line-height: 1.7;
     margin-bottom: 1rem;
   }
 
-  .card p {
+  .about-awards {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+
+  .about-awards p {
     margin: 0;
-    color: #666;
+  }
+
+  .about-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-link {
+    color: #dd3333;
+    font-weight: 500;
+  }
+
+  /* Contact CTA */
+  .contact-cta {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .contact-cta h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-cta p {
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+
+  .contact-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .cred-items {
+      gap: 1.5rem;
+    }
+
+    .offerings-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
