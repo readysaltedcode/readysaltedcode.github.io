@@ -2,109 +2,305 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Lesson for Gemma" description="Learn to create wearable technology with Adafruit Gemma and NeoPixels">
+<BaseLayout title="Wearables with Gemma M0" description="Learn to create wearable technology with Adafruit Gemma M0 and NeoPixels">
   <section class="page-header">
     <div class="container">
       <nav class="breadcrumb">
-        <a href="/lessons">Lessons</a> / Gemma
+        <a href="/lessons">Lessons</a> / Gemma M0
       </nav>
-      <h1>Lesson for Gemma</h1>
-      <p class="subtitle">Wearable technology with Adafruit Gemma and NeoPixels</p>
+      <h1>Wearables with Gemma M0</h1>
+      <p class="subtitle">Create light-up wearable technology with Adafruit Gemma M0 and NeoPixels</p>
+      <span class="updated-badge">Updated January 2026</span>
     </div>
   </section>
 
   <article class="lesson-content">
     <div class="container">
+      <div class="intro-box">
+        <p><strong>This lesson uses the Gemma M0</strong>, Adafruit's current wearable microcontroller. The Gemma M0 is more powerful and easier to use than the original Gemma, with support for both CircuitPython and Arduino.</p>
+      </div>
+
       <h2 class="section-title">Kit List</h2>
       <ul>
-        <li>Gemma</li>
-        <li>2 x Coin Cell batteries</li>
-        <li>1 coin cell battery holder (for 2 coin cells or 2 holders chained together)</li>
-        <li>Conductive Thread</li>
-        <li>3 x Neopixels (sewable LEDs)</li>
-        <li>Needles</li>
+        <li><strong>Gemma M0</strong> (or Gemma M0 Starter Pack)</li>
+        <li>USB cable (Micro-B)</li>
+        <li>Lithium polymer battery (3.7V 150mAh or similar) with JST connector</li>
+        <li>Conductive thread (2-ply or 3-ply stainless steel)</li>
+        <li>3-5 x Flora NeoPixels (sewable RGB LEDs)</li>
+        <li>Needles (embroidery needles work well)</li>
         <li>Scissors</li>
-        <li>Crocodile clips</li>
-        <li>Multimeter (optional)</li>
-        <li>T-shirt or material to stitch onto</li>
+        <li>Alligator/crocodile clips (for prototyping)</li>
+        <li>Fabric or garment to stitch onto</li>
       </ul>
 
-      <h2 class="section-title">Starter: 10mins</h2>
-      <h3>What are microcontrollers?</h3>
-      <p>A <strong>microcontroller</strong> (sometimes abbreviated uC or MCU) is a small computer on a single integrated circuit containing a processor core, memory, and programmable input/output peripherals. Microcontrollers are designed for embedded applications, in contrast to the microprocessors used in personal computers or other general purpose applications.</p>
+      <div class="note-box">
+        <strong>Alternative boards:</strong> This lesson also works with the <strong>Circuit Playground Express</strong> (great for beginners - has built-in NeoPixels and sensors) or <strong>QT Py</strong> (smaller form factor).
+      </div>
 
-      <h3>What is Gemma?</h3>
-      <blockquote>
-        "Get started with Adafruit GEMMA with this lovely starter kit! Included is everything you need to make a basic project. There's a GEMMA board, four sewable bright RGB pixels, a battery holder and batteries, 2-ply conductive thread, alligator clips to help you test out your circuit, and a USB cable for programming GEMMA." - Adafruit.com
-      </blockquote>
-      <p>The Gemma does not have a <strong>Serial port</strong> connection for debugging so the serial port monitor will not be able to send/receive data. Unlike the Flora, the Gemma must be connected to a computer via a USB cable. Once programmed it will run any code uploaded onto it.</p>
+      <h2 class="section-title">Starter: Understanding Microcontrollers (10 mins)</h2>
 
-      <h2 class="section-title">Set up IDE or launch application</h2>
+      <h3>What is a Microcontroller?</h3>
+      <p>A <strong>microcontroller</strong> is a small computer on a single chip. Unlike a full computer, it's designed to do one specific task - running the code you upload to it. Microcontrollers are everywhere: in washing machines, cars, toys, and of course, wearable technology!</p>
+
+      <h3>What is Gemma M0?</h3>
+      <p>The Gemma M0 is a tiny, sewable microcontroller designed for wearable projects. Key features:</p>
+      <ul>
+        <li><strong>Processor:</strong> ATSAMD21E18 (32-bit ARM Cortex M0+) running at 48MHz</li>
+        <li><strong>Memory:</strong> 256KB Flash, 32KB RAM - enough for complex projects</li>
+        <li><strong>Programming:</strong> CircuitPython (recommended for beginners) or Arduino</li>
+        <li><strong>Power:</strong> USB or 3.7V LiPo battery via JST connector</li>
+        <li><strong>Size:</strong> 27mm diameter - perfect for wearables</li>
+        <li><strong>Built-in:</strong> Red LED, RGB DotStar LED, on/off switch</li>
+      </ul>
+
+      <div class="comparison-box">
+        <h4>Gemma M0 vs Original Gemma</h4>
+        <table>
+          <tr>
+            <th>Feature</th>
+            <th>Gemma M0 (Current)</th>
+            <th>Original Gemma (Legacy)</th>
+          </tr>
+          <tr>
+            <td>Processor</td>
+            <td>32-bit ARM (48MHz)</td>
+            <td>8-bit ATtiny85 (8MHz)</td>
+          </tr>
+          <tr>
+            <td>Memory</td>
+            <td>256KB Flash / 32KB RAM</td>
+            <td>8KB Flash / 512B RAM</td>
+          </tr>
+          <tr>
+            <td>CircuitPython</td>
+            <td>Yes</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>NeoPixels supported</td>
+            <td>Hundreds</td>
+            <td>~40-100</td>
+          </tr>
+        </table>
+      </div>
+
+      <h2 class="section-title">Setting Up Your Gemma M0</h2>
+
+      <h3>Option A: CircuitPython (Recommended for beginners)</h3>
+      <p>CircuitPython lets you code by simply editing a file - no compiling needed!</p>
       <ol>
-        <li>Set Up IDE (if not done already) - see Adafruit Learning System for instructions</li>
-        <li>Check your kit has everything</li>
-        <li>Check that you have spare Coin cell batteries (optional)</li>
+        <li>Connect Gemma M0 to your computer via USB</li>
+        <li>It should appear as a drive called <code>CIRCUITPY</code></li>
+        <li>If not, visit the <a href="https://circuitpython.org/board/gemma_m0/" target="_blank" rel="noopener noreferrer">CircuitPython download page</a> and follow the installation instructions</li>
+        <li>Download the <a href="https://circuitpython.org/libraries" target="_blank" rel="noopener noreferrer">CircuitPython Library Bundle</a> and copy the <code>neopixel.mpy</code> file to the <code>lib</code> folder on your CIRCUITPY drive</li>
       </ol>
 
-      <p>Testing your microcontroller: Connect Gemma via USB to the computer and use Blinky code to test the onboard LED.</p>
-
-      <h3>Blinky Test Code</h3>
-      <pre><code is:raw>int led = 1;
-// blink the built in red LED
-// 26 - 03 - 14
-
-void setup() &#123;
-  pinMode(led, OUTPUT);
-&#125;
-
-void loop() &#123;
-  digitalWrite(led, HIGH);
-  delay(4000);
-  digitalWrite(led, LOW);
-  delay(8000);
-&#125;</code></pre>
-
-      <h2 class="section-title">What Can We Make?</h2>
-      <p>With Gemma and NeoPixels, you can create wearable light-up projects like:</p>
-      <ul>
-        <li>Light-up clothing and accessories</li>
-        <li>Wearable point-of-view displays</li>
-        <li>Interactive costumes</li>
-        <li>Dance performance wearables</li>
-      </ul>
-
-      <h3>How many Neopixels can the Gemma Run?</h3>
-      <p>Gemma was designed to drive short segments of NeoPixels. There is enough RAM on the ATtiny85 to drive 100 pixels, but depending on program RAM usage you may have to scale back to 60 or 40. Then you have to think about power - the brighter the LEDs, the more power required.</p>
-
-      <h3>To use with NeoPixels:</h3>
+      <h3>Option B: Arduino IDE</h3>
       <ol>
-        <li>Connect the + power line of the strip to Vout on the Gemma, or to a separate 4-7VDC power source such as a 3 or 4 pack of AA batteries.</li>
-        <li>Connect the - common ground to the battery pack (if being used) and also to the Gemma GND pin</li>
-        <li>Connect the data in line to Gemma #1 - this will let you see when data is being sent because the #1 red LED will flicker. You can use other pins but start with #1 since it's easiest to debug and use</li>
-        <li>Install the NeoPixel library as detailed in Adafruit's Uber Guide, and change the PIN to 1 (it's 6 by default)</li>
-        <li>Upload and enjoy!</li>
+        <li>Install the <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer">Arduino IDE</a></li>
+        <li>Add Adafruit board support: Go to Preferences → Additional Board Manager URLs, add: <code>https://adafruit.github.io/arduino-board-index/package_adafruit_index.json</code></li>
+        <li>Install "Adafruit SAMD Boards" from Board Manager</li>
+        <li>Install "Adafruit NeoPixel" library from Library Manager</li>
+        <li>Select "Adafruit Gemma M0" from Tools → Board</li>
       </ol>
 
-      <h2 class="section-title">Main Activity: 45mins+</h2>
+      <h2 class="section-title">Test Your Board: Blinky</h2>
+      <p>Before starting your project, let's make sure everything works!</p>
 
-      <h3>Task 1: Circuit Design - What are you making?</h3>
-      <p><strong>Draw the Circuit</strong> - Individual Task. This is a really good paper-based activity. Students draw the circuit for their project using colors/labels to highlight the different wires. They need to think about how much distance to use between each LED/Neopixel. Compare circuits with a fellow student. Check to see if the circuit would work. Correct any errors.</p>
+      <h3>CircuitPython Version</h3>
+      <p>Save this as <code>code.py</code> on your CIRCUITPY drive:</p>
+      <pre><code>import board
+import digitalio
+import time
 
-      <p><strong>Test the circuit:</strong> Using crocodile clips, create a simple 2 NeoPixel circuit with the Gemma to test the circuit. Don't forget to remove the battery pack when stitching onto the material.</p>
+led = digitalio.DigitalInOut(board.D13)
+led.direction = digitalio.Direction.OUTPUT
 
-      <h3>Task 2: Stitching</h3>
-      <p>Once you've tested your circuit with crocodile clips, you can start stitching with conductive thread. Take care to:</p>
+while True:
+    led.value = True
+    time.sleep(0.5)
+    led.value = False
+    time.sleep(0.5)</code></pre>
+
+      <h3>Arduino Version</h3>
+      <pre><code is:raw>// Blink the built-in red LED on Gemma M0
+const int LED_PIN = 13;
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);
+  delay(500);
+  digitalWrite(LED_PIN, LOW);
+  delay(500);
+}</code></pre>
+
+      <h2 class="section-title">NeoPixel Basics</h2>
+      <p>NeoPixels are individually addressable RGB LEDs - each pixel can be any colour! The sewable Flora NeoPixels are perfect for wearables.</p>
+
+      <h3>Wiring NeoPixels</h3>
       <ul>
-        <li>Keep your stitches tight and consistent</li>
-        <li>Avoid crossing threads (this will cause a short circuit)</li>
-        <li>Secure knots well at connection points</li>
-        <li>Test as you go</li>
+        <li><strong class="wire-red">+ (Power)</strong> → Gemma 3V or Vout</li>
+        <li><strong class="wire-black">- (Ground)</strong> → Gemma GND</li>
+        <li><strong class="wire-yellow">→ (Data In)</strong> → Gemma D1 (first pixel only)</li>
+        <li><strong class="wire-yellow">→ (Data Out)</strong> → Next pixel's Data In (chain them together)</li>
       </ul>
+
+      <div class="tip-box">
+        <strong>Tip:</strong> Always prototype with alligator clips before sewing! It's much easier to fix mistakes.
+      </div>
+
+      <h3>NeoPixel Code - CircuitPython</h3>
+      <pre><code>import board
+import neopixel
+import time
+
+# Set up NeoPixels on pin D1, with 3 pixels
+pixels = neopixel.NeoPixel(board.D1, 3, brightness=0.3)
+
+while True:
+    # Red
+    pixels.fill((255, 0, 0))
+    time.sleep(1)
+
+    # Green
+    pixels.fill((0, 255, 0))
+    time.sleep(1)
+
+    # Blue
+    pixels.fill((0, 0, 255))
+    time.sleep(1)
+
+    # Rainbow cycle
+    for i in range(len(pixels)):
+        pixels[i] = (255, 0, 0)
+        time.sleep(0.2)
+    for i in range(len(pixels)):
+        pixels[i] = (0, 255, 0)
+        time.sleep(0.2)
+    for i in range(len(pixels)):
+        pixels[i] = (0, 0, 255)
+        time.sleep(0.2)</code></pre>
+
+      <h3>NeoPixel Code - Arduino</h3>
+      <pre><code is:raw>#include &lt;Adafruit_NeoPixel.h&gt;
+
+#define PIN        1    // Data pin connected to NeoPixels
+#define NUMPIXELS  3    // Number of NeoPixels
+
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+
+void setup() {
+  pixels.begin();
+  pixels.setBrightness(50);  // 0-255, keep low for battery life
+}
+
+void loop() {
+  // Red
+  pixels.fill(pixels.Color(255, 0, 0));
+  pixels.show();
+  delay(1000);
+
+  // Green
+  pixels.fill(pixels.Color(0, 255, 0));
+  pixels.show();
+  delay(1000);
+
+  // Blue
+  pixels.fill(pixels.Color(0, 0, 255));
+  pixels.show();
+  delay(1000);
+}</code></pre>
+
+      <h2 class="section-title">Main Activity: Create Your Wearable (45+ mins)</h2>
+
+      <h3>Task 1: Design Your Circuit (10 mins)</h3>
+      <p>Before sewing, plan your project on paper:</p>
+      <ol>
+        <li><strong>Sketch your design</strong> - Where will the Gemma go? Where will each NeoPixel be?</li>
+        <li><strong>Draw the connections</strong> - Use different colours for power (+), ground (-), and data</li>
+        <li><strong>Check for crossings</strong> - Conductive thread can't cross itself without causing a short circuit!</li>
+        <li><strong>Measure distances</strong> - Make sure you have enough thread</li>
+      </ol>
+
+      <div class="tip-box">
+        <strong>Design tip:</strong> Keep the Gemma somewhere accessible (e.g., inside pocket or hem) so you can easily connect USB for reprogramming.
+      </div>
+
+      <h3>Task 2: Prototype with Clips (10 mins)</h3>
+      <p>Use alligator clips to build your circuit temporarily:</p>
+      <ol>
+        <li>Connect your NeoPixels to the Gemma using alligator clips</li>
+        <li>Upload your code and test that all pixels light up</li>
+        <li>Fix any issues before you start sewing</li>
+      </ol>
+
+      <h3>Task 3: Sew Your Circuit (25+ mins)</h3>
+      <p>Now for the fun part - stitching with conductive thread!</p>
+
+      <h4>Sewing Tips:</h4>
+      <ul>
+        <li><strong>Use a running stitch</strong> - small, even stitches work best</li>
+        <li><strong>Loop through holes multiple times</strong> - at least 3 times for good electrical contact</li>
+        <li><strong>Tie secure knots</strong> - dab with clear nail polish to prevent unraveling</li>
+        <li><strong>Keep threads separated</strong> - at least 3mm apart to avoid shorts</li>
+        <li><strong>Test as you go</strong> - connect power after each connection to verify</li>
+        <li><strong>Cut threads cleanly</strong> - loose ends can cause shorts</li>
+      </ul>
+
+      <h3>Task 4: Customise Your Code</h3>
+      <p>Once your circuit is sewn and working, experiment with different patterns:</p>
+      <ul>
+        <li>Fade colours in and out</li>
+        <li>Create a rainbow animation</li>
+        <li>React to button presses (Gemma M0 has a built-in button!)</li>
+        <li>Change patterns with different gestures</li>
+      </ul>
+
+      <h2 class="section-title">Extension Ideas</h2>
+      <ul>
+        <li><strong>Add sensors:</strong> Connect a light sensor to make pixels respond to ambient light</li>
+        <li><strong>Sound reactive:</strong> Add a microphone to pulse with music</li>
+        <li><strong>Motion activated:</strong> Use an accelerometer to change colours when you move</li>
+        <li><strong>Wireless control:</strong> Upgrade to a Feather board with Bluetooth for app control</li>
+      </ul>
+
+      <h2 class="section-title">Troubleshooting</h2>
+      <table class="troubleshoot-table">
+        <tr>
+          <th>Problem</th>
+          <th>Solution</th>
+        </tr>
+        <tr>
+          <td>NeoPixels won't light up</td>
+          <td>Check power and ground connections. Ensure data wire goes to Data IN (arrow pointing away from Gemma)</td>
+        </tr>
+        <tr>
+          <td>Only first pixel works</td>
+          <td>Check data connection between first and second pixel</td>
+        </tr>
+        <tr>
+          <td>Wrong colours</td>
+          <td>Some NeoPixels are RGB, others are GRB - check the library settings</td>
+        </tr>
+        <tr>
+          <td>Flickering</td>
+          <td>Usually a loose connection - check all stitched joints</td>
+        </tr>
+        <tr>
+          <td>CIRCUITPY drive not appearing</td>
+          <td>Double-click the reset button on Gemma M0 to enter bootloader mode</td>
+        </tr>
+      </table>
 
       <div class="resource-links">
         <h3>Additional Resources</h3>
-        <a href="https://learn.adafruit.com/" target="_blank" rel="noopener noreferrer">Adafruit Learning System</a>
+        <a href="https://learn.adafruit.com/adafruit-gemma-m0" target="_blank" rel="noopener noreferrer">Gemma M0 Guide</a>
         <a href="https://learn.adafruit.com/adafruit-neopixel-uberguide" target="_blank" rel="noopener noreferrer">NeoPixel Uber Guide</a>
+        <a href="https://circuitpython.org/board/gemma_m0/" target="_blank" rel="noopener noreferrer">CircuitPython for Gemma M0</a>
+        <a href="https://learn.adafruit.com/conductive-thread" target="_blank" rel="noopener noreferrer">Conductive Thread Guide</a>
       </div>
     </div>
   </article>
@@ -136,8 +332,84 @@ void loop() &#123;
     margin: 0;
   }
 
+  .updated-badge {
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+
   .lesson-content {
     padding: 3rem 0;
+  }
+
+  .intro-box {
+    background: #e8f4fd;
+    border-left: 4px solid #0066cc;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .intro-box p {
+    margin: 0;
+  }
+
+  .note-box {
+    background: #f0f0f0;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+  }
+
+  .tip-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .comparison-box {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+  }
+
+  .comparison-box h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .comparison-box table,
+  .troubleshoot-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .comparison-box th,
+  .comparison-box td,
+  .troubleshoot-table th,
+  .troubleshoot-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .comparison-box th,
+  .troubleshoot-table th {
+    background: #eee;
+    font-weight: 600;
+  }
+
+  .troubleshoot-table {
+    margin-top: 1rem;
   }
 
   .section-title {
@@ -151,6 +423,11 @@ void loop() &#123;
   .lesson-content h3 {
     color: #333;
     margin-top: 1.5rem;
+  }
+
+  .lesson-content h4 {
+    color: #555;
+    margin-top: 1.25rem;
   }
 
   .lesson-content ul, .lesson-content ol {
@@ -185,6 +462,17 @@ void loop() &#123;
     font-size: 0.9rem;
   }
 
+  p code {
+    background: #f0f0f0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+
+  .wire-red { color: #dd3333; font-weight: bold; }
+  .wire-black { color: #333; font-weight: bold; }
+  .wire-yellow { color: #cc9900; font-weight: bold; }
+
   .resource-links {
     background: #f9f9f9;
     padding: 1.5rem;
@@ -198,16 +486,25 @@ void loop() &#123;
 
   .resource-links a {
     display: inline-block;
-    margin-right: 1rem;
-    margin-bottom: 0.5rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
     padding: 0.5rem 1rem;
     background: #dd3333;
     color: #fff;
     border-radius: 4px;
+    font-size: 0.9rem;
   }
 
   .resource-links a:hover {
     background: #bb2222;
     color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .resource-links a {
+      display: block;
+      margin-right: 0;
+      text-align: center;
+    }
   }
 </style>
