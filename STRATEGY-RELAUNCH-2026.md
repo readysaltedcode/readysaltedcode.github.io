@@ -17,7 +17,7 @@
 ### Proposed Positioning
 > "Dr. Genevieve Smith-Nunes has shaped computing education at the highest levels - from contributing to the UK's national computing curriculum to developing ICT education policy for Caribbean governments. ReadySaltedCode brings this expertise to educators through research-backed resources and methodologies."
 
-**Shift**: From "I'll teach your students" → "I'll empower you to teach your students better"
+**Shift**: From "I'll teach your students" to "I'll empower you to teach your students better"
 
 ---
 
@@ -98,13 +98,13 @@ Where does **ReadySaltedCode** (business) end and **Genevieve Smith-Nunes** (aca
 
 | Activity | ReadySaltedCode? | Genevieve Personal? |
 |----------|------------------|---------------------|
-| Selling lesson resources | ✓ | |
-| Training educators on methodology | ✓ | |
+| Selling lesson resources | Yes | |
+| Training educators on methodology | Yes | |
 | Keynote on computing education | ? | ? |
-| Curriculum consultancy for schools | ✓ | |
-| Government policy work | | ✓ (academic) |
-| IEEE/standards work | | ✓ (academic) |
-| High-profile hackday (e.g., UN/Google) | ✓ (the brand) | ✓ (the expertise) |
+| Curriculum consultancy for schools | Yes | |
+| Government policy work | | Yes (academic) |
+| IEEE/standards work | | Yes (academic) |
+| High-profile hackday (e.g., UN/Google) | Yes (the brand) | Yes (the expertise) |
 
 **Recommendation**: Speaking/keynotes could sit under ReadySaltedCode when the topic is practical (creative computing, engaging students) and under Genevieve when academic (research, policy, ethics).
 
@@ -178,13 +178,16 @@ Resources | Workshops | Lessons | datadrivendance | Archive | About
 ### Proposed Navigation Options
 
 **Option A: Product-Focused**
-> Resources | datadrivendance | Training | About
+
+Resources | datadrivendance | Training | About
 
 **Option B: Audience-Focused**
-> For Educators | For Schools | datadrivendance | About
+
+For Educators | For Schools | datadrivendance | About
 
 **Option C: Action-Focused**
-> Browse Resources | Get Trained | Book Consultancy | About
+
+Browse Resources | Get Trained | Book Consultancy | About
 
 ### Homepage Sections (Proposed)
 
@@ -204,7 +207,7 @@ Resources | Workshops | Lessons | datadrivendance | Archive | About
 | **Training Courses** | Online educator training (self-serve or cohort) | Scalable, higher price point | Requires content creation |
 | **Consultancy** | High-value, limited availability | High revenue per engagement | Not scalable, time-intensive |
 | **Licensing** | Schools pay annual fee for resources + updates | Recurring revenue | Need enough content to justify |
-| **Hybrid** | Free content → paid resources → premium training → consultancy | Multiple entry points | Complex to manage |
+| **Hybrid** | Free content > paid resources > premium training > consultancy | Multiple entry points | Complex to manage |
 
 ---
 
@@ -246,7 +249,7 @@ Resources | Workshops | Lessons | datadrivendance | Archive | About
 75 blog posts from 2012-2017 documenting:
 - Project development (RC cars, wearables, hackdays)
 - Event participation (Maker Faires, festivals, school visits)
-- datadrivendance evolution ([arra]stre → [data]storm → [pain]Byte)
+- datadrivendance evolution ([arra]stre > [data]storm > [pain]Byte)
 - Industry engagement (Google, Brighton Digital Festival)
 - The story of how ReadySaltedCode grew
 
@@ -305,7 +308,7 @@ Multi-week structured programmes, not just individual lessons:
 |------|----------|----------|
 | Wearables Programme | 8 weeks | Full scheme of work, all resources, assessment, video guides, kit list with suppliers |
 | Physical Computing Programme | 10 weeks | micro:bit/Pi pathway, progressive projects, differentiation |
-| Creative Coding Programme | 6 weeks | Scratch → Python bridge, creative outcomes |
+| Creative Coding Programme | 6 weeks | Scratch to Python bridge, creative outcomes |
 
 **2. Event-in-a-Box Kits** (£199-399)
 Everything needed to run a specific event:
