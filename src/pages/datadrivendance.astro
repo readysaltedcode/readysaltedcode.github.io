@@ -26,11 +26,11 @@ const performances = [
 ];
 ---
 
-<BaseLayout title="datadrivendance" description="Data-driven dance performances blending technology and art">
+<BaseLayout title="datadrivendance" description="A proven methodology combining dance, data, and computing education">
   <section class="page-header">
     <div class="container">
       <h1><span class="accent">datadrivendance</span></h1>
-      <p class="subtitle">Where data meets dance, technology meets art</p>
+      <p class="subtitle">A methodology for schools: where data meets dance, technology meets art</p>
     </div>
   </section>
 
@@ -38,21 +38,50 @@ const performances = [
     <div class="container">
       <div class="intro-content">
         <p>
-          datadrivendance is a series of innovative performance pieces that explore the
-          intersection of classical ballet, biometric data, wearable technology, and
-          computer science education.
+          datadrivendance is a proven methodology that combines data, wearable technology,
+          and movement to create engaging cross-curricular learning experiences. Originally
+          developed through award-winning performance pieces, it's now available as a
+          complete framework for schools.
         </p>
         <p>
-          Each performance transforms data into movement, making the invisible visible
-          through the universal language of dance.
+          Run your own datadrivendance event - combining Computing and PE/Dance curricula
+          in a project that culminates in a school performance. No dance expertise required.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- For Schools Section -->
+  <section class="for-schools">
+    <div class="container">
+      <h2>datadrivendance for Schools</h2>
+      <div class="package-info">
+        <div class="package-description">
+          <p>Everything you need to run a cross-curricular data and dance project at your school, ending in a live performance event.</p>
+          <ul>
+            <li>8-12 session framework (flexible to your timetable)</li>
+            <li>Complete lesson plans for Computing and PE/Dance</li>
+            <li>Data collection activities (age-appropriate, ethical)</li>
+            <li>Movement/choreography resources (no dance expertise needed)</li>
+            <li>Technical setup guides for data visualisation</li>
+            <li>Performance event planning checklist</li>
+            <li>Student workbooks and assessment criteria</li>
+          </ul>
+        </div>
+        <div class="package-cta">
+          <p><strong>Interested in running datadrivendance at your school?</strong></p>
+          <a href="/workshops" class="btn">Explore Training Options</a>
+          <p class="or">or</p>
+          <a href="mailto:genevieve@readysaltedcode.org?subject=datadrivendance%20for%20Schools" class="btn-secondary">Get in Touch</a>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="performances">
     <div class="container">
-      <h2>Performances</h2>
+      <h2>The Original Performances</h2>
+      <p class="performances-intro">datadrivendance began as a series of award-winning performance pieces. These works informed the methodology now available to schools.</p>
       {performances.map((performance) => (
         <article class="performance-card">
           <div class="performance-image">
@@ -79,11 +108,14 @@ const performances = [
 
   <section class="cta">
     <div class="container">
-      <h2>Interested in our work?</h2>
-      <p>Get in touch to learn more about our performances or to discuss collaborations.</p>
-      <a href="mailto:genevieve@readysaltedcode.org?subject=datadrivendance%20enquiry" class="btn">
-        Get in Touch
-      </a>
+      <h2>Bring datadrivendance to Your School</h2>
+      <p>Ready to run a cross-curricular project that combines computing, data, and movement? Get trained on the methodology or get in touch to discuss options.</p>
+      <div class="cta-buttons">
+        <a href="/workshops" class="btn">Explore Training</a>
+        <a href="mailto:genevieve@readysaltedcode.org?subject=datadrivendance%20enquiry" class="btn-outline">
+          Contact Us
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -237,7 +269,125 @@ const performances = [
     color: #fff;
   }
 
+  .btn-outline {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: #dd3333;
+    border: 2px solid #dd3333;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-outline:hover {
+    background: #dd3333;
+    color: #fff;
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: #dd3333;
+    border: 1px solid #dd3333;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background: #dd3333;
+    color: #fff;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* For Schools Section */
+  .for-schools {
+    padding: 4rem 0;
+    background: #fff;
+  }
+
+  .for-schools h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .package-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .package-description p {
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+
+  .package-description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .package-description li {
+    padding: 0.5rem 0;
+    color: #555;
+    border-bottom: 1px solid #eee;
+  }
+
+  .package-description li:before {
+    content: '✓';
+    color: #28a745;
+    margin-right: 0.75rem;
+    font-weight: bold;
+  }
+
+  .package-cta {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .package-cta p {
+    margin-bottom: 1rem;
+  }
+
+  .package-cta .or {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0.75rem 0;
+  }
+
+  .package-cta .btn {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .performances-intro {
+    text-align: center;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+  }
+
   @media (max-width: 768px) {
+    .package-info {
+      grid-template-columns: 1fr;
+    }
+  }
     .performance-card {
       grid-template-columns: 1fr;
     }

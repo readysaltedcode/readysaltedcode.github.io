@@ -2,45 +2,76 @@
 
 ## Current Status (January 2026)
 
-**Branch**: `business-revival` - Ready for client approval
+**Branch**: `business-revival` - Strategic repositioning in progress
 **Preview URL**: https://business-revival.readysaltedcode-github-io.pages.dev/
 
-### What's Been Done
-- Migrated from GitHub Pages to Cloudflare Pages (Astro static site)
-- Updated all 6 lessons for modern hardware (Circuit Playground Express, micro:bit, MIT App Inventor, Python/gpiozero)
-- Added "Updated January 2026" badges to lessons
-- Replaced Twitter/X with Substack across site
-- Linked About section to Genevieve's academic profile (genevievesmithnunes.me)
-- Added archive badges to 75 stories (2012-2017)
-- Removed unimplemented features (newsletter signup, Calendly booking)
-- Fixed navigation active state bug (About was always highlighted)
-- Updated contact email to genevieve@readysaltedcode.org
+### Strategic Direction (Client-Approved)
 
-### Next Steps (After Client Approval)
-1. Merge `business-revival` branch to `main`
-2. Configure Cloudflare Pages for production domain (readysaltedcode.org)
-3. Update DNS if needed
-4. Uncomment ReadySaltedCode in CV on genevievesmithnunes.me
+ReadySaltedCode is repositioning from "Genevieve teaches students" to "Genevieve empowers educators". The focus is now on:
+- **Educators as the target audience** (not students directly)
+- **Training & methodologies** that educators can deliver themselves
+- **Senior positioning** reflecting Genevieve's policy-level work
+- **datadrivendance as a packaged methodology** for schools
+
+### What's Been Done
+
+**Phase 1: Technical Migration & Content Update**
+- Migrated from GitHub Pages to Cloudflare Pages (Astro static site)
+- Updated all 6 lessons for modern hardware
+- Replaced Twitter/X with Substack
+- Fixed navigation bugs, removed unimplemented features
+
+**Phase 2: Strategic Repositioning (Current)**
+- Updated homepage with senior positioning and policy credentials
+- Surfaced key credentials: UK DfE curriculum work, Antigua policy, IEEE standards
+- Reframed "Workshops" as "Training for Educators"
+- Repositioned datadrivendance as a methodology schools can deliver
+- Replaced "CPD" language with clearer terms ("Educator Resources", "Training")
+- Created STRATEGY-RELAUNCH-2026.md for ongoing strategic discussion
+
+### Still To Decide (See STRATEGY-RELAUNCH-2026.md)
+- Product packaging and pricing structure
+- Service offerings and boundaries
+- Where speaking/keynotes should live (RSC vs personal site)
+- datadrivendance packaging details
+
+### Next Steps
+1. Client review of repositioned site
+2. Finalise product/service decisions
+3. Merge to main when approved
+4. Configure production domain
 
 ---
 
 ## Site Purpose
 
-**readysaltedcode** is a commercial STEM education business founded by Dr. Genevieve Smith-Nunes. It provides creative computing resources and services to schools and educators.
+**readysaltedcode** is a STEM education business founded by Dr. Genevieve Smith-Nunes. It provides:
+- **Educator resources** for creative computing
+- **Training & methodologies** educators can deliver themselves
+- **datadrivendance** as a school event methodology
 
-## What This Site Offers
+## Positioning
 
-- **Teaching Resources**: Lesson packs for creative computing (wearables, physical computing, data visualization)
-- **Workshops & Hackdays**: In-school hands-on workshops for students
-- **CPD**: Continuing professional development for teachers
-- **datadrivendance**: Artistic performances combining classical ballet with data/technology
+Genevieve is positioned as a **senior industry figure** who has:
+- Shaped the UK's national computing curriculum (DfE working group)
+- Advised governments on ICT education policy (Antigua & Barbuda)
+- Contributed to IEEE standards (Brain Neuroethics, Age-Appropriate Digital Services)
+- PhD from Cambridge, Senior Lecturer at Roehampton
+
+This is **not** "experienced teacher for hire" - it's "industry leader empowering educators."
 
 ## Target Audience
 
-- School teachers (primary and secondary)
-- Computing/STEM coordinators
-- Schools booking workshops
-- Educational institutions
+- Computing/STEM coordinators and leads
+- Teachers wanting to build creative computing skills
+- Schools/MATs seeking training
+- Education authorities
+
+## What This Site Offers
+
+- **Educator Resources**: Lesson packs for creative computing (freemium model TBD)
+- **Training**: Methodologies educators can deliver (hackdays, wearables, datadrivendance)
+- **datadrivendance for Schools**: Complete framework for cross-curricular data+dance projects
 
 ## Tech Stack
 
@@ -52,22 +83,26 @@
 
 **Dr. Genevieve Smith-Nunes' Academic Profile**: https://www.genevievesmithnunes.me/
 
-This is Genevieve's personal academic portfolio showcasing her:
-- University lecturer position (University of Roehampton)
-- Research (data ethics, AI, computing education, XR)
-- Publications (IEEE, peer-reviewed journals)
-- PhD from University of Cambridge
-
-The academic site lends credibility to the commercial offerings. The About section on readysaltedcode.org links to her academic profile.
+The academic site provides credibility for the commercial offerings. Key credentials from the academic site are now surfaced on ReadySaltedCode.
 
 **Source code**: `/Users/naty/Documents/GitHub/genevievesmithnunes.me`
 
+## Key Credentials to Surface
+
+- UK Department for Education - Computing Programme of Study (2012-2014)
+- Government of Antigua & Barbuda - ICT Education Policy (2022-2025)
+- IEEE Brain Neuroethics Framework 2025 - Education component
+- IEEE 2089-2021 - Age-Appropriate Digital Services
+- PhD Education, University of Cambridge
+- Senior Lecturer, University of Roehampton
+- Google RISE Award
+
 ## Brand Relationship
 
-- **readysaltedcode.org** = The business (products, services, revenue)
+- **readysaltedcode.org** = The business (products, training, revenue)
 - **genevievesmithnunes.me** = The academic (research, publications, credentials)
 
-Both sites should cross-reference each other appropriately. Genevieve left Twitter/X - use Substack (readysaltedcode.substack.com) for social links.
+The line between them needs clarification (see STRATEGY-RELAUNCH-2026.md), particularly for speaking/keynotes.
 
 ## Key Contacts
 
@@ -79,5 +114,5 @@ Both sites should cross-reference each other appropriately. Genevieve left Twitt
 
 - Lessons have been updated for modern hardware (January 2026)
 - Stories section is archived content from 2012-2017
-- Newsletter signup removed (not implemented)
-- Calendly booking removed (not implemented)
+- "CPD" language has been replaced with "Training" / "Educator Resources"
+- Workshops reframed as training for educators (not Genevieve delivering to students)

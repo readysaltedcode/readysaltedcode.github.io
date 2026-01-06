@@ -1,103 +1,103 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const workshops = [
+const trainingOptions = [
   {
-    title: 'Creative Computing Hackday',
+    title: 'Hackday Methodology Training',
     duration: 'Full day',
-    price: '£650',
-    capacity: 'Up to 60 pupils',
-    description: 'An immersive day of creative coding, problem-solving, and making. Students work in teams to tackle real-world challenges using physical computing, data, and code.',
+    price: 'From £450',
+    capacity: 'Up to 20 educators',
+    description: 'Learn how to run creative computing hackdays at your school. We teach you the methodology so you can deliver engaging hackdays year after year.',
     includes: [
-      'Challenge briefing and team formation',
-      'Guided making sessions',
-      'Final presentations and judging',
-      'Certificates for all participants'
+      'Complete hackday framework',
+      'Challenge design templates',
+      'Facilitation techniques',
+      'All resources to run your own events'
     ],
-    suitable: 'KS2-4, Youth groups',
+    suitable: 'Computing leads, STEM coordinators',
     featured: true
   },
   {
-    title: 'Wearables Workshop',
+    title: 'Wearables for Educators',
     duration: 'Half day',
-    price: '£400',
-    capacity: 'Up to 30 pupils',
-    description: 'Hands-on introduction to wearable technology. Students create light-up wearables using sewable circuits, LEDs, and conductive thread.',
+    price: 'From £300',
+    capacity: 'Up to 15 educators',
+    description: 'Build your confidence with wearable technology. Learn how to teach sewable circuits, LEDs, and e-textiles in your classroom.',
     includes: [
-      'Introduction to e-textiles',
-      'Circuit design activity',
-      'Practical making session',
-      'Take-home project'
+      'Hands-on making experience',
+      'Complete lesson resources',
+      'Troubleshooting guide',
+      'Kit recommendations'
     ],
-    suitable: 'KS2-3',
+    suitable: 'Primary & Secondary teachers',
     featured: false
   },
   {
-    title: 'Data & Dance Experience',
+    title: 'datadrivendance for Schools',
     duration: 'Full day',
-    price: '£750',
-    capacity: 'Up to 60 pupils',
-    description: 'Our signature workshop combining data visualization with movement. Students explore how data can be captured, visualized, and interpreted through dance and creative coding.',
+    price: 'From £500',
+    capacity: 'Up to 15 educators',
+    description: 'Learn how to run your own data-driven dance event. Combine computing with PE/Dance for a cross-curricular project that culminates in a school performance.',
     includes: [
-      'Introduction to biometric data',
-      'Data capture activities',
-      'Creative visualization workshop',
-      'Performance showcase'
+      'Complete methodology framework',
+      'Session-by-session plans',
+      'Technical setup guides',
+      'Performance event checklist'
     ],
-    suitable: 'KS3-4, Universities',
+    suitable: 'Computing & PE teachers, STEM leads',
     featured: true
   },
   {
     title: 'Physical Computing Fundamentals',
-    duration: 'Full day',
-    price: '£650',
-    capacity: 'Up to 30 pupils',
-    description: 'Get hands-on with micro:bit, Raspberry Pi, or Arduino. Students learn inputs, outputs, and programming through practical projects.',
+    duration: 'Half day',
+    price: 'From £300',
+    capacity: 'Up to 15 educators',
+    description: 'Get confident with micro:bit, Raspberry Pi, or Arduino. Practical training so you can teach physical computing with confidence.',
     includes: [
-      'Platform introduction',
-      'Input/output experiments',
-      'Programming challenges',
-      'Final project build'
+      'Platform deep-dive',
+      'Project-based learning approach',
+      'Classroom management tips',
+      'Lesson resources included'
     ],
-    suitable: 'KS3-4',
+    suitable: 'Primary & Secondary teachers',
     featured: false
   },
   {
-    title: 'Teacher CPD Session',
-    duration: 'Half day',
-    price: '£350',
-    capacity: 'Up to 20 teachers',
-    description: 'Practical training for teachers wanting to bring creative computing into their classroom. Build confidence with new tools and pedagogies.',
+    title: 'Bespoke Training',
+    duration: 'Flexible',
+    price: 'By arrangement',
+    capacity: 'Flexible',
+    description: 'Need something specific? We design training around your school\'s needs, curriculum, and equipment.',
     includes: [
-      'Hands-on with equipment',
-      'Lesson planning time',
-      'Resource pack to take away',
-      'Follow-up email support'
+      'Needs analysis consultation',
+      'Customised training programme',
+      'Tailored resources',
+      'Follow-up support'
     ],
-    suitable: 'Primary & Secondary teachers',
+    suitable: 'Schools, MATs, Education authorities',
     featured: false
   }
 ];
 
 const testimonials = [
   {
-    quote: "The hackday was incredibly engaging. Students who normally struggle in computing were leading their teams by the end of the day.",
+    quote: "The training gave us everything we needed to run hackdays ourselves. We've now done three and the students love them.",
     author: "Head of Computing",
     school: "Secondary Academy, Brighton"
   },
   {
-    quote: "Genevieve brought something completely different to our school. The combination of creativity and computing was exactly what our students needed.",
+    quote: "The datadrivendance methodology was brilliant. Our PE and Computing departments collaborated for the first time, and the performance event was a highlight of the school year.",
     author: "STEM Coordinator",
     school: "Primary School, London"
   }
 ];
 ---
 
-<BaseLayout title="Workshops" description="In-person creative computing workshops and hackdays for schools">
+<BaseLayout title="Training" description="Educator training for creative computing - learn methodologies you can deliver yourself">
   <section class="page-header">
     <div class="container">
-      <h1>Workshops & Hackdays</h1>
-      <p class="subtitle">Inspiring the next generation of creative technologists</p>
+      <h1>Training for Educators</h1>
+      <p class="subtitle">Learn methodologies you can deliver in your school, year after year</p>
     </div>
   </section>
 
@@ -105,53 +105,53 @@ const testimonials = [
   <section class="intro">
     <div class="container">
       <div class="intro-content">
-        <h2>Bring Creative Computing to Your School</h2>
-        <p>Our workshops combine the best of arts and technology to engage all learners. Led by Dr. Genevieve Smith-Nunes, a Google RISE Award recipient and experienced computing educator, each session is designed to inspire creativity, build confidence, and develop real skills.</p>
+        <h2>Build Your Creative Computing Toolkit</h2>
+        <p>Our training empowers you to run engaging creative computing activities yourself. Developed by Dr. Genevieve Smith-Nunes - who helped shape the UK's national computing curriculum - each methodology is research-backed and classroom-tested. You'll leave with everything you need to deliver confidently.</p>
         <div class="stats">
           <div class="stat">
-            <span class="number">15+</span>
-            <span class="label">Years Teaching</span>
-          </div>
-          <div class="stat">
             <span class="number">100+</span>
-            <span class="label">Workshops Delivered</span>
+            <span class="label">Educators Trained</span>
           </div>
           <div class="stat">
-            <span class="number">5000+</span>
-            <span class="label">Students Reached</span>
+            <span class="number">50+</span>
+            <span class="label">Schools Supported</span>
+          </div>
+          <div class="stat">
+            <span class="number">15+</span>
+            <span class="label">Years Experience</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Workshop Options -->
+  <!-- Training Options -->
   <section class="workshops">
     <div class="container">
-      <h2>Workshop Options</h2>
+      <h2>Training Options</h2>
 
       <div class="workshops-grid">
-        {workshops.map((workshop) => (
-          <div class={`workshop-card ${workshop.featured ? 'featured' : ''}`}>
-            {workshop.featured && <span class="featured-badge">Popular</span>}
+        {trainingOptions.map((training) => (
+          <div class={`workshop-card ${training.featured ? 'featured' : ''}`}>
+            {training.featured && <span class="featured-badge">Popular</span>}
             <div class="workshop-header">
-              <h3>{workshop.title}</h3>
+              <h3>{training.title}</h3>
               <div class="workshop-meta">
-                <span class="duration">{workshop.duration}</span>
-                <span class="price">{workshop.price}</span>
+                <span class="duration">{training.duration}</span>
+                <span class="price">{training.price}</span>
               </div>
             </div>
-            <p class="description">{workshop.description}</p>
+            <p class="description">{training.description}</p>
             <div class="capacity">
-              <strong>Capacity:</strong> {workshop.capacity}
+              <strong>Group size:</strong> {training.capacity}
             </div>
             <div class="suitable">
-              <strong>Suitable for:</strong> {workshop.suitable}
+              <strong>For:</strong> {training.suitable}
             </div>
             <div class="includes">
-              <strong>Includes:</strong>
+              <strong>You'll get:</strong>
               <ul>
-                {workshop.includes.map((item) => (
+                {training.includes.map((item) => (
                   <li>{item}</li>
                 ))}
               </ul>
@@ -171,22 +171,22 @@ const testimonials = [
         <div class="step">
           <span class="step-number">1</span>
           <h3>Get in Touch</h3>
-          <p>Tell us about your school, year groups, and what you're hoping to achieve.</p>
+          <p>Tell us about your school, staff, and what you'd like to be able to deliver.</p>
         </div>
         <div class="step">
           <span class="step-number">2</span>
-          <h3>We Plan Together</h3>
-          <p>We'll customise the workshop to fit your curriculum, space, and equipment.</p>
+          <h3>We Design Together</h3>
+          <p>We'll tailor the training to your curriculum, equipment, and experience level.</p>
         </div>
         <div class="step">
           <span class="step-number">3</span>
-          <h3>Delivery Day</h3>
-          <p>We bring everything needed and deliver an inspiring, hands-on experience.</p>
+          <h3>Training Day</h3>
+          <p>Hands-on, practical training where you'll actually do the activities you'll be teaching.</p>
         </div>
         <div class="step">
           <span class="step-number">4</span>
-          <h3>Follow Up</h3>
-          <p>You receive resources to continue the learning after we leave.</p>
+          <h3>Deliver Confidently</h3>
+          <p>You have everything you need - resources, guides, and ongoing support.</p>
         </div>
       </div>
     </div>
@@ -235,11 +235,11 @@ const testimonials = [
   <!-- Enquiry Form -->
   <section class="enquire" id="enquire">
     <div class="container">
-      <h2>Book a Workshop</h2>
-      <p>Interested in bringing a workshop to your school? Get in touch and we'll help you find the right option.</p>
+      <h2>Enquire About Training</h2>
+      <p>Ready to empower your educators? Get in touch to discuss training options for your school or MAT.</p>
 
       <div class="enquiry-options">
-        <a href="mailto:genevieve@readysaltedcode.org?subject=Workshop Enquiry" class="enquiry-btn primary">
+        <a href="mailto:genevieve@readysaltedcode.org?subject=Training Enquiry" class="enquiry-btn primary">
           Email Us
         </a>
       </div>
