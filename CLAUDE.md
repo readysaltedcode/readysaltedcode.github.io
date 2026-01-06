@@ -2,8 +2,8 @@
 
 ## Current Status (January 2026)
 
-**Branch**: `business-revival` - Strategic repositioning in progress
-**Preview URL**: https://business-revival.readysaltedcode-github-io.pages.dev/
+**Branch**: `main` - Strategic repositioning complete, awaiting client decisions
+**Production**: Cloudflare Pages (configure production domain when ready)
 
 ### Strategic Direction (Client-Approved)
 
@@ -21,12 +21,14 @@ ReadySaltedCode is repositioning from "Genevieve teaches students" to "Genevieve
 - Replaced Twitter/X with Substack
 - Fixed navigation bugs, removed unimplemented features
 
-**Phase 2: Strategic Repositioning (Current)**
+**Phase 2: Strategic Repositioning (Complete)**
 - Updated homepage with senior positioning and policy credentials
 - Surfaced key credentials: UK DfE curriculum work, Antigua policy, IEEE standards
 - Reframed "Workshops" as "Training for Educators"
 - Repositioned datadrivendance as a methodology schools can deliver
 - Replaced "CPD" language with clearer terms ("Educator Resources", "Training")
+- Made all lesson resources free (removed pricing/subscriptions)
+- Removed Archive from navigation
 - Created STRATEGY-RELAUNCH-2026.md for ongoing strategic discussion
 
 ### Still To Decide (See STRATEGY-RELAUNCH-2026.md)
@@ -34,12 +36,12 @@ ReadySaltedCode is repositioning from "Genevieve teaches students" to "Genevieve
 - Service offerings and boundaries
 - Where speaking/keynotes should live (RSC vs personal site)
 - datadrivendance packaging details
+- Archive/Stories integration approach
 
 ### Next Steps
-1. Client review of repositioned site
+1. Client review of STRATEGY-RELAUNCH-2026.pdf
 2. Finalise product/service decisions
-3. Merge to main when approved
-4. Configure production domain
+3. Configure production domain
 
 ---
 
