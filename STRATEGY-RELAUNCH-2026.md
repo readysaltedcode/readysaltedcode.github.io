@@ -240,6 +240,145 @@ Resources | Workshops | Lessons | datadrivendance | Archive | About
 
 ---
 
+## 10. Stories Archive - The ReadySaltedCode Journey
+
+### The Asset
+75 blog posts from 2012-2017 documenting:
+- Project development (RC cars, wearables, hackdays)
+- Event participation (Maker Faires, festivals, school visits)
+- datadrivendance evolution ([arra]stre → [data]storm → [pain]Byte)
+- Industry engagement (Google, Brighton Digital Festival)
+- The story of how ReadySaltedCode grew
+
+### The Problem
+Currently hidden as "Archive" - feels like old, irrelevant content. But this is actually **proof of track record** and tells the story of the company's evolution.
+
+### Options for Integration
+
+**Option A: "Our Journey" Timeline**
+- Curated highlights as a visual timeline
+- Shows evolution from early projects to current positioning
+- Demonstrates longevity and experience
+
+**Option B: Weave into Relevant Sections**
+- datadrivendance page links to original development posts
+- Hackday methodology references early hackday stories
+- Adds depth and credibility to current offerings
+
+**Option C: "Case Studies" Reframe**
+- Select best stories, rewrite as case studies
+- "How we developed the wearables curriculum"
+- "The story behind datadrivendance"
+
+**Option D: Leave Hidden for Now**
+- Content remains at /stories (accessible via direct link)
+- Focus relaunch on new positioning
+- Revisit archive integration later
+
+### Question for Genevieve
+How important is the history to the relaunch narrative? Should we invest time curating it, or focus on new content first?
+
+---
+
+## 11. Paid Content - Product Proposals
+
+### The Freemium Foundation
+Current free resources (6 lesson packs) serve as tasters. Revenue comes from premium content that goes deeper.
+
+### Target Markets (Beyond Schools)
+
+| Market | Why They'd Buy | What They Need |
+|--------|---------------|----------------|
+| **Schools** | Curriculum delivery, enrichment | Curriculum-mapped, assessment-ready |
+| **Scout Association / Guides** | Badge requirements, programme content | Activity-based, badge-aligned, leader guides |
+| **Youth clubs / Coder Dojos** | Session content, volunteer support | Drop-in friendly, minimal prep, fun-focused |
+| **Corporate CSR / Outreach** | Community engagement, STEM pipeline | Turnkey, impressive outcomes, photo-worthy |
+| **Museums / Science Centres** | Workshop content, holiday programmes | Engaging, hands-on, varying age groups |
+| **International schools** | Creative computing curriculum | English-language, adaptable |
+
+### Proposed Paid Products
+
+**1. Complete Programme Packs** (£149-299)
+Multi-week structured programmes, not just individual lessons:
+
+| Pack | Duration | Includes |
+|------|----------|----------|
+| Wearables Programme | 8 weeks | Full scheme of work, all resources, assessment, video guides, kit list with suppliers |
+| Physical Computing Programme | 10 weeks | micro:bit/Pi pathway, progressive projects, differentiation |
+| Creative Coding Programme | 6 weeks | Scratch → Python bridge, creative outcomes |
+
+**2. Event-in-a-Box Kits** (£199-399)
+Everything needed to run a specific event:
+
+| Kit | What's Included |
+|-----|-----------------|
+| Hackday in a Box | Planning timeline, challenge cards, team materials, judging rubrics, certificates, facilitator guide, promotional templates |
+| datadrivendance Event Kit | 8-12 session plans, technical setup, movement resources, performance framework, parent comms templates |
+| Maker Fair Stand Kit | Activity stations, signage templates, volunteer briefings, engagement tracking |
+
+**3. Organisation-Specific Packs** (£99-199)
+
+| Pack | Audience | Alignment |
+|------|----------|-----------|
+| Scout Digital Maker Pack | Scout leaders | Digital Maker badge stages 1-4 |
+| Guide Tech Pack | Guide leaders | Skills builder framework |
+| Coder Dojo Session Pack | Dojo volunteers | 12 drop-in sessions, varying difficulty |
+| Holiday Club Pack | Holiday programme providers | 5-day themed programme |
+
+**4. Corporate Outreach Package** (£499-999)
+For companies running STEM outreach:
+- Turnkey 1-day or multi-session programme
+- Branding templates (add company logo)
+- Volunteer briefing and training guide
+- Impact measurement framework
+- Photo/video release templates
+- "Powered by ReadySaltedCode" attribution
+
+**5. Subscription / Membership** (£199-499/year)
+For organisations wanting ongoing access:
+- All programme packs
+- New content as released
+- Quarterly Q&A calls
+- Resource request submissions
+- Community forum access
+
+### Content Creation Priority
+
+What needs to be created vs. what exists:
+
+| Product | Exists? | Work Needed |
+|---------|---------|-------------|
+| Lesson content | Yes (free) | Package into programmes, add video |
+| Hackday framework | Partial | Document methodology, create materials |
+| datadrivendance kit | No | Major creation project |
+| Scout/Guide alignment | No | Map existing content to badge requirements |
+| Corporate package | No | Create wrapper, templates, branding guides |
+
+### Pricing Strategy
+
+| Tier | Price Point | Target |
+|------|-------------|--------|
+| Individual educator | £49-99 | Teachers buying personally |
+| School/organisation | £149-299 | Department budget |
+| Multi-site license | £499-999 | MATs, Scout districts, corporate |
+| Enterprise/bespoke | £1000+ | Large corporates, national programmes |
+
+---
+
+## 12. Questions for Genevieve (Additional)
+
+9. **Archive**: How important is telling the RSC story? Invest time now or later?
+
+10. **Markets**: Which non-school markets are most interesting? Scouts? Corporate? International?
+
+11. **Content creation**: What's realistic to create? What exists that could be packaged?
+
+12. **Pricing**: Do these price points feel right for the repositioned brand?
+
+13. **Partnerships**: Interest in licensing to organisations (e.g., Scout Association) vs. direct sales?
+
+---
+
 ## Appendix: Genevieve's Key Credentials (for reference)
 
 ### Education
