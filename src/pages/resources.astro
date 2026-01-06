@@ -1,149 +1,63 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const freeResources = [
-  {
-    title: 'Getting Started with Wearables',
-    description: 'Introduction to sewable circuits and conductive thread. Perfect for beginners.',
-    type: 'PDF Guide',
-    icon: '📄'
-  },
-  {
-    title: 'Physical Computing Poster',
-    description: 'Classroom poster showing the basics of microcontrollers and circuits.',
-    type: 'Printable',
-    icon: '🖼️'
-  },
-  {
-    title: 'Lesson Planning Template',
-    description: 'Template for planning creative computing lessons with learning objectives.',
-    type: 'Template',
-    icon: '📝'
-  }
-];
-
 const lessonPacks = [
   {
     title: 'Wearables with Gemma',
     description: 'Complete lesson pack for creating wearable technology with Adafruit Gemma and NeoPixels. Includes teacher guide, student worksheets, and assessment rubrics.',
-    price: '£59',
     lessons: '6 lessons',
     level: 'KS2-3',
-    tags: ['Wearables', 'Physical Computing']
+    tags: ['Wearables', 'Physical Computing'],
+    link: '/lessons/gemma'
   },
   {
     title: 'Simple Sewable Circuits',
     description: 'Introduction to e-textiles and sewable electronics. Perfect for beginners and cross-curricular projects with textiles/DT.',
-    price: '£49',
     lessons: '4 lessons',
     level: 'KS2-3',
-    tags: ['Wearables', 'Beginner']
+    tags: ['Wearables', 'Beginner'],
+    link: '/lessons/simple-wearables'
   },
   {
     title: 'RPi-ano: GPIO Piano',
     description: 'Build an interactive piano using Raspberry Pi and GPIO. Covers inputs, outputs, and Python programming.',
-    price: '£59',
     lessons: '5 lessons',
     level: 'KS3-4',
-    tags: ['Raspberry Pi', 'Python']
+    tags: ['Raspberry Pi', 'Python'],
+    link: '/lessons/rpi-ano'
   },
   {
     title: 'Crumble Computing',
     description: 'Getting started with the Crumble board. Block-based programming for physical computing.',
-    price: '£49',
     lessons: '4 lessons',
     level: 'KS1-2',
-    tags: ['Crumble', 'Beginner']
+    tags: ['Crumble', 'Beginner'],
+    link: '/lessons/crumble'
   },
   {
     title: 'Piano Glove Project',
     description: 'Advanced wearable musical instrument using Flora, audio codec, and color sensors. Includes cross-curricular music and art links.',
-    price: '£79',
     lessons: '6+ lessons',
     level: 'KS3-4',
-    tags: ['Wearables', 'Advanced', 'Music']
+    tags: ['Wearables', 'Advanced', 'Music'],
+    link: '/lessons/piano-glove'
   },
   {
     title: 'RC Car with AppShed',
     description: 'Build and program a remote-controlled car with mobile app control. Great for robotics clubs.',
-    price: '£59',
     lessons: '5 lessons',
     level: 'KS3-4',
-    tags: ['Robotics', 'Mobile Apps']
-  }
-];
-
-const subscriptionTiers = [
-  {
-    name: 'Starter',
-    price: '£149',
-    period: '/year',
-    pupils: '0-150 pupils',
-    features: [
-      'All lesson packs included',
-      'Termly content updates',
-      'Editable resources (Word/PPT)',
-      'Email support'
-    ],
-    highlight: false
-  },
-  {
-    name: 'Standard',
-    price: '£199',
-    period: '/year',
-    pupils: '150-300 pupils',
-    features: [
-      'Everything in Starter',
-      'Video tutorial library',
-      'Assessment materials',
-      'Priority email support'
-    ],
-    highlight: true
-  },
-  {
-    name: 'Premium',
-    price: '£249',
-    period: '/year',
-    pupils: '300+ pupils',
-    features: [
-      'Everything in Standard',
-      'Scheme of work documents',
-      'Curriculum mapping',
-      'Termly Q&A calls'
-    ],
-    highlight: false
+    tags: ['Robotics', 'Mobile Apps'],
+    link: '/lessons/rc-car'
   }
 ];
 ---
 
-<BaseLayout title="Resources" description="Free and premium creative computing resources for teachers">
+<BaseLayout title="Resources" description="Free creative computing resources for educators">
   <section class="page-header">
     <div class="container">
-      <h1>Teaching Resources</h1>
-      <p class="subtitle">Creative computing resources that bring code to life</p>
-    </div>
-  </section>
-
-  <!-- Free Resources Section -->
-  <section class="free-resources">
-    <div class="container">
-      <div class="section-header">
-        <span class="badge">Free</span>
-        <h2>Free Resources</h2>
-        <p>Download these resources for free to try in your classroom.</p>
-      </div>
-
-      <div class="free-grid">
-        {freeResources.map((resource) => (
-          <div class="free-card">
-            <span class="icon">{resource.icon}</span>
-            <h3>{resource.title}</h3>
-            <p>{resource.description}</p>
-            <span class="type">{resource.type}</span>
-            <a href="/lessons" class="download-btn">View Lessons</a>
-          </div>
-        ))}
-      </div>
+      <h1>Free Educator Resources</h1>
+      <p class="subtitle">Ready-to-teach creative computing lesson packs - free for educators</p>
     </div>
   </section>
 
@@ -151,8 +65,9 @@ const subscriptionTiers = [
   <section class="lesson-packs">
     <div class="container">
       <div class="section-header">
+        <span class="badge free">Free</span>
         <h2>Lesson Packs</h2>
-        <p>Complete, ready-to-teach lesson packs with everything you need.</p>
+        <p>Complete, ready-to-teach lesson packs with everything you need. Updated for modern hardware in January 2026.</p>
       </div>
 
       <div class="packs-grid">
@@ -164,7 +79,7 @@ const subscriptionTiers = [
                   <span class="tag">{tag}</span>
                 ))}
               </div>
-              <span class="price">{pack.price}</span>
+              <span class="free-badge">Free</span>
             </div>
             <h3>{pack.title}</h3>
             <p>{pack.description}</p>
@@ -172,44 +87,9 @@ const subscriptionTiers = [
               <span>{pack.lessons}</span>
               <span>{pack.level}</span>
             </div>
-            <a href="#contact" class="buy-btn">Buy Now</a>
+            <a href={pack.link} class="view-btn">View Lessons</a>
           </div>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- School Subscriptions -->
-  <section class="subscriptions">
-    <div class="container">
-      <div class="section-header">
-        <h2>School Subscriptions</h2>
-        <p>Get access to all resources with a school subscription. Best value for schools teaching creative computing across year groups.</p>
-      </div>
-
-      <div class="pricing-grid">
-        {subscriptionTiers.map((tier) => (
-          <div class={`pricing-card ${tier.highlight ? 'highlighted' : ''}`}>
-            {tier.highlight && <span class="popular">Most Popular</span>}
-            <h3>{tier.name}</h3>
-            <p class="pupils">{tier.pupils}</p>
-            <div class="price">
-              <span class="amount">{tier.price}</span>
-              <span class="period">{tier.period}</span>
-            </div>
-            <ul class="features">
-              {tier.features.map((feature) => (
-                <li>{feature}</li>
-              ))}
-            </ul>
-            <a href="#contact" class="subscribe-btn">Get Started</a>
-          </div>
-        ))}
-      </div>
-
-      <div class="mat-info">
-        <h3>Multi-Academy Trust?</h3>
-        <p>We offer discounted licensing for MATs and school groups. <a href="#contact">Contact us</a> for a custom quote.</p>
       </div>
     </div>
   </section>
@@ -247,12 +127,15 @@ const subscriptionTiers = [
     </div>
   </section>
 
-  <!-- Contact/Enquiry -->
+  <!-- Training CTA -->
   <section class="contact" id="contact">
     <div class="container">
-      <h2>Get in Touch</h2>
-      <p>Questions about resources or subscriptions? Want a demo or custom quote?</p>
-      <a href="mailto:genevieve@readysaltedcode.org" class="contact-btn">Contact Us</a>
+      <h2>Want More?</h2>
+      <p>Looking for training on how to deliver these lessons confidently? We offer educator training sessions.</p>
+      <div class="cta-buttons">
+        <a href="/workshops" class="contact-btn">Explore Training</a>
+        <a href="mailto:genevieve@readysaltedcode.org" class="contact-btn-outline">Contact Us</a>
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -302,71 +185,10 @@ const subscriptionTiers = [
     margin-bottom: 0.5rem;
   }
 
-  /* Free Resources */
-  .free-resources {
-    padding: 4rem 0;
-    background: #f9f9f9;
-  }
-
-  .free-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .free-card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  }
-
-  .free-card .icon {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  .free-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .free-card p {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .free-card .type {
-    display: inline-block;
-    background: #f0f0f0;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    color: #666;
-    margin-bottom: 1rem;
-  }
-
-  .download-btn {
-    display: block;
-    background: #28a745;
-    color: #fff;
-    padding: 0.6rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s;
-  }
-
-  .download-btn:hover {
-    background: #218838;
-  }
-
-    /* Lesson Packs */
+  /* Lesson Packs */
   .lesson-packs {
     padding: 4rem 0;
+    background: #f9f9f9;
   }
 
   .packs-grid {
@@ -408,10 +230,13 @@ const subscriptionTiers = [
     color: #666;
   }
 
-  .pack-header .price {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #dd3333;
+  .free-badge {
+    background: #28a745;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 
   .pack-card h3 {
@@ -434,7 +259,7 @@ const subscriptionTiers = [
     margin-bottom: 1rem;
   }
 
-  .buy-btn {
+  .view-btn {
     display: block;
     text-align: center;
     background: #dd3333;
@@ -446,129 +271,8 @@ const subscriptionTiers = [
     transition: background 0.2s;
   }
 
-  .buy-btn:hover {
+  .view-btn:hover {
     background: #bb2222;
-  }
-
-  /* Subscriptions */
-  .subscriptions {
-    padding: 4rem 0;
-    background: #f9f9f9;
-  }
-
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .pricing-card {
-    background: #fff;
-    border: 2px solid #eee;
-    border-radius: 8px;
-    padding: 2rem 1.5rem;
-    text-align: center;
-    position: relative;
-  }
-
-  .pricing-card.highlighted {
-    border-color: #dd3333;
-  }
-
-  .pricing-card .popular {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #dd3333;
-    color: #fff;
-    padding: 0.25rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-
-  .pricing-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .pricing-card .pupils {
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .pricing-card .price {
-    margin-bottom: 1.5rem;
-  }
-
-  .pricing-card .amount {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-  }
-
-  .pricing-card .period {
-    color: #888;
-  }
-
-  .pricing-card .features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.5rem 0;
-    text-align: left;
-  }
-
-  .pricing-card .features li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 0.9rem;
-  }
-
-  .pricing-card .features li:before {
-    content: '✓';
-    color: #28a745;
-    margin-right: 0.5rem;
-    font-weight: bold;
-  }
-
-  .subscribe-btn {
-    display: block;
-    background: #dd3333;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.2s;
-  }
-
-  .subscribe-btn:hover {
-    background: #bb2222;
-  }
-
-  .mat-info {
-    text-align: center;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .mat-info h3 {
-    margin-bottom: 0.5rem;
-  }
-
-  .mat-info p {
-    margin: 0;
-    color: #666;
-  }
-
-  .mat-info a {
-    color: #dd3333;
   }
 
   /* What's Included */
@@ -622,6 +326,13 @@ const subscriptionTiers = [
     margin-bottom: 1.5rem;
   }
 
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .contact-btn {
     display: inline-block;
     background: #dd3333;
@@ -637,8 +348,25 @@ const subscriptionTiers = [
     background: #bb2222;
   }
 
+  .contact-btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+
+  .contact-btn-outline:hover {
+    background: #fff;
+    color: #1a1a2e;
+  }
+
   @media (max-width: 768px) {
-    .pricing-grid {
+    .packs-grid {
       grid-template-columns: 1fr;
     }
   }
